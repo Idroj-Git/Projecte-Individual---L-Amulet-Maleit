@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - SpawnableEnemies
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - SolidObjects
+  - SpawnableEnemies
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 3372912801
+    locked: 0
+  - name: Foreground
+    uniqueID: 2558074995
+    locked: 0
+  - name: Player
+    uniqueID: 604960327
+    locked: 0
+  - name: Midground
+    uniqueID: 3048248769
+    locked: 0
+  - name: SpawnableEnemies
+    uniqueID: 1354943181
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
