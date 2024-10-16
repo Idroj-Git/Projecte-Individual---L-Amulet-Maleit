@@ -10,12 +10,26 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D _rb;
 
+    private float spawnCooldown;
+    private float spawnCooldownMax = 10f;
+
     // Start is called before the first frame update
     void Start()
     {
         InputController.OnMoveInput += SetMoveDirection;
 
         _rb = GetComponent<Rigidbody2D>();
+
+        spawnCooldown = spawnCooldownMax;
+
+        if (SceneController.GetActualSceneIndex() == 1)
+        {
+            _rb.position = new Vector2(-6, 2); // aprox de on vull que faci spawn
+        }
+        else if (RuntimeGameSettings.Instance.playerLastPosition != Vector2.zero) // CANVIAR AMB EL GETTER / SETTER
+        {
+            _rb.position = RuntimeGameSettings.Instance.playerLastPosition;
+        }
     }
 
     private void FixedUpdate()
@@ -27,6 +41,15 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             _rb.velocity = Vector2.zero;
+        }
+
+        if (spawnCooldown > 0)
+        {
+            spawnCooldown -= Time.deltaTime;
+        }
+        else
+        {
+            spawnCooldown = 0;
         }
     }
 
@@ -44,9 +67,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("SpawnableEnemies"))
+        if (collision.CompareTag("SpawnableEnemies") && spawnCooldown == 0)
         {
-            Debug.Log("HA APARECIDO UN ENEMIGO!");
+            Debug.Log("¡HA APARECIDO UN ENEMIGO!");
+            RuntimeGameSettings.Instance.playerLastPosition = _rb.position; // CANVIAR AMB EL SETTER
+            SceneController.LoadScene(1);
         }
     }
 }
