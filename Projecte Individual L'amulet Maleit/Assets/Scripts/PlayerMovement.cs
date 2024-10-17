@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private float spawnCooldown;
     private float spawnCooldownMax = 10f;
 
+    [SerializeField] Animator _animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,10 +43,14 @@ public class PlayerMovement : MonoBehaviour
         if (_moveDirection != Vector2.zero)
         {
             MovePlayer();
+            _animator.SetBool("isMoving", true);
+            _animator.SetFloat("x_direction", _moveDirection.x);
+            _animator.SetFloat("y_direction", _moveDirection.y);
         }
         else
         {
             _rb.velocity = Vector2.zero;
+            _animator.SetBool("isMoving", false);
         }
 
         if (spawnCooldown > 0)
@@ -76,6 +82,18 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("¡HA APARECIDO UN ENEMIGO!");
             RuntimeGameSettings.Instance.SetPlayerLastPosition(_rb.position); // CANVIAR AMB EL SETTER
             SceneController.LoadScene(2);
+        }
+    }
+
+    void PlayerSpriteChange(float y_direction)
+    {
+        if (y_direction < 0)
+        {
+
+        }
+        else if (y_direction > 1)
+        {
+
         }
     }
 }
