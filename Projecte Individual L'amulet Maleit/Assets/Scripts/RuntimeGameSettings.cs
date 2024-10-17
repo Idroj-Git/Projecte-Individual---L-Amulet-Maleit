@@ -21,5 +21,14 @@ public class RuntimeGameSettings : MonoBehaviour
         }
     }
 
+    public void SetPlayerLastPosition(Vector2 playerLastPosition)
+    {
+        this.playerLastPosition = playerLastPosition;
+    }
+
+    public Vector2 GetPlayerLastPostion()
+    {
+        return this.playerLastPosition;
+    }
     // getter / setter de playerLastPosition
 }

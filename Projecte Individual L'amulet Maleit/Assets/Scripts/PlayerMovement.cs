@@ -22,14 +22,18 @@ public class PlayerMovement : MonoBehaviour
 
         spawnCooldown = spawnCooldownMax;
 
-        if (SceneController.GetActualSceneIndex() == 1)
+        if (SceneController.GetActualSceneIndex() == 2)
         {
             _rb.position = new Vector2(-6, 2); // aprox de on vull que faci spawn
         }
-        else if (RuntimeGameSettings.Instance.playerLastPosition != Vector2.zero) // CANVIAR AMB EL GETTER / SETTER
+        else if (RuntimeGameSettings.Instance.GetPlayerLastPostion() != Vector2.zero) // CANVIAR AMB EL GETTER / SETTER
         {
-            _rb.position = RuntimeGameSettings.Instance.playerLastPosition;
+            _rb.position = RuntimeGameSettings.Instance.GetPlayerLastPostion();
         }
+        //else
+        //{
+        //    _rb.position = new Vector2(-5,1);
+        //}
     }
 
     private void FixedUpdate()
@@ -70,8 +74,8 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("SpawnableEnemies") && spawnCooldown == 0)
         {
             Debug.Log("¡HA APARECIDO UN ENEMIGO!");
-            RuntimeGameSettings.Instance.playerLastPosition = _rb.position; // CANVIAR AMB EL SETTER
-            SceneController.LoadScene(1);
+            RuntimeGameSettings.Instance.SetPlayerLastPosition(_rb.position); // CANVIAR AMB EL SETTER
+            SceneController.LoadScene(2);
         }
     }
 }

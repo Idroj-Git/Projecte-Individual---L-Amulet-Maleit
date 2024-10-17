@@ -22,4 +22,5 @@ public static class SceneController
     {
         return SceneManager.GetActiveScene().buildIndex;
     }
+
 }

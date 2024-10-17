@@ -26,6 +26,6 @@ public class BattleManager : MonoBehaviour
 
     private void Victory()
     {
-        SceneController.LoadScene(0);
+        SceneController.LoadScene(1);
     }
 }
