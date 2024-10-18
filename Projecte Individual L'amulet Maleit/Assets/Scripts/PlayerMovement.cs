@@ -14,11 +14,13 @@ public class PlayerMovement : MonoBehaviour
     private float spawnCooldownMax = 10f;
 
     [SerializeField] Animator _animator;
+    [SerializeField] SpriteRenderer spriteRenderer;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        InputController.OnMoveInput += SetMoveDirection;
+        InputController.OnMoveInput += SetMoveDirection; // Aconseguir input de moviment
 
         _rb = GetComponent<Rigidbody2D>();
 
@@ -44,8 +46,10 @@ public class PlayerMovement : MonoBehaviour
         {
             MovePlayer();
             _animator.SetBool("isMoving", true);
-            _animator.SetFloat("x_direction", _moveDirection.x);
+            if (_moveDirection.x < 0) { spriteRenderer.flipX = true; } // SpriteFlip
+            else { spriteRenderer.flipX = false; }
             _animator.SetFloat("y_direction", _moveDirection.y);
+            
         }
         else
         {
@@ -83,17 +87,9 @@ public class PlayerMovement : MonoBehaviour
             RuntimeGameSettings.Instance.SetPlayerLastPosition(_rb.position); // CANVIAR AMB EL SETTER
             SceneController.LoadScene(2);
         }
-    }
-
-    void PlayerSpriteChange(float y_direction)
-    {
-        if (y_direction < 0)
+        else if (collision.CompareTag("CaveEntrance"))
         {
-
-        }
-        else if (y_direction > 1)
-        {
-
+            SceneController.LoadScene(3);
         }
     }
 }

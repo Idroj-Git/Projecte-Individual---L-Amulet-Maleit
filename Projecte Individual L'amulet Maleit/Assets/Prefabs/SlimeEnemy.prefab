@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 8285671313087632985}
   - component: {fileID: 8991807110160219467}
   - component: {fileID: -4618330861398554593}
-  m_Layer: 0
+  - component: {fileID: 8649777860534996527}
+  - component: {fileID: 3596412359145566579}
+  m_Layer: 10
   m_Name: SlimeEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 604960327
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_Sprite: {fileID: 1869473599, guid: 7c4c4f74640c6bd41900769ada9f0350, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -157,3 +159,46 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &8649777860534996527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600916043292263795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f2c74f6a4e31342a6e6bd4995d8eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  speed: 3
+  strength: 50
+  target: {fileID: 0}
+--- !u!50 &3596412359145566579
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600916043292263795}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
