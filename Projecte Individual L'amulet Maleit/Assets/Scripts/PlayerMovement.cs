@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rb;
 
     private float spawnCooldown;
-    private float spawnCooldownMax = 10f;
+    private float spawnCooldownMax = 3f;
 
     [SerializeField] Animator _animator;
     [SerializeField] SpriteRenderer spriteRenderer;
@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("SpawnableEnemies") && spawnCooldown == 0)
+        if (collision.CompareTag("SpawnableEnemies") && spawnCooldown == 0 && Random.Range(0, 100) < 23) // 30% de que apareixin enemics
         {
             Debug.Log("¡HA APARECIDO UN ENEMIGO!");
             RuntimeGameSettings.Instance.SetPlayerLastPosition(_rb.position); // CANVIAR AMB EL SETTER

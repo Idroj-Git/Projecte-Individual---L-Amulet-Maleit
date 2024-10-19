@@ -10,7 +10,8 @@ public class PlayerSettings : MonoBehaviour
     [SerializeField] int weaponDamage;
     private float weaponCooldown;
 
-    public Transform attackPosition;
+    [SerializeField] Transform attackPosition;
+    [SerializeField] Transform weaponPivot;
     public LayerMask whatIsEnemies;
     public float attackRange;
 
@@ -45,6 +46,18 @@ public class PlayerSettings : MonoBehaviour
         {
             weaponCooldown -= Time.deltaTime;
         }
+
+        if (weaponPivot != null)
+        {
+            if (_moveDirection.x < 0)
+            {
+                weaponPivot.localScale = new Vector3(Mathf.Abs(weaponPivot.localScale.x) * -1, weaponPivot.localScale.y, weaponPivot.localScale.z);
+            }
+            else if (_moveDirection.x > 0)
+            {
+                weaponPivot.localScale = new Vector3(Mathf.Abs(weaponPivot.localScale.x), weaponPivot.localScale.y, weaponPivot.localScale.z);
+            }
+        }
     }
 
     public void TakeDamage(int dmg)
@@ -63,21 +76,32 @@ public class PlayerSettings : MonoBehaviour
         {
             if (weaponCooldown <= 0)
             {
-                if (_moveDirection.x < 0)
-                {
-                    attackPosition.localPosition = new Vector3(attackPosition.position.x * -1, attackPosition.position.y, attackPosition.position.z);
-                }
-                else if (_moveDirection.x > 0)
-                {
-                    attackPosition.localPosition = new Vector3(Mathf.Abs(attackPosition.position.x), attackPosition.position.y, attackPosition.position.z);
-                }
+                //Debug.Log("Direction="+_moveDirection);
+                //Debug.Log("WeaponPivot="+weaponPivot.localPosition);
+                //if (_moveDirection.x < 0)
+                //{
+                //    weaponPivot.localScale = new Vector3(Mathf.Abs(weaponPivot.localScale.x) * -1, weaponPivot.localScale.y, weaponPivot.localScale.z);
+                //    attackPosition.localPosition = new Vector3(Mathf.Abs(attackPosition.localPosition.x) * -1, attackPosition.localPosition.y, attackPosition.localPosition.z);
+                //    attackPosition.localScale = new Vector3(Mathf.Abs(attackPosition.localScale.x) * -1, attackPosition.localScale.y, attackPosition.localScale.z);
+                //}
+                //else if (_moveDirection.x > 0)
+                //{
+                //    weaponPivot.localScale = new Vector3(Mathf.Abs(weaponPivot.localScale.x), weaponPivot.localScale.y, weaponPivot.localScale.z);
+                //    attackPosition.localPosition = new Vector3(Mathf.Abs(attackPosition.localPosition.x), attackPosition.localPosition.y, attackPosition.localPosition.z);
+                //    attackPosition.localScale = new Vector3(Mathf.Abs(attackPosition.localScale.x), attackPosition.localScale.y, attackPosition.localScale.z);
+                //}
+                //else
+                //{
+                //    //attackPosition.localPosition = new Vector3(attackPosition.localPosition.x, attackPosition.localPosition.y, attackPosition.localPosition.z);
+                //    attackPosition.localScale = new Vector3(attackPosition.localScale.x, attackPosition.localScale.y, attackPosition.localScale.z);
+                //}
 
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                     enemiesToDamage[i].GetComponent<EnemyController>().TakeDamage(weaponDamage);
                 }
-                weaponCooldown = 1.5f;
+                weaponCooldown = 1f;
                 axe_animator.SetTrigger("Attack");
             }
         }
