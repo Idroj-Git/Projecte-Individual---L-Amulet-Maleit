@@ -76,27 +76,7 @@ public class PlayerSettings : MonoBehaviour
         {
             if (weaponCooldown <= 0)
             {
-                //Debug.Log("Direction="+_moveDirection);
-                //Debug.Log("WeaponPivot="+weaponPivot.localPosition);
-                //if (_moveDirection.x < 0)
-                //{
-                //    weaponPivot.localScale = new Vector3(Mathf.Abs(weaponPivot.localScale.x) * -1, weaponPivot.localScale.y, weaponPivot.localScale.z);
-                //    attackPosition.localPosition = new Vector3(Mathf.Abs(attackPosition.localPosition.x) * -1, attackPosition.localPosition.y, attackPosition.localPosition.z);
-                //    attackPosition.localScale = new Vector3(Mathf.Abs(attackPosition.localScale.x) * -1, attackPosition.localScale.y, attackPosition.localScale.z);
-                //}
-                //else if (_moveDirection.x > 0)
-                //{
-                //    weaponPivot.localScale = new Vector3(Mathf.Abs(weaponPivot.localScale.x), weaponPivot.localScale.y, weaponPivot.localScale.z);
-                //    attackPosition.localPosition = new Vector3(Mathf.Abs(attackPosition.localPosition.x), attackPosition.localPosition.y, attackPosition.localPosition.z);
-                //    attackPosition.localScale = new Vector3(Mathf.Abs(attackPosition.localScale.x), attackPosition.localScale.y, attackPosition.localScale.z);
-                //}
-                //else
-                //{
-                //    //attackPosition.localPosition = new Vector3(attackPosition.localPosition.x, attackPosition.localPosition.y, attackPosition.localPosition.z);
-                //    attackPosition.localScale = new Vector3(attackPosition.localScale.x, attackPosition.localScale.y, attackPosition.localScale.z);
-                //}
-
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies);
+                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies); // Mirar com es fa per que quedi una estela de dmg (coroutine o algo)
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                     enemiesToDamage[i].GetComponent<EnemyController>().TakeDamage(weaponDamage);

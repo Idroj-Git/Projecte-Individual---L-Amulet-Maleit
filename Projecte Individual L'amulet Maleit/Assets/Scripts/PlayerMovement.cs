@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         }
         //else
         //{
-        //    _rb.position = new Vector2(-5,1);
+        //    _rb.position = new Vector2(-6, 2);
         //}
     }
 

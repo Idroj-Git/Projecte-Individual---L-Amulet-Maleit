@@ -23,4 +23,12 @@ public static class SceneController
         return SceneManager.GetActiveScene().buildIndex;
     }
 
+    public static void ExitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
 }
