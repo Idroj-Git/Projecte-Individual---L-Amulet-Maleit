@@ -36,7 +36,7 @@ public class ButtonController : MonoBehaviour
 
     public void ExitGame()
     {
-        Time.timeScale = 1.0f;
+        ClosePauseMenu();
         SceneController.ExitGame();
     }
 
