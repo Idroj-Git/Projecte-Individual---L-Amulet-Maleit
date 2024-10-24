@@ -17,7 +17,7 @@ public class ButtonController : MonoBehaviour
         {
             pauseMenuCanvas.SetActive(isGamePaused);
         }
-        InputController.OnPauseGameInput += PauseMenu;
+        InputController.OnPauseGameInput += PauseMenu; // Quan s'apreta ESC
     }
     private void OnDestroy()
     {
