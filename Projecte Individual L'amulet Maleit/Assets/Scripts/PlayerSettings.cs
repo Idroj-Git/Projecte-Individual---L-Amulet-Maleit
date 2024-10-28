@@ -17,6 +17,9 @@ public class PlayerSettings : MonoBehaviour
 
     [SerializeField] Animator axe_animator;
 
+    [SerializeField] Transform interactPosition;
+    public LayerMask interactable;
+
     private Vector2 _moveDirection;
 
     // Start is called before the first frame update
@@ -49,14 +52,44 @@ public class PlayerSettings : MonoBehaviour
 
         if (weaponPivot != null)
         {
-            if (_moveDirection.x < 0)
-            {
-                weaponPivot.localScale = new Vector3(Mathf.Abs(weaponPivot.localScale.x) * -1, weaponPivot.localScale.y, weaponPivot.localScale.z);
-            }
-            else if (_moveDirection.x > 0)
-            {
-                weaponPivot.localScale = new Vector3(Mathf.Abs(weaponPivot.localScale.x), weaponPivot.localScale.y, weaponPivot.localScale.z);
-            }
+            TurnWeaponPivot();
+        }
+
+        if (interactPosition != null)
+        {
+            TurnInteractPosition();
+        }
+    }
+
+    private void TurnWeaponPivot()
+    {
+        if (_moveDirection.x < 0)
+        {
+            weaponPivot.localScale = new Vector3(Mathf.Abs(weaponPivot.localScale.x) * -1, weaponPivot.localScale.y, weaponPivot.localScale.z);
+        }
+        else if (_moveDirection.x > 0)
+        {
+            weaponPivot.localScale = new Vector3(Mathf.Abs(weaponPivot.localScale.x), weaponPivot.localScale.y, weaponPivot.localScale.z);
+        }
+    }
+
+    private void TurnInteractPosition()
+    {
+        if (_moveDirection.x < 0 && _moveDirection.y == 0) // mira a la izq
+        {
+            interactPosition.localScale = new Vector3(Mathf.Abs(interactPosition.localScale.x) * -1, interactPosition.localScale.y, interactPosition.localScale.z);
+        }
+        else if ( _moveDirection.x > 0 && _moveDirection.y == 0) // mira a la dere
+        {
+            interactPosition.localScale = new Vector3(Mathf.Abs(interactPosition.localScale.x), interactPosition.localScale.y, interactPosition.localScale.z);
+        }
+        else if (_moveDirection.y < 0  && _moveDirection.x == 0) // mira abajo
+        {
+            interactPosition.localScale = new Vector3(interactPosition.localScale.x, Mathf.Abs(interactPosition.localScale.y) * -1, interactPosition.localScale.z);
+        }
+        else if (_moveDirection.y > 0 && _moveDirection.x == 0) // mira arriba
+        {
+            interactPosition.localScale = new Vector3(interactPosition.localScale.x, Mathf.Abs(interactPosition.localScale.y), interactPosition.localScale.z);
         }
     }
 
@@ -84,6 +117,15 @@ public class PlayerSettings : MonoBehaviour
                 weaponCooldown = 1f;
                 axe_animator.SetTrigger("Attack");
             }
+        }
+    }
+
+    public void Interact()
+    {
+        if (SceneController.GetActualSceneIndex() != 2)
+        {
+            Collider2D interactedObjects = Physics2D.OverlapCircle(interactPosition.position, 0.5f, interactable); // Sense el ALL perquè només vull una interacció
+            // como podria hacer que esto sea una colisión que active el OnCollisionEnter de otros objetos?
         }
     }
 

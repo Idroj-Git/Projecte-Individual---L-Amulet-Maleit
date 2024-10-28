@@ -36,11 +36,25 @@ public class InputController : MonoBehaviour
         overworldInteractAction = playerActionMap.FindAction("OverworldInteract");
 
         //  moveDirection = moveAction.ReadValue<Vector2>();
+
+    }
+
+    private void OnEnable()
+    {
         moveAction.performed += MoveActionPerformed;
         attackAction.performed += AttackActionPerformed;
         pauseMenuAction.performed += PauseActionPerformed;
         interactDialogueAction.performed += DialogueActionPerformed;
         overworldInteractAction.performed += OverworldActionPerformed;
+    }
+
+    private void OnDisable() //preferible abans que el OnDestroy
+    {
+        moveAction.performed -= MoveActionPerformed;
+        attackAction.performed -= AttackActionPerformed;
+        pauseMenuAction.performed -= PauseActionPerformed;
+        interactDialogueAction.performed -= DialogueActionPerformed;
+        overworldInteractAction.performed -= OverworldActionPerformed;
     }
 
     void MoveActionPerformed(InputAction.CallbackContext context)

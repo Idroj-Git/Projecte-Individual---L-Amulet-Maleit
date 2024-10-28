@@ -19,9 +19,14 @@ public class ButtonController : MonoBehaviour
             // Aquí puedes acceder al objeto solo si existe
             pauseMenuCanvas.SetActive(isGamePaused); // O cualquier otra operación
         }
+    }
+
+    private void OnEnable()
+    {
         InputController.OnPauseGameInput += PauseMenu; // Quan s'apreta ESC
     }
-    private void OnDestroy()
+
+    private void OnDisable()
     {
         InputController.OnPauseGameInput -= PauseMenu;
     }
@@ -71,6 +76,7 @@ public class ButtonController : MonoBehaviour
 
     public void PauseMenu()
     {
+
         if (pausableScenes.Contains(SceneController.GetActualSceneIndex()) && (pauseMenuCanvas != null && pauseMenuCanvasGroup != null)) // comprovar si es pot pausar l'escena
         {
             if (!isGamePaused)

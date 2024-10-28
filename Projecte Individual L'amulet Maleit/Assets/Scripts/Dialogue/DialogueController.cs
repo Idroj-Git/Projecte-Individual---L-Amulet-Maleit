@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -16,6 +17,7 @@ public class DialogueController : MonoBehaviour
     private bool dBoxOpen = false;
 
     [SerializeField] PlayerMovement player;
+    private bool nextButtonPressed = false;
 
     private void Awake() // Singleton
     {
@@ -29,6 +31,31 @@ public class DialogueController : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+
+    private void OnEnable()
+    {
+        InputController.OnInteractDialogue += SetNextButtonPressed;
+    }
+    private void OnDisable()
+    {
+        InputController.OnInteractDialogue -= SetNextButtonPressed;
+    }
+
+    private void SetNextButtonPressed()
+    {
+        if (!nextButtonPressed)
+        {
+            nextButtonPressed = true;
+            StartCoroutine(InteractCooldown());
+        }
+    }
+
+    private IEnumerator InteractCooldown()
+    {
+        yield return new WaitForSeconds(0.5f);
+        nextButtonPressed = false;
+    }
+
     private void Start()
     {
         dBoxOpen = false;
@@ -60,7 +87,17 @@ public class DialogueController : MonoBehaviour
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
 
-        yield return new WaitForSeconds(3f); // dialogue interact
+        yield return StartCoroutine(WaitForInteract(() => nextButtonPressed));
+        //yield return new WaitForSeconds(3f); // dialogue interact
         CloseDialogueBox();
     }
+
+    private IEnumerator WaitForInteract(Func<bool> condition, float checkInterval = 0.1f)
+    {
+        while (!condition())
+        {
+            yield return new WaitForSeconds(checkInterval);
+        }
+    }
+
 }
