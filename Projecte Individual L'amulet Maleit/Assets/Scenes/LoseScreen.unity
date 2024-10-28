@@ -645,8 +645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e99093d4f3d5e4d904e21587983197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuCanvas: {fileID: 0}
-  pauseMenuCanvasGroup: {fileID: 0}
 --- !u!114 &1200100613
 MonoBehaviour:
   m_ObjectHideFlags: 0

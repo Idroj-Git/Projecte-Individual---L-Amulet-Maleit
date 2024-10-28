@@ -13,9 +13,11 @@ public class ButtonController : MonoBehaviour
     {
         pausableScenes = new int[] { 1, 2 };
         isGamePaused = false;
-        if (pauseMenuCanvas != null)
+
+        if (pausableScenes.Contains(SceneController.GetActualSceneIndex()) && pauseMenuCanvas != null)
         {
-            pauseMenuCanvas.SetActive(isGamePaused);
+            // Aquí puedes acceder al objeto solo si existe
+            pauseMenuCanvas.SetActive(isGamePaused); // O cualquier otra operación
         }
         InputController.OnPauseGameInput += PauseMenu; // Quan s'apreta ESC
     }
@@ -27,7 +29,11 @@ public class ButtonController : MonoBehaviour
 
     public void RestartGame() // tot el joc
     {
-        ClosePauseMenu();
+        if (isGamePaused)
+        {
+            ClosePauseMenu();
+        }
+
         SceneController.LoadScene(0);
     }
 
@@ -65,7 +71,7 @@ public class ButtonController : MonoBehaviour
 
     public void PauseMenu()
     {
-        if (pausableScenes.Contains(SceneController.GetActualSceneIndex())) // comprovar si es pot pausar l'escena
+        if (pausableScenes.Contains(SceneController.GetActualSceneIndex()) && (pauseMenuCanvas != null && pauseMenuCanvasGroup != null)) // comprovar si es pot pausar l'escena
         {
             if (!isGamePaused)
             {

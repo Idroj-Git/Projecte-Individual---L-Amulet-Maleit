@@ -12,6 +12,7 @@ public class InputController : MonoBehaviour
     private InputAction attackAction;
     private InputAction pauseMenuAction;
     private InputAction interactDialogueAction;
+    private InputAction overworldInteractAction;
 
     private Vector2 moveDirection;
 
@@ -19,6 +20,7 @@ public class InputController : MonoBehaviour
     public static event Action OnAttackInput;
     public static event Action OnPauseGameInput;
     public static event Action OnInteractDialogue;
+    public static event Action OnOverworldInteract;
 
 
     private void Awake()
@@ -31,12 +33,14 @@ public class InputController : MonoBehaviour
         attackAction = playerActionMap.FindAction("Attack");
         pauseMenuAction = playerActionMap.FindAction("PauseGame");
         interactDialogueAction = playerActionMap.FindAction("InteractDialogue");
+        overworldInteractAction = playerActionMap.FindAction("OverworldInteract");
 
         //  moveDirection = moveAction.ReadValue<Vector2>();
         moveAction.performed += MoveActionPerformed;
         attackAction.performed += AttackActionPerformed;
         pauseMenuAction.performed += PauseActionPerformed;
         interactDialogueAction.performed += DialogueActionPerformed;
+        overworldInteractAction.performed += OverworldActionPerformed;
     }
 
     void MoveActionPerformed(InputAction.CallbackContext context)
@@ -57,6 +61,11 @@ public class InputController : MonoBehaviour
     void DialogueActionPerformed(InputAction.CallbackContext context)
     {
         OnInteractDialogue?.Invoke(); // si es un button posar-ho dins del mètode
+    }
+    
+    void OverworldActionPerformed(InputAction.CallbackContext context)
+    {
+        OnOverworldInteract?.Invoke(); // si es un button posar-ho dins del mètode
     }
 
 

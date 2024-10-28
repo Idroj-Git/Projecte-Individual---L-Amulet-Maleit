@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     private float _speed = 6f;
     private Vector2 _moveDirection;
 
@@ -15,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] Animator _animator;
     [SerializeField] SpriteRenderer spriteRenderer;
+
+    private bool canMove = true;
 
 
     // Start is called before the first frame update
@@ -30,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb.position = new Vector2(-6, 2); // aprox de on vull que faci spawn
         }
-        else if (RuntimeGameSettings.Instance.GetPlayerLastPostion() != Vector2.zero) // CANVIAR AMB EL GETTER / SETTER
+        else if (RuntimeGameSettings.Instance.GetPlayerLastPostion() != Vector2.zero)
         {
             _rb.position = RuntimeGameSettings.Instance.GetPlayerLastPostion();
         }
@@ -42,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_moveDirection != Vector2.zero)
+        if (_moveDirection != Vector2.zero && canMove)
         {
             MovePlayer();
             _animator.SetBool("isMoving", true);
@@ -69,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
     void MovePlayer()
     {
+
         _rb.velocity = _moveDirection * _speed;
         //Debug.Log("Movimiento hacia " + _moveDirection);
     }
@@ -91,5 +93,15 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneController.LoadScene(3);
         }
+    }
+
+    public void SetCanMove(bool canMove)
+    {
+        this.canMove = canMove;
+    }
+
+    public bool GetCanMove()
+    {
+        return canMove;
     }
 }
