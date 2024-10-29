@@ -16,7 +16,7 @@ TagManager:
   - 
   - SolidObjects
   - SpawnableEnemies
-  - 
+  - interactable
   - Enemy
   - 
   - 

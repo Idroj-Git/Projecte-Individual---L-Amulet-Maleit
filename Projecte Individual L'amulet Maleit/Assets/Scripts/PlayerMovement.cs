@@ -21,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InputController.OnMoveInput += SetMoveDirection; // Aconseguir input de moviment
 
         _rb = GetComponent<Rigidbody2D>();
 
@@ -39,6 +38,15 @@ public class PlayerMovement : MonoBehaviour
         //{
         //    _rb.position = new Vector2(-6, 2);
         //}
+    }
+
+    private void OnEnable()
+    {
+        InputController.OnMoveInput += SetMoveDirection; // Aconseguir input de moviment
+    }
+    private void OnDisable()
+    {
+        InputController.OnMoveInput -= SetMoveDirection; // Aconseguir input de moviment
     }
 
     private void FixedUpdate()

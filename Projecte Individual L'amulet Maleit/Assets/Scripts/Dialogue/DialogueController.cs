@@ -17,7 +17,12 @@ public class DialogueController : MonoBehaviour
     private bool dBoxOpen = false;
 
     [SerializeField] PlayerMovement player;
+    [SerializeField] PlayerSettings playerSettings;
     private bool nextButtonPressed = false;
+
+    private TextStorage actualDialogue;
+    private int currentLine = 0;
+//    private int maxLine;
 
     private void Awake() // Singleton
     {
@@ -62,12 +67,13 @@ public class DialogueController : MonoBehaviour
         textBox.SetActive(dBoxOpen);
     }
 
-    public void ShowDialogue(TextStorage text)
+    public void ShowDialogue(TextStorage dialogue)
     {
         dBoxOpen = true;
         textBox.SetActive(dBoxOpen);
         player.SetCanMove(!dBoxOpen);
-        StartCoroutine(TypeDialogue(text.Lines[0]));
+        actualDialogue = dialogue;
+        StartCoroutine(TypeDialogue(actualDialogue.Lines[currentLine]));
     }
 
     public void CloseDialogueBox()
@@ -75,9 +81,10 @@ public class DialogueController : MonoBehaviour
         dBoxOpen = false;
         textBox.SetActive(dBoxOpen);
         player.SetCanMove(!dBoxOpen);
+        playerSettings.SetCanInteract(true);
     }
 
-    public IEnumerator TypeDialogue(string line)
+    public IEnumerator TypeDialogue(string line) // OJO QUE EL TEXT NO TINGUI MÉS DE X CHARS!!!
     {
         dialogueText.text = string.Empty; // lo mateix que posar ->    = "";
 
@@ -87,9 +94,20 @@ public class DialogueController : MonoBehaviour
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
 
-        yield return StartCoroutine(WaitForInteract(() => nextButtonPressed));
         //yield return new WaitForSeconds(3f); // dialogue interact
-        CloseDialogueBox();
+        if (currentLine < actualDialogue.Lines.Count - 1) 
+        {
+            yield return StartCoroutine(WaitForInteract(() => nextButtonPressed));
+            currentLine++; 
+            ShowDialogue(actualDialogue);
+        }
+        else
+        {
+            yield return StartCoroutine(WaitForInteract(() => nextButtonPressed));
+            currentLine = 0;
+            actualDialogue = null;
+            CloseDialogueBox();
+        }
     }
 
     private IEnumerator WaitForInteract(Func<bool> condition, float checkInterval = 0.1f)

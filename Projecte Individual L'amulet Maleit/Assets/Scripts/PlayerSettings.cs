@@ -18,7 +18,9 @@ public class PlayerSettings : MonoBehaviour
     [SerializeField] Animator axe_animator;
 
     [SerializeField] Transform interactPosition;
+    [SerializeField] float interactRange = 0.5f;
     public LayerMask interactable;
+    private bool canInteract = true;
 
     private Vector2 _moveDirection;
 
@@ -29,12 +31,19 @@ public class PlayerSettings : MonoBehaviour
         // same per weaponDamage
         maxHealth = health;
         weaponCooldown = 0;
+    }
+
+    private void OnEnable()
+    {
         InputController.OnAttackInput += Attack;
         InputController.OnMoveInput += SetMoveDirection;
+        InputController.OnOverworldInteract += Interact;
     }
-    void OnDestroy()
+    void OnDisable()
     {
         InputController.OnAttackInput -= Attack;
+        InputController.OnMoveInput -= SetMoveDirection;
+        InputController.OnOverworldInteract -= Interact;
     }
     void SetMoveDirection(Vector2 moveDirection)
     {
@@ -77,19 +86,19 @@ public class PlayerSettings : MonoBehaviour
     {
         if (_moveDirection.x < 0 && _moveDirection.y == 0) // mira a la izq
         {
-            interactPosition.localScale = new Vector3(Mathf.Abs(interactPosition.localScale.x) * -1, interactPosition.localScale.y, interactPosition.localScale.z);
+            interactPosition.localPosition = new Vector3(-1f, 0f, interactPosition.localScale.z);
         }
         else if ( _moveDirection.x > 0 && _moveDirection.y == 0) // mira a la dere
         {
-            interactPosition.localScale = new Vector3(Mathf.Abs(interactPosition.localScale.x), interactPosition.localScale.y, interactPosition.localScale.z);
+            interactPosition.localPosition = new Vector3(1f, 0f, interactPosition.localScale.z);
         }
         else if (_moveDirection.y < 0  && _moveDirection.x == 0) // mira abajo
         {
-            interactPosition.localScale = new Vector3(interactPosition.localScale.x, Mathf.Abs(interactPosition.localScale.y) * -1, interactPosition.localScale.z);
+            interactPosition.localPosition = new Vector3(0f, -1f, interactPosition.localScale.z);
         }
         else if (_moveDirection.y > 0 && _moveDirection.x == 0) // mira arriba
         {
-            interactPosition.localScale = new Vector3(interactPosition.localScale.x, Mathf.Abs(interactPosition.localScale.y), interactPosition.localScale.z);
+            interactPosition.localPosition = new Vector3(0f, 1f, interactPosition.localScale.z);
         }
     }
 
@@ -122,16 +131,44 @@ public class PlayerSettings : MonoBehaviour
 
     public void Interact()
     {
-        if (SceneController.GetActualSceneIndex() != 2)
+        if (SceneController.GetActualSceneIndex() != 2 && canInteract) // tot menys l'escena de batalla
         {
-            Collider2D interactedObjects = Physics2D.OverlapCircle(interactPosition.position, 0.5f, interactable); // Sense el ALL perquè només vull una interacció
-            // como podria hacer que esto sea una colisión que active el OnCollisionEnter de otros objetos?
+            Collider2D interactedObject = Physics2D.OverlapCircle(interactPosition.position, interactRange, interactable); // Sense el ALL (OverlapCircle) perquè només vull una interacció
+            if (interactedObject != null)
+            {
+                if (interactedObject.GetComponent<NPCController>() != null)
+                {
+                    NPCController nPCController = interactedObject.GetComponent< NPCController>();
+                    nPCController.Interacted();
+                }
+                else if (interactedObject.GetComponent <ItemController>() != null)
+                {
+                    // item thing
+                }
+                else
+                {
+                    Debug.Log("No hay nada con que interactuar");
+                }
+            }
         }
+    }
+
+    public void SetCanInteract(bool canInteract)
+    {
+        this.canInteract = canInteract;
+    }
+
+    public bool GetCanInteract()
+    {
+        return canInteract;
     }
 
     private void OnDrawGizmosSelected() // Això serveix per poder veure el rang d'atac desde l'escena (no en el joc)
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPosition.position, attackRange);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(interactPosition.position, interactRange);
     }
 }
