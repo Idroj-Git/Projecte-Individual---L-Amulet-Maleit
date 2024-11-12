@@ -1596,7 +1596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e6d49557cf6e94abc9c1d8c1df36ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoRestante: 20
+  tiempoRestante: 20000
   enemiesAlive: 0
 --- !u!4 &1691222899
 Transform:

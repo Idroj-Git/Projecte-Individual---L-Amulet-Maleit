@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
-    public float tiempoRestante = 30f;
+    public float tiempoRestante = 3000f; // Posat molt alt per fer proves, CANVIAR O ELIMINAR!
     public int enemiesAlive = 0;
 
     // Start is called before the first frame update
