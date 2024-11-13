@@ -107,7 +107,7 @@ public class PlayerSettings : MonoBehaviour
         this.health -= dmg;
         if (this.health <= 0)
         {
-            SceneController.LoadScene(4);
+            SceneController.LoadLoseScene();
         }
         Debug.Log("*player says* Ouch");
     }

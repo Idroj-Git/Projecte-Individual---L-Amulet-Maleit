@@ -32,7 +32,7 @@ public class BattleManager : MonoBehaviour
         {
             Debug.Log("Tots els enemics han sigut derrotats, VICTORIA!");
         }
-        SceneController.LoadScene(1);
+        SceneController.LoadMainWorldScene();
     }
 
     public void SetEnemiesAlive(int enemiesAlive)

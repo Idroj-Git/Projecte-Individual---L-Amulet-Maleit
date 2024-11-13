@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/BattleScene.unity
     guid: e3b19738311ae8947b87ca361f4f44ab
   - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 403b315f773699849a1ee917a31a5af0
+  - enabled: 1
+    path: Assets/Scenes/Cave.unity
+    guid: f435b94475ed05044b9639971e644f22
+  - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: 272a2b0a99b18c6428cfc1846193de5e
   - enabled: 1

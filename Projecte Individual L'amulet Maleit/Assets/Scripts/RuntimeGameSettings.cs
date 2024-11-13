@@ -6,7 +6,8 @@ public class RuntimeGameSettings : MonoBehaviour
 {
     public static RuntimeGameSettings Instance;
 
-    public Vector2 playerLastPosition;
+    public Vector2 playerLastPosition; // POSAR PRIVATE I ARREGLAR ERRORS
+    public int lastScene;
 
     private void Awake()
     {
@@ -30,5 +31,13 @@ public class RuntimeGameSettings : MonoBehaviour
     {
         return this.playerLastPosition;
     }
-    // getter / setter de playerLastPosition
+    
+    public int GetLastScene()
+    {
+        return this.lastScene;
+    }
+    public void SetLastScene(int scene)
+    {
+        this.lastScene = scene;
+    }
 }

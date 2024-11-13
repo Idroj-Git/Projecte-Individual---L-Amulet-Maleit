@@ -95,11 +95,19 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("¡HA APARECIDO UN ENEMIGO!");
             RuntimeGameSettings.Instance.SetPlayerLastPosition(_rb.position); // CANVIAR AMB EL SETTER
-            SceneController.LoadScene(2);
+            SceneController.LoadBattleScene();
         }
         else if (collision.CompareTag("CaveEntrance"))
         {
-            SceneController.LoadScene(3);
+            SceneController.LoadCaveScene();
+        }
+        else if (collision.CompareTag("ForestEntrance"))
+        {
+            SceneController.LoadForestScene();
+        }
+        else if (collision.CompareTag("ForestExit"))
+        {
+            SceneController.LoadMainWorldScene();
         }
     }
 

@@ -39,12 +39,12 @@ public class ButtonController : MonoBehaviour
             ClosePauseMenu();
         }
 
-        SceneController.LoadScene(0);
+        SceneController.LoadMainMenuScene();
     }
 
     public void StartGame() // mainWorld
     {
-        SceneController.LoadScene(1);
+        SceneController.LoadMainWorldScene();
     }
 
     public void ExitGame() //apagar el joc
