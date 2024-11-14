@@ -99,14 +99,22 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (collision.CompareTag("CaveEntrance"))
         {
+            RuntimeGameSettings.Instance.SetPlayerLastPosition(new Vector2(0f, 0f)); // POSICIÓ DE LA ENTRADA DINS LA COVA. Això ho necessito aquí perquè al combatre amb enemics em canvia el lloc on apareix
+            SceneController.LoadCaveScene();
+        }
+        else if (collision.CompareTag("CaveExit"))
+        {
+            RuntimeGameSettings.Instance.SetPlayerLastPosition(new Vector2(11.05f, -14.8f)); // POSICIÓ DE LA ENTRADA DINS LA COVA. Això ho necessito aquí perquè al combatre amb enemics em canvia el lloc on apareix
             SceneController.LoadCaveScene();
         }
         else if (collision.CompareTag("ForestEntrance"))
         {
+            RuntimeGameSettings.Instance.SetPlayerLastPosition(new Vector2(0f, 0f)); // POSICIÓ DE LA SORTIDA DEL BOSC
             SceneController.LoadForestScene();
         }
         else if (collision.CompareTag("ForestExit"))
         {
+            RuntimeGameSettings.Instance.SetPlayerLastPosition(new Vector2(11.05f, -14.8f)); // POSICIÓ DE LA SORTIDA DEL BOSC
             SceneController.LoadMainWorldScene();
         }
     }

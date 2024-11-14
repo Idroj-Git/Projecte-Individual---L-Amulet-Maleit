@@ -11,7 +11,7 @@ public class ButtonController : MonoBehaviour
     [SerializeField] CanvasGroup pauseMenuCanvasGroup;
     private void Start()
     {
-        pausableScenes = new int[] { 1, 2 };
+        pausableScenes = new int[] { 1, 2, 3, 4};
         isGamePaused = false;
 
         if (pausableScenes.Contains(SceneController.GetActualSceneIndex()) && pauseMenuCanvas != null)

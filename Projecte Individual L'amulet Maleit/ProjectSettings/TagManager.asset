@@ -6,6 +6,9 @@ TagManager:
   tags:
   - SpawnableEnemies
   - CaveEntrance
+  - ForestEntrance
+  - ForestExit
+  - CaveExit
   layers:
   - Default
   - TransparentFX

@@ -9,9 +9,30 @@ public static class SceneController
     {
         if (sceneIndex < SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene(sceneIndex);
+            if (CanvasFade.Instance != null)
+            {
+                //CanvasFade.Instance.FadeCanvas();
+                CanvasFade.Instance.LoadSceneFadingCoroutine(sceneIndex);
+            }
+            //StartCoroutine(LoadSceneFading(sceneIndex)); NO ES POT FER AQUI PERQUÈ ES ESTÀTIC!
+            //SceneManager.LoadScene(sceneIndex);
         }
     }
+
+    //private static IEnumerator LoadSceneFading(int sceneIndex)
+    //{
+    //    CanvasFade.Instance.FadeCanvas();
+
+    //    Debug.Log("Escena NO cargada");
+    //    yield return new WaitForSeconds(2.1f);
+
+    //    SceneManager.LoadScene(sceneIndex);
+    //    Debug.Log("Escena cargada");
+
+    //    yield return new WaitForSeconds(2.1f);
+
+    //    CanvasFade.Instance.FadeCanvas();
+    //}
 
     public static void RestartScene()
     {
