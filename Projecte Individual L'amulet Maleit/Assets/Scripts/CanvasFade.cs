@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -12,6 +13,9 @@ public class CanvasFade : MonoBehaviour
     private static CanvasFade instance;
     private static bool isInitalized; //Boolea que em serveix per executar coses NOMÉS al iniciar el joc.
 
+    [SerializeField] CinemachineVirtualCamera virtualCam;
+    public CinemachineFramingTransposer transposer;
+
     // Propiedad para acceder a la instancia
     public static CanvasFade Instance
     {
@@ -25,11 +29,22 @@ public class CanvasFade : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
         canvasGroup = GetComponent<CanvasGroup>(); // Aqui falla si no hi ha canvas group!
-        
+        virtualCam = GetComponent<CinemachineVirtualCamera>();
+
+        if (virtualCam == null)
+        {
+            virtualCam = FindObjectOfType<CinemachineVirtualCamera>();
+            Debug.Log("Nova camera virtual" + virtualCam);
+            if (virtualCam != null)
+            {
+                transposer = virtualCam.GetCinemachineComponent<CinemachineFramingTransposer>();
+                Debug.Log("Nou Transponder" + transposer);
+            }
+        }
+
         if (!isInitalized) // Es guarda una sola vegada, per evitar problemes amb el isCanvasOpen i alpha
         {
             canvasGroup.interactable = false;
@@ -50,6 +65,12 @@ public class CanvasFade : MonoBehaviour
         {
             instance = this;
         }
+        
+        
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
     }
 
     // Update is called once per frame
@@ -60,12 +81,14 @@ public class CanvasFade : MonoBehaviour
 
     private void FadeInCanvas()
     {
-        StartCoroutine(fadeCanvas(canvasGroup, 0f, 1f, 2f));
+        Time.timeScale = 0;
+        StartCoroutine(fadeCanvas(canvasGroup, 0f, 1f, 0.5f));
         isCanvasOpen = true;
     }
     private void FadeOutCanvas()
     {
-        StartCoroutine(fadeCanvas(canvasGroup, 1f, 0f, 2f));
+        StartCoroutine(fadeCanvas(canvasGroup, 1f, 0f, 0.5f));
+        Time.timeScale = 1;
         isCanvasOpen = false;
     }
 
@@ -87,11 +110,12 @@ public class CanvasFade : MonoBehaviour
         canvasGroup.alpha += startAlpha;
         while (elapsedTime < duration)
         {
-            elapsedTime += Time.deltaTime;
+            elapsedTime += Time.unscaledDeltaTime;
             canvasGroup.alpha = Mathf.Lerp(startAlpha, endAlpha, elapsedTime/duration);
 
             yield return null;
         }
+
 
         yield return null;
     }
@@ -104,12 +128,12 @@ public class CanvasFade : MonoBehaviour
     {
         StartCoroutine(LoadSceneFading2());
     }
-    private static IEnumerator LoadSceneFading(int sceneIndex)
+    private static IEnumerator LoadSceneFading(int sceneIndex) // posar fading
     {
         Instance.FadeCanvas();
 
         Debug.Log("Escena NO cargada");
-        yield return new WaitForSeconds(2.1f);
+        yield return new WaitForSecondsRealtime(1.3f);
 
         SceneManager.LoadScene(sceneIndex);
 
@@ -120,8 +144,39 @@ public class CanvasFade : MonoBehaviour
 
     private static IEnumerator LoadSceneFading2()
     {
+        // Cambiar el damping a valores bajos inmediatamente antes de la transición
+        if (Instance.transposer != null)
+        {
+            Instance.CinemachineDampingChange(); // Cambia el damping a 0 para eliminar el movimiento
+        }
+
+        // Pausa el tiempo para que el fade suceda sin interferencia
+        yield return new WaitForSecondsRealtime(0.5f);
         Instance.FadeCanvas();
-        Debug.Log("Escena cargada");
-        yield return new WaitForSeconds(2.1f);
+
+        // Pausa adicional para asegurar que el fade esté completo
+        yield return new WaitForSecondsRealtime(0.5f);
+
+        // Restablecer el damping a su valor original después del fade
+        if (Instance.transposer != null)
+        {
+            Instance.CinemachineDampingReset();
+        }
+
+    }
+
+    private void CinemachineDampingChange()
+    {
+        Debug.Log("Damping Changed");
+        transposer.m_XDamping = 0;
+        transposer.m_YDamping = 0;
+        transposer.m_ZDamping = 0;
+    }
+    private void CinemachineDampingReset()
+    {
+        Debug.Log("Damping Reset");
+        transposer.m_XDamping = 1f;
+        transposer.m_YDamping = 1f;
+        transposer.m_ZDamping = 1f;
     }
 }

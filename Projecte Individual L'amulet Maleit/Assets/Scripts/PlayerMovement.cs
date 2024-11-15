@@ -17,11 +17,32 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canMove = true;
 
-
+    
     // Start is called before the first frame update
     void Start()
     {
 
+        //_rb = GetComponent<Rigidbody2D>();
+
+        //spawnCooldown = spawnCooldownMax;
+
+        //if (SceneController.GetActualSceneIndex() == 2)
+        //{
+        //    _rb.position = new Vector2(-6, 2); // aprox de on vull que faci spawn
+        //}
+        //else if (RuntimeGameSettings.Instance.GetPlayerLastPostion() != Vector2.zero)
+        //{
+        //    _rb.position = RuntimeGameSettings.Instance.GetPlayerLastPostion();
+        //}
+        //else
+        //{
+        //    _rb.position = new Vector2(-6, 2);
+        //}
+    }
+
+    private void OnEnable()
+    {
+        InputController.OnMoveInput += SetMoveDirection; // Aconseguir input de moviment
         _rb = GetComponent<Rigidbody2D>();
 
         spawnCooldown = spawnCooldownMax;
@@ -34,15 +55,6 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb.position = RuntimeGameSettings.Instance.GetPlayerLastPostion();
         }
-        //else
-        //{
-        //    _rb.position = new Vector2(-6, 2);
-        //}
-    }
-
-    private void OnEnable()
-    {
-        InputController.OnMoveInput += SetMoveDirection; // Aconseguir input de moviment
     }
     private void OnDisable()
     {
@@ -104,8 +116,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (collision.CompareTag("CaveExit"))
         {
-            RuntimeGameSettings.Instance.SetPlayerLastPosition(new Vector2(11.05f, -14.8f)); // POSICIÓ DE LA ENTRADA DINS LA COVA. Això ho necessito aquí perquè al combatre amb enemics em canvia el lloc on apareix
-            SceneController.LoadCaveScene();
+            RuntimeGameSettings.Instance.SetPlayerLastPosition(new Vector2(81.55f, 32.8f)); // POSICIÓ DE LA ENTRADA DINS LA COVA. Això ho necessito aquí perquè al combatre amb enemics em canvia el lloc on apareix
+            SceneController.LoadMainWorldScene();
         }
         else if (collision.CompareTag("ForestEntrance"))
         {
@@ -114,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (collision.CompareTag("ForestExit"))
         {
-            RuntimeGameSettings.Instance.SetPlayerLastPosition(new Vector2(11.05f, -14.8f)); // POSICIÓ DE LA SORTIDA DEL BOSC
+            RuntimeGameSettings.Instance.SetPlayerLastPosition(new Vector2(11.05f, -14.6f)); // POSICIÓ DE LA SORTIDA DEL BOSC
             SceneController.LoadMainWorldScene();
         }
     }
