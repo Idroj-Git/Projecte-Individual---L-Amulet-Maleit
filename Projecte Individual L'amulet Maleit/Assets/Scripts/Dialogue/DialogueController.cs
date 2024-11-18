@@ -57,16 +57,42 @@ public class DialogueController : MonoBehaviour
             {
                 Debug.Log("Click!");
                 nextButtonPressed = true;
+                StartCoroutine(DisableInitialClick());
                 StartCoroutine(InteractCooldown());
             }
+            //else
+            //{
+            //    Debug.Log("NextButtonPressed"); <-- No s'executa mai
+            //}
         }
+        //StartCoroutine(NextButtonPressedWait());
     }
 
     private IEnumerator InteractCooldown() // Retorna el valor de nextButtonPressed a false.
     {
-        yield return new WaitForSeconds(0.06f);
-        nextButtonPressed = false;
+        yield return new WaitForSeconds(0.1f);
+        nextButtonPressed = !nextButtonPressed;
     }
+
+    //private IEnumerator NextButtonPressedWait()
+    //{
+    //    yield return new WaitForEndOfFrame();
+    //    StartCoroutine(InteractCooldown());
+    //    if (dBoxOpen)
+    //    {
+    //        if (!nextButtonPressed)
+    //        {
+    //            Debug.Log("Click!");
+    //            StartCoroutine(DisableInitialClick());
+    //            nextButtonPressed = true;
+    //            StartCoroutine(InteractCooldown());
+    //        }
+    //        else
+    //        {
+    //            Debug.Log("NextButtonPressed");
+    //        }
+    //    }
+    //}
 
     private void Start()
     {
@@ -81,6 +107,7 @@ public class DialogueController : MonoBehaviour
 
     public void ShowDialogue(TextStorage dialogue) // METODE PRINCIPAL
     {
+        Debug.Log("truers");
         dBoxOpen = true;
         textBox.SetActive(dBoxOpen);
         player.SetCanMove(!dBoxOpen);
@@ -92,7 +119,6 @@ public class DialogueController : MonoBehaviour
             disableInitialClickCoroutine = null;
         }
         disableInitialClickCoroutine = StartCoroutine(DisableInitialClick());
-        StartCoroutine(DisableInitialClick());
 
         string line = actualDialogue.Lines[currentLine];
         int separatorIndex = line.IndexOf('>');
@@ -122,6 +148,8 @@ public class DialogueController : MonoBehaviour
 
     public IEnumerator TypeDialogue(string line) // OJO QUE EL TEXT NO TINGUI MÉS DE X CHARS!!!
     {
+        yield return new WaitForEndOfFrame();
+        nextButtonPressed = false;
         dialogueText.text = string.Empty; // lo mateix que posar ->    = "";
         foreach (char letter in line.ToCharArray())
         {
@@ -130,7 +158,7 @@ public class DialogueController : MonoBehaviour
             {
                 dialogueText.text = line;
                 nextButtonPressed = false;
-                canSkipDialogue = false;
+                //canSkipDialogue = false;
                 break; // Es l'única manera que se'm acudeix per poder sortir del foreach abans de que acabi...
             }
             else
@@ -140,11 +168,11 @@ public class DialogueController : MonoBehaviour
         }
         //yield return new WaitForSeconds(3f); // dialogue interact
 
-        if (currentLine < actualDialogue.Lines.Count - 1) 
+        if (currentLine < actualDialogue.Lines.Count - 1)
         {
             yield return StartCoroutine(WaitForInteract(() => nextButtonPressed));
             nextButtonPressed = false;
-            currentLine++; 
+            currentLine++;
             ShowDialogue(actualDialogue);
         }
         else
@@ -169,8 +197,8 @@ public class DialogueController : MonoBehaviour
     {
         canSkipDialogue = false;
 
-        yield return new WaitForSeconds(1.5f);
-        
+        yield return new WaitForSeconds(1.0f);
+
         canSkipDialogue = true;
     }
 }
