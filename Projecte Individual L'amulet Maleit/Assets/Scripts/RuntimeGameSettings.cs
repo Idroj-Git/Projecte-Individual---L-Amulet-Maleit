@@ -7,7 +7,7 @@ public class RuntimeGameSettings : MonoBehaviour
     public static RuntimeGameSettings Instance;
 
     public Vector2 playerLastPosition; // POSAR PRIVATE I ARREGLAR ERRORS
-    public int lastScene;
+    public int lastScene; // Quan em posi amb els playerpref guardar això tmb!
 
     private void Awake()
     {
@@ -20,6 +20,11 @@ public class RuntimeGameSettings : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        lastScene = 1;
     }
 
     public void SetPlayerLastPosition(Vector2 playerLastPosition)

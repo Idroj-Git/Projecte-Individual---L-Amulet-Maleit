@@ -15,34 +15,20 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Animator _animator;
     [SerializeField] SpriteRenderer spriteRenderer;
 
-    private bool canMove = true;
+    private bool canMove = true, isPlayerOnSpawner = false;
+    private Collider2D lastCollision;
 
     
     // Start is called before the first frame update
     void Start()
     {
-
-        //_rb = GetComponent<Rigidbody2D>();
-
-        //spawnCooldown = spawnCooldownMax;
-
-        //if (SceneController.GetActualSceneIndex() == 2)
-        //{
-        //    _rb.position = new Vector2(-6, 2); // aprox de on vull que faci spawn
-        //}
-        //else if (RuntimeGameSettings.Instance.GetPlayerLastPostion() != Vector2.zero)
-        //{
-        //    _rb.position = RuntimeGameSettings.Instance.GetPlayerLastPostion();
-        //}
-        //else
-        //{
-        //    _rb.position = new Vector2(-6, 2);
-        //}
     }
 
     private void OnEnable()
     {
         InputController.OnMoveInput += SetMoveDirection; // Aconseguir input de moviment
+
+        //Tot això d'abaix estava al Start, però m'interessa que s'executi abans del primer frame.
         _rb = GetComponent<Rigidbody2D>();
 
         spawnCooldown = spawnCooldownMax;
@@ -85,6 +71,12 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             spawnCooldown = 0;
+            if (isPlayerOnSpawner && Random.Range(0, 100) < 23 && lastCollision.CompareTag("SpawnableEnemies") && _moveDirection != Vector2.zero)
+            {
+                Debug.Log("¡HA APARECIDO UN ENEMIGO en el update!");
+                RuntimeGameSettings.Instance.SetPlayerLastPosition(_rb.position); // CANVIAR AMB EL SETTER
+                SceneController.LoadBattleScene();
+            }
         }
     }
 
@@ -103,11 +95,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("SpawnableEnemies") && spawnCooldown == 0 && Random.Range(0, 100) < 23) // 30% de que apareixin enemics
+        if (collision.CompareTag("SpawnableEnemies") && spawnCooldown == 0 && Random.Range(0, 100) < 23) // 23% de que apareixin enemics
         {
-            Debug.Log("¡HA APARECIDO UN ENEMIGO!");
-            RuntimeGameSettings.Instance.SetPlayerLastPosition(_rb.position); // CANVIAR AMB EL SETTER
-            SceneController.LoadBattleScene();
+            //Debug.Log("¡HA APARECIDO UN ENEMIGO!");
+            //RuntimeGameSettings.Instance.SetPlayerLastPosition(_rb.position); // CANVIAR AMB EL SETTER
+            //SceneController.LoadBattleScene();
+        }
+        else if (collision.CompareTag("SpawnableEnemies"))
+        {
+            Debug.Log("aaa");
+            lastCollision = collision;
+            isPlayerOnSpawner = true;
         }
         else if (collision.CompareTag("CaveEntrance"))
         {
@@ -128,6 +126,14 @@ public class PlayerMovement : MonoBehaviour
         {
             RuntimeGameSettings.Instance.SetPlayerLastPosition(new Vector2(11.05f, -14.6f)); // POSICIÓ DE LA SORTIDA DEL BOSC
             SceneController.LoadMainWorldScene();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("SpawnableEnemies"))
+        {
+            isPlayerOnSpawner = false;
         }
     }
 

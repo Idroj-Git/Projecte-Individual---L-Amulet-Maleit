@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class TextStorage
 {
+    //[SerializeField] string name;
     [SerializeField] List<string> lines;
 
     public List<string> Lines
@@ -12,4 +13,5 @@ public class TextStorage
         get { return lines; }
     }
     
+    //public string GetName() { return name; }
 }

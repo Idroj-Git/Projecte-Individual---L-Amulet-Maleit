@@ -9,6 +9,7 @@ TagManager:
   - ForestEntrance
   - ForestExit
   - CaveExit
+  - StoryTrigger
   layers:
   - Default
   - TransparentFX

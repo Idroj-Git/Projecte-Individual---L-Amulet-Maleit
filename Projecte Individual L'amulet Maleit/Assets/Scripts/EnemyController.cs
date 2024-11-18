@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] int strength;
     private BattleManager battleManager;
     [SerializeField] Transform target;
+    private bool canMove = true;
 
     private Rigidbody2D rb;
 
@@ -39,7 +40,7 @@ public class EnemyController : MonoBehaviour
 
     private void MoveEnemy()
     {
-        if (target != null)
+        if (target != null && canMove)
         {
             Vector2 direction = (target.position - transform.position).normalized;
             rb.velocity = direction * speed;
@@ -49,13 +50,18 @@ public class EnemyController : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         this.health -= dmg;
-        speed = -20f;
+        GetKnockbacked();
         Debug.Log("*enemy says* Ouch");
         if (health <= 0)
         {
             battleManager.SetEnemiesAlive(battleManager.GetEnemiesAlive() - 1);
             Destroy(gameObject);
         }
+    }
+
+    private void GetKnockbacked()
+    {
+        speed = -6f;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -66,7 +72,13 @@ public class EnemyController : MonoBehaviour
             if (player != null)
             {
                 player.TakeDamage(strength);
+                GetKnockbacked();
             }
         }
+    }
+
+    public void SetCanMove(bool canMove)
+    {
+        this.canMove = canMove;
     }
 }

@@ -24,7 +24,7 @@ public class MainMenuController : MonoBehaviour
         }
         else
         {
-            SceneController.LoadSceneByOrder(RuntimeGameSettings.Instance.GetLastScene());
+            SceneController.LoadSceneByIndex(RuntimeGameSettings.Instance.GetLastScene());
         }
     }
 

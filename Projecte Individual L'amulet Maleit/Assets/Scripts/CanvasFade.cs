@@ -1,6 +1,7 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +10,7 @@ public class CanvasFade : MonoBehaviour
 {
     private CanvasGroup canvasGroup;
     private bool isCanvasOpen;
+    private float fadeDuration = 0.3f;
 
     private static CanvasFade instance;
     private static bool isInitalized; //Boolea que em serveix per executar coses NOMÉS al iniciar el joc.
@@ -37,11 +39,11 @@ public class CanvasFade : MonoBehaviour
         if (virtualCam == null)
         {
             virtualCam = FindObjectOfType<CinemachineVirtualCamera>();
-            Debug.Log("Nova camera virtual" + virtualCam);
+            //Debug.Log("Nova camera virtual" + virtualCam);
             if (virtualCam != null)
             {
                 transposer = virtualCam.GetCinemachineComponent<CinemachineFramingTransposer>();
-                Debug.Log("Nou Transponder" + transposer);
+                //Debug.Log("Nou Transponder" + transposer);
             }
         }
 
@@ -79,16 +81,16 @@ public class CanvasFade : MonoBehaviour
         
     }
 
-    private void FadeInCanvas()
+    private void FadeInCanvas() // obrir fade, desapareix l'escena
     {
         Time.timeScale = 0;
-        StartCoroutine(fadeCanvas(canvasGroup, 0f, 1f, 0.5f));
+        StartCoroutine(fadeCanvas(canvasGroup, 0f, 1f, fadeDuration));
         isCanvasOpen = true;
     }
-    private void FadeOutCanvas()
+    private void FadeOutCanvas() // tancar fade, apareix l'escena
     {
-        StartCoroutine(fadeCanvas(canvasGroup, 1f, 0f, 0.5f));
-        Time.timeScale = 1;
+        StartCoroutine(fadeCanvas(canvasGroup, 1f, 0f, fadeDuration));
+        //Time.timeScale = 1;
         isCanvasOpen = false;
     }
 
@@ -132,49 +134,72 @@ public class CanvasFade : MonoBehaviour
     {
         Instance.FadeCanvas();
 
-        Debug.Log("Escena NO cargada");
-        yield return new WaitForSecondsRealtime(1.3f);
+        //Debug.Log("Escena NO cargada");
+        yield return new WaitForSecondsRealtime(Instance.fadeDuration + 0.2f);
 
         SceneManager.LoadScene(sceneIndex);
 
-        //yield return new WaitForSeconds(2.1f);
+        //yield return new WaitForSeconds(2.1f); No posar res aqui sota, perquè al canviar l'escena es deixa d'executar aquest script.
 
         //Instance.FadeCanvas();
     }
 
     private static IEnumerator LoadSceneFading2()
     {
-        // Cambiar el damping a valores bajos inmediatamente antes de la transición
-        if (Instance.transposer != null)
+        if (Instance.transposer != null) //Assegura que hi hagi un transposer, en algunes escenes no utilitzo cinemachine per això ho necessito
         {
-            Instance.CinemachineDampingChange(); // Cambia el damping a 0 para eliminar el movimiento
+            Instance.CinemachineDampingChange(); // Ajusta el damping a 0 perque es mogui "instantaneament" al centre del player
         }
 
-        // Pausa el tiempo para que el fade suceda sin interferencia
-        yield return new WaitForSecondsRealtime(0.5f);
-        Instance.FadeCanvas();
+        // Impedeixo que el jugador i altres es puguin moure mentres s'executa el fade.
+        PlayerMovement playerMovement = FindObjectOfType<PlayerMovement>();
+        if (playerMovement != null)
+        {
+            playerMovement.SetCanMove(false);
+        }
+        EnemyController[] enemies = FindObjectsOfType<EnemyController>();
+        foreach (EnemyController enemy in enemies)
+        {
+            enemy.SetCanMove(false);
+        }
 
-        // Pausa adicional para asegurar que el fade esté completo
-        yield return new WaitForSecondsRealtime(0.5f);
+        Time.timeScale = 1; // NECESSARI PERQUE ES MOGUI LA CAMERA!!! (el damping funciona amb deltaTime)
 
-        // Restablecer el damping a su valor original después del fade
+        yield return new WaitForSecondsRealtime(Instance.fadeDuration); // Espera a que la camera estigui a on ha d'estar
+
         if (Instance.transposer != null)
         {
-            Instance.CinemachineDampingReset();
+            Instance.CinemachineDampingReset(); // Torna el damping al estat original
         }
+        Time.timeScale = 0; // Torna a pausar el joc
+        
+        Instance.FadeCanvas(); // CANVASFADE, sempre serà el fadeout
+
+        yield return new WaitForSecondsRealtime(Instance.fadeDuration); //Espera a que el fade s'acabi
+
+        // Torna tot a la normalitat. 
+        if (playerMovement != null)
+        {
+            playerMovement.SetCanMove(true);
+        }
+        foreach (EnemyController enemy in enemies)
+        {
+            enemy.SetCanMove(true);
+        }
+        Time.timeScale = 1;
 
     }
 
     private void CinemachineDampingChange()
     {
-        Debug.Log("Damping Changed");
+        //Debug.Log("Damping Changed");
         transposer.m_XDamping = 0;
         transposer.m_YDamping = 0;
         transposer.m_ZDamping = 0;
     }
     private void CinemachineDampingReset()
     {
-        Debug.Log("Damping Reset");
+        //Debug.Log("Damping Reset");
         transposer.m_XDamping = 1f;
         transposer.m_YDamping = 1f;
         transposer.m_ZDamping = 1f;

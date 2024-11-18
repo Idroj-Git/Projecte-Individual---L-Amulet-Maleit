@@ -54,7 +54,7 @@ public static class SceneController
     }
 
 
-    // Diferents Loads
+    // Diferents Loads per cada escena
     public static void LoadMainMenuScene()
     {
         LoadScene(0);
@@ -65,6 +65,7 @@ public static class SceneController
     }
     public static void LoadBattleScene()
     {
+        RuntimeGameSettings.Instance.lastScene = GetActualSceneIndex();
         LoadScene(2);
     }
     public static void LoadForestScene()
@@ -84,9 +85,9 @@ public static class SceneController
         LoadScene(6);
     }
 
-    public static void LoadSceneByOrder(int order)
+    public static void LoadSceneByIndex(int index)
     {
-        switch (order)
+        switch (index)
         {
             case 0:
                 LoadMainMenuScene();

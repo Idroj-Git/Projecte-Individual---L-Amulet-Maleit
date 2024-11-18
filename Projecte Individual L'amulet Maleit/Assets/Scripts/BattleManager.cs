@@ -7,6 +7,8 @@ public class BattleManager : MonoBehaviour
     public float tiempoRestante = 3000f; // Posat molt alt per fer proves, CANVIAR O ELIMINAR!
     public int enemiesAlive = 0;
 
+    private bool victoryCalled = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +18,9 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (tiempoRestante < 0 || enemiesAlive == 0)
+        if ((tiempoRestante < 0 || enemiesAlive == 0) && !victoryCalled)
         {
+            victoryCalled = true;
             Victory();
         }
         else
@@ -32,7 +35,7 @@ public class BattleManager : MonoBehaviour
         {
             Debug.Log("Tots els enemics han sigut derrotats, VICTORIA!");
         }
-        SceneController.LoadMainWorldScene();
+        SceneController.LoadSceneByIndex(RuntimeGameSettings.Instance.lastScene);
     }
 
     public void SetEnemiesAlive(int enemiesAlive)

@@ -12,17 +12,20 @@ public class DialogueController : MonoBehaviour
 
     [SerializeField] GameObject textBox;
     [SerializeField] TMP_Text dialogueText;
+    [SerializeField] TMP_Text nameText;
     private float lettersPerSecond = 40;
 
     private bool dBoxOpen = false;
 
     [SerializeField] PlayerMovement player;
     [SerializeField] PlayerSettings playerSettings;
-    private bool nextButtonPressed = false;
+    private bool nextButtonPressed = false, canSkipDialogue = false;
 
     private TextStorage actualDialogue;
     private int currentLine = 0;
-//    private int maxLine;
+
+    private Coroutine disableInitialClickCoroutine;
+    //private int maxLine;
 
     private void Awake() // Singleton
     {
@@ -46,18 +49,22 @@ public class DialogueController : MonoBehaviour
         InputController.OnInteractDialogue -= SetNextButtonPressed;
     }
 
-    private void SetNextButtonPressed()
+    private void SetNextButtonPressed() // Controla el input del click
     {
-        if (!nextButtonPressed)
+        if (dBoxOpen)
         {
-            nextButtonPressed = true;
-            StartCoroutine(InteractCooldown());
+            if (!nextButtonPressed)
+            {
+                Debug.Log("Click!");
+                nextButtonPressed = true;
+                StartCoroutine(InteractCooldown());
+            }
         }
     }
 
-    private IEnumerator InteractCooldown()
+    private IEnumerator InteractCooldown() // Retorna el valor de nextButtonPressed a false.
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.06f);
         nextButtonPressed = false;
     }
 
@@ -67,13 +74,42 @@ public class DialogueController : MonoBehaviour
         textBox.SetActive(dBoxOpen);
     }
 
-    public void ShowDialogue(TextStorage dialogue)
+    private void SetTextName(string name)
+    {
+        nameText.text = name;
+    }
+
+    public void ShowDialogue(TextStorage dialogue) // METODE PRINCIPAL
     {
         dBoxOpen = true;
         textBox.SetActive(dBoxOpen);
         player.SetCanMove(!dBoxOpen);
         actualDialogue = dialogue;
-        StartCoroutine(TypeDialogue(actualDialogue.Lines[currentLine]));
+        nextButtonPressed = false;
+        if (disableInitialClickCoroutine != null)
+        {
+            StopCoroutine(disableInitialClickCoroutine);
+            disableInitialClickCoroutine = null;
+        }
+        disableInitialClickCoroutine = StartCoroutine(DisableInitialClick());
+        StartCoroutine(DisableInitialClick());
+
+        string line = actualDialogue.Lines[currentLine];
+        int separatorIndex = line.IndexOf('>');
+
+        if (separatorIndex != -1) // Asegura que hi ha nom,
+        {
+            string characterName = line.Substring(0, separatorIndex + 1).Trim();
+            string dialogueText = line.Substring(separatorIndex + 1).Trim();
+
+            SetTextName(characterName);
+            StartCoroutine(TypeDialogue(dialogueText));
+        }
+        else
+        {
+            SetTextName("<???>"); // Si no troba el nom es posa ??? per default.
+            StartCoroutine(TypeDialogue(line));
+        }
     }
 
     public void CloseDialogueBox()
@@ -87,23 +123,34 @@ public class DialogueController : MonoBehaviour
     public IEnumerator TypeDialogue(string line) // OJO QUE EL TEXT NO TINGUI MÉS DE X CHARS!!!
     {
         dialogueText.text = string.Empty; // lo mateix que posar ->    = "";
-
         foreach (char letter in line.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(1f / lettersPerSecond);
+            if (nextButtonPressed && canSkipDialogue)
+            {
+                dialogueText.text = line;
+                nextButtonPressed = false;
+                canSkipDialogue = false;
+                break; // Es l'única manera que se'm acudeix per poder sortir del foreach abans de que acabi...
+            }
+            else
+            {
+                yield return new WaitForSeconds(1f / lettersPerSecond);
+            }
         }
-
         //yield return new WaitForSeconds(3f); // dialogue interact
+
         if (currentLine < actualDialogue.Lines.Count - 1) 
         {
             yield return StartCoroutine(WaitForInteract(() => nextButtonPressed));
+            nextButtonPressed = false;
             currentLine++; 
             ShowDialogue(actualDialogue);
         }
         else
         {
             yield return StartCoroutine(WaitForInteract(() => nextButtonPressed));
+            nextButtonPressed = false;
             currentLine = 0;
             actualDialogue = null;
             CloseDialogueBox();
@@ -118,4 +165,12 @@ public class DialogueController : MonoBehaviour
         }
     }
 
+    private IEnumerator DisableInitialClick() // Evita que el botó es pugui premer fins que passa cert temps.
+    {
+        canSkipDialogue = false;
+
+        yield return new WaitForSeconds(1.5f);
+        
+        canSkipDialogue = true;
+    }
 }

@@ -22,6 +22,8 @@ public class PlayerSettings : MonoBehaviour
     public LayerMask interactable;
     private bool canInteract = true;
 
+    [SerializeField] ParticleSystem damagedParticleSystem;
+
     private Vector2 _moveDirection;
 
     // Start is called before the first frame update
@@ -105,6 +107,7 @@ public class PlayerSettings : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         this.health -= dmg;
+        damagedParticleSystem.Play();
         if (this.health <= 0)
         {
             SceneController.LoadLoseScene();
