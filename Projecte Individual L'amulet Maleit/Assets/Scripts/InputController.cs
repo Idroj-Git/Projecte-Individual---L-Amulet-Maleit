@@ -61,22 +61,23 @@ public class InputController : MonoBehaviour
     {
         moveDirection = context.ReadValue<Vector2>();
     }
-    
+
     void AttackActionPerformed(InputAction.CallbackContext context)
     {
         OnAttackInput?.Invoke(); // si es un button posar-ho dins del mètode
     }
-    
+
     void PauseActionPerformed(InputAction.CallbackContext context)
     {
         OnPauseGameInput?.Invoke(); // si es un button posar-ho dins del mètode
     }
-    
+
     void DialogueActionPerformed(InputAction.CallbackContext context)
     {
+        Debug.Log("A");
         OnInteractDialogue?.Invoke(); // si es un button posar-ho dins del mètode
     }
-    
+
     void OverworldActionPerformed(InputAction.CallbackContext context)
     {
         OnOverworldInteract?.Invoke(); // si es un button posar-ho dins del mètode

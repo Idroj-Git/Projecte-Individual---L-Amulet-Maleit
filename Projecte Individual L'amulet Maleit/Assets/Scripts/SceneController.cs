@@ -19,21 +19,6 @@ public static class SceneController
         }
     }
 
-    //private static IEnumerator LoadSceneFading(int sceneIndex)
-    //{
-    //    CanvasFade.Instance.FadeCanvas();
-
-    //    Debug.Log("Escena NO cargada");
-    //    yield return new WaitForSeconds(2.1f);
-
-    //    SceneManager.LoadScene(sceneIndex);
-    //    Debug.Log("Escena cargada");
-
-    //    yield return new WaitForSeconds(2.1f);
-
-    //    CanvasFade.Instance.FadeCanvas();
-    //}
-
     public static void RestartScene()
     {
         LoadScene(SceneManager.GetActiveScene().buildIndex);
