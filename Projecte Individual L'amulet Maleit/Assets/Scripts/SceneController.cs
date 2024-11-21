@@ -63,7 +63,8 @@ public static class SceneController
     }
     public static void LoadWinScene()
     {
-        LoadScene(5);
+        SceneManager.LoadScene(5);
+        //LoadScene(5);
     }
     public static void LoadLoseScene()
     {

@@ -41,6 +41,11 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb.position = RuntimeGameSettings.Instance.GetPlayerLastPostion();
         }
+
+        if (PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName) <= 1)
+        {
+            canMove = false;
+        }
     }
     private void OnDisable()
     {
@@ -71,9 +76,9 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             spawnCooldown = 0;
-            if (isPlayerOnSpawner && Random.Range(0, 100) < 23 && lastCollision.CompareTag("SpawnableEnemies") && _moveDirection != Vector2.zero)
+            if (isPlayerOnSpawner && Random.Range(0, 100) < 5 && lastCollision.CompareTag("SpawnableEnemies") && _moveDirection != Vector2.zero) // 5% de posibilitats d'spawn d'enemics
             {
-                Debug.Log("¡HA APARECIDO UN ENEMIGO en el update!");
+                //Debug.Log("¡HA APARECIDO UN ENEMIGO en el update!");
                 RuntimeGameSettings.Instance.SetPlayerLastPosition(_rb.position); // CANVIAR AMB EL SETTER
                 SceneController.LoadBattleScene();
             }
@@ -103,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (collision.CompareTag("SpawnableEnemies"))
         {
-            Debug.Log("aaa");
+            //Debug.Log("aaa");
             lastCollision = collision;
             isPlayerOnSpawner = true;
         }

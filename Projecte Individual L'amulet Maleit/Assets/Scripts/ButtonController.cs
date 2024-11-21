@@ -42,18 +42,21 @@ public class ButtonController : MonoBehaviour
         {
             ClosePauseMenu();
         }
-
+        RuntimeGameSettings.Instance.SetLastScene(1); // Reset de tot.
+        RuntimeGameSettings.Instance.SetPlayerLastPosition(new Vector2(16, 2));
         SceneController.LoadMainMenuScene();
     }
 
     public void StartGame() // mainWorld
     {
         PlayerPrefs.SetInt("GameStarted", 1);
+        PlayerPrefs.SetInt("StoryFlag", 1); // TEMPORAL, FINS QUE POSI BOTÓ DE RESET DE HISTORIA!
         SceneController.LoadMainWorldScene();
     }
 
     public void ExitGame() //apagar el joc
     {
+        PlayerPrefs.SetInt("GameStarted", 0);
         SceneController.ExitGame();
     }
     public void OpenConfig()

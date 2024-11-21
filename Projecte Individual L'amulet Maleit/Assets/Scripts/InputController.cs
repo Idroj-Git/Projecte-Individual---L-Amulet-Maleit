@@ -74,7 +74,6 @@ public class InputController : MonoBehaviour
 
     void DialogueActionPerformed(InputAction.CallbackContext context)
     {
-        Debug.Log("A");
         OnInteractDialogue?.Invoke(); // si es un button posar-ho dins del mètode
     }
 

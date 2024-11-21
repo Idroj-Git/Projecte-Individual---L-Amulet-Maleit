@@ -10,6 +10,7 @@ public class DialogueController : MonoBehaviour
 {
     public static DialogueController Instance { get; private set; }
 
+    public bool hasDialogueFinished = false;
 
     [SerializeField] GameObject textBox;
     [SerializeField] TMP_Text dialogueText;
@@ -34,8 +35,8 @@ public class DialogueController : MonoBehaviour
     private int actualDialogueID;
     private int currentLine = 0;
 
-    float maxInteractionCooldown = 0.05f;
-    float interactionCooldown = 0.05f;
+    float maxInteractionCooldown = 0.03f;
+    float interactionCooldown = 0.03f;
     bool hasInteractionCooldownFinished
     {
         get { return interactionCooldown == 0; }
@@ -76,7 +77,7 @@ public class DialogueController : MonoBehaviour
         {
             if (!nextButtonPressed)
             {
-                Debug.Log("Click!");
+                //Debug.Log("Click!");
                 nextButtonPressed = true;
             }
             //else
@@ -93,16 +94,17 @@ public class DialogueController : MonoBehaviour
     public void CloseDialogueBox()
     {
         SetDialogueBoxStatus(false);
+        hasDialogueFinished = true;
         playerSettings.SetCanInteract(true); // es posa a false en el metode de interactuar de totes les diferents interaccions
         InputController.OnInteractDialogue -= SetNextButtonPressed;
-        Debug.Log("Close");
+        //Debug.Log("Close");
     }
 
     public void OpenDialogueBox()
     {
         SetDialogueBoxStatus(true);
         InputController.OnInteractDialogue += SetNextButtonPressed;
-        Debug.Log("Open");
+        //Debug.Log("Open");
     }
 
     void SetDialogueBoxStatus(bool open)
@@ -114,7 +116,8 @@ public class DialogueController : MonoBehaviour
 
     public void ShowDialogue(TextStorage dialogue) // METODE PRINCIPAL
     {
-        Debug.Log("ShowDialogue");
+        //Debug.Log("ShowDialogue");
+        hasDialogueFinished = false;
         if (!dBoxOpen)
         {
             OpenDialogueBox();
@@ -122,7 +125,7 @@ public class DialogueController : MonoBehaviour
         actualDialogue = dialogue;
         nextButtonPressed = false;
         timeSinceDialogueBoxOpened = 0;
-        Debug.Log("nextButtonPressedIsFalse");
+        //Debug.Log("nextButtonPressedIsFalse");
 
         string line = actualDialogue.Lines[currentLine];
         int separatorIndex = line.IndexOf('>');
@@ -144,16 +147,22 @@ public class DialogueController : MonoBehaviour
 
     public void ShowStoryDialogue(int dialogueId) // METODE secundari
     {
-        Debug.Log("ShowDialogue");
+        //Debug.Log("ShowDialogue");
         if (!dBoxOpen)
         {
             OpenDialogueBox();
         }
         actualDialogueID = dialogueId;
         actualStoryDialogue = StoryController.GetDialogueById(dialogueId);
+        if (actualStoryDialogue == null)
+        {
+            Debug.LogError($"No se pudo cargar el diálogo con ID: {dialogueId}");
+            CloseDialogueBox();
+            return;
+        }
         nextButtonPressed = false;
         timeSinceDialogueBoxOpened = 0;
-        Debug.Log("nextButtonPressedIsFalse");
+        //Debug.Log("nextButtonPressedIsFalse");
 
         string line = actualStoryDialogue.lines[currentLine].text;
         string characterName = actualStoryDialogue.lines[currentLine].name;
@@ -240,49 +249,6 @@ public class DialogueController : MonoBehaviour
             }
         }
     }
-    
-    //public IEnumerator TypeStoryDialogue(string line)
-    //{
-    //    nextButtonPressed = false;
-    //    yield return null;
-    //    dialogueText.text = string.Empty; // lo mateix que posar ->    = "";
-    //    interactionCooldown = maxInteractionCooldown;
-    //    foreach (char letter in line.ToCharArray())
-    //    {
-    //        dialogueText.text += letter;
-    //        if (nextButtonPressed && canSkipDialogue)
-    //        {
-    //            dialogueText.text = line;
-    //            nextButtonPressed = false;
-    //            //canSkipDialogue = false;
-    //            break; // Es l'única manera que se'm acudeix per poder sortir del foreach abans de que acabi...
-    //        }
-    //        else
-    //        {
-    //            yield return new WaitForSeconds(1f / lettersPerSecond);
-    //        }
-    //    }
-    //    //yield return new WaitForSeconds(3f); // dialogue interact
-
-    //    if (currentLine < actualDialogue.Lines.Count - 1)
-    //    {
-    //        yield return StartCoroutine(WaitForInteract(() => nextButtonPressed && canSkipDialogue));
-    //        nextButtonPressed = false;
-    //        currentLine++;
-    //        ShowStoryDialogue(actualDialogueID);
-    //    }
-    //    else
-    //    {
-    //        yield return StartCoroutine(WaitForInteract(() => nextButtonPressed && canSkipDialogue));
-    //        nextButtonPressed = false;
-    //        currentLine = 0;
-    //        actualDialogue = null;
-    //        if (dBoxOpen)
-    //        {
-    //            CloseDialogueBox();
-    //        }
-    //    }
-    //}
 
     private IEnumerator WaitForInteract(Func<bool> condition, float checkInterval = 0.1f)
     {

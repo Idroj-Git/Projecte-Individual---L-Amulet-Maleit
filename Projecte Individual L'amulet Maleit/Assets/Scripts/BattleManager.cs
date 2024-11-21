@@ -34,6 +34,7 @@ public class BattleManager : MonoBehaviour
         if (enemiesAlive == 0)
         {
             Debug.Log("Tots els enemics han sigut derrotats, VICTORIA!");
+            //afegir sfx
         }
         SceneController.LoadSceneByIndex(RuntimeGameSettings.Instance.lastScene);
     }

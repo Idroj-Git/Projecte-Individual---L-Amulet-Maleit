@@ -26,6 +26,8 @@ public class PlayerSettings : MonoBehaviour
 
     private Vector2 _moveDirection;
 
+    [SerializeField] MusicController musicController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -108,8 +110,10 @@ public class PlayerSettings : MonoBehaviour
     {
         this.health -= dmg;
         damagedParticleSystem.Play();
+        musicController.PlayHurt();
         if (this.health <= 0)
         {
+            musicController.PlayDeath();
             SceneController.LoadLoseScene();
         }
         Debug.Log("*player says* Ouch");
@@ -121,6 +125,7 @@ public class PlayerSettings : MonoBehaviour
         {
             if (weaponCooldown <= 0)
             {
+                musicController.PlaySlash();
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies); // Mirar com es fa per que quedi una estela de dmg (coroutine o algo)
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
@@ -141,12 +146,14 @@ public class PlayerSettings : MonoBehaviour
             {
                 if (interactedObject.GetComponent<NPCController>() != null)
                 {
-                    NPCController nPCController = interactedObject.GetComponent<NPCController>();
-                    nPCController.Interacted();
+                    NPCController npcController = interactedObject.GetComponent<NPCController>();
+                    npcController.Interacted();
                 }
                 else if (interactedObject.GetComponent <ItemController>() != null)
                 {
-                    // item thing
+                    Debug.Log("Objeto detectado: " + interactedObject.name);
+                    ItemController itemController = interactedObject.GetComponent<ItemController>();
+                    itemController.Interacted();
                 }
                 else
                 {

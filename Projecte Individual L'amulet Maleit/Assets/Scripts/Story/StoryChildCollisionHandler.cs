@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class StoryChildCollisionHandler : MonoBehaviour
 {
-    private MainWorldStoryEvents parentStoryEvents;
+    private MainWorldStoryEvents mainWorldStoryEvents;
+    private ForestStoryEvents forestStoryEvents;
 
     private void Start()
     {
-        parentStoryEvents = GetComponentInParent<MainWorldStoryEvents>();
+        mainWorldStoryEvents = GetComponentInParent<MainWorldStoryEvents>();
+        forestStoryEvents = GetComponentInParent<ForestStoryEvents>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (parentStoryEvents != null)
+        if (mainWorldStoryEvents != null)
         {
-            parentStoryEvents.HandleChildCollision(collision, gameObject);
+            mainWorldStoryEvents.HandleChildCollision(collision, gameObject);
+        }
+        else if (forestStoryEvents != null)
+        {
+            forestStoryEvents.HandleChildCollision(collision, gameObject);
         }
     }
 }

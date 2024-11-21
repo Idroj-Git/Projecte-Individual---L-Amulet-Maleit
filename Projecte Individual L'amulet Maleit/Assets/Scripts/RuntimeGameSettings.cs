@@ -9,6 +9,8 @@ public class RuntimeGameSettings : MonoBehaviour
     public Vector2 playerLastPosition; // POSAR PRIVATE I ARREGLAR ERRORS
     public int lastScene; // Quan em posi amb els playerpref guardar això tmb!
 
+    public static string storyFlagName = "StoryFlag";
+
     private void Awake()
     {
         if (Instance != null)

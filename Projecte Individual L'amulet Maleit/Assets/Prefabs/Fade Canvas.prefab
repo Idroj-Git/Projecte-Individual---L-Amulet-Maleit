@@ -262,7 +262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc410e72dd76254e84a51de12184fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 4831086718530259853}
+  virtualCam: {fileID: 0}
+  transposer: {fileID: 0}
 --- !u!1 &7641126986362312134
 GameObject:
   m_ObjectHideFlags: 0
