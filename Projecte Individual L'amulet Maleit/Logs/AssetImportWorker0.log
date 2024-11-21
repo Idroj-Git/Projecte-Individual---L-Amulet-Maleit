@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.45f1 (a13dfa44d684) revision 10567162'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ca' Physical Memory: 16296 MB
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'es' Physical Memory: 32581 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2022.3.45f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Tarda/Desktop/project/Projecte Individual L'amulet Maleit
+C:/Users/eudal/Desktop/JORDI/Dam-Vi 2n/Projecte Individual/Github Sourcetree/Projecte Individual L'amulet Maleit
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59141
-Successfully changed project path to: C:/Users/Tarda/Desktop/project/Projecte Individual L'amulet Maleit
-C:/Users/Tarda/Desktop/project/Projecte Individual L'amulet Maleit
+58288
+Successfully changed project path to: C:/Users/eudal/Desktop/JORDI/Dam-Vi 2n/Projecte Individual/Github Sourcetree/Projecte Individual L'amulet Maleit
+C:/Users/eudal/Desktop/JORDI/Dam-Vi 2n/Projecte Individual/Github Sourcetree/Projecte Individual L'amulet Maleit
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,80 +49,67 @@ C:/Users/Tarda/Desktop/project/Projecte Individual L'amulet Maleit
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [10884]  Target information:
+Player connection [15096]  Target information:
 
-Player connection [10884]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1085209669 [EditorId] 1085209669 [Version] 1048832 [Id] WindowsEditor(7,INFO1-Equip04) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [15096]  * "[IP] 192.168.1.40 [Port] 0 [Flags] 2 [Guid] 1443426321 [EditorId] 1443426321 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-FC7OJL3) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [10884]  * "[IP] 192.168.203.139 [Port] 0 [Flags] 2 [Guid] 1085209669 [EditorId] 1085209669 [Version] 1048832 [Id] WindowsEditor(7,INFO1-Equip04) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
-
-Player connection [10884] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [10884] Host joined alternative multi-casting on [225.0.0.222:34997]...
-[PhysX] Initialized MultithreadedTaskDispatcher with 6 workers.
-Refreshing native plugins compatible for Editor in 15.55 ms, found 4 plugins.
+Player connection [15096] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [15096] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+Refreshing native plugins compatible for Editor in 16.61 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.45f1 (a13dfa44d684)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.45f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Tarda/Desktop/project/Projecte Individual L'amulet Maleit/Assets
+[Subsystems] Discovering subsystems at path C:/Users/eudal/Desktop/JORDI/Dam-Vi 2n/Projecte Individual/Github Sourcetree/Projecte Individual L'amulet Maleit/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1660 Ti (ID=0x2182)
+    Renderer: NVIDIA GeForce RTX 4070 (ID=0x2786)
     Vendor:   NVIDIA
-    VRAM:     5966 MB
+    VRAM:     12012 MB
     Driver:   32.0.15.6094
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.45f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.45f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.45f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56564
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56920
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.45f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.45f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.45f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.45f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.45f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.014093 seconds.
-- Loaded All Assemblies, in  0.436 seconds
-Native extension for UWP target not found
+Registered in 0.012497 seconds.
+- Loaded All Assemblies, in  0.400 seconds
 Native extension for WindowsStandalone target not found
-[usbmuxd] Start listen thread
-[usbmuxd] Listen thread started
-Native extension for iOS target not found
-Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 439 ms
-Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.863 seconds
-Domain Reload Profiling: 1298ms
-	BeginReloadAssembly (120ms)
+- Finished resetting the current domain, in  0.322 seconds
+Domain Reload Profiling: 719ms
+	BeginReloadAssembly (124ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (38ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (69ms)
-	LoadAllAssembliesAndSetupDomain (193ms)
-		LoadAssemblies (120ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (76ms)
+	LoadAllAssembliesAndSetupDomain (148ms)
+		LoadAssemblies (121ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (189ms)
-			TypeCache.Refresh (187ms)
-				TypeCache.ScanAssembly (171ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
+		AnalyzeDomain (146ms)
+			TypeCache.Refresh (144ms)
+				TypeCache.ScanAssembly (131ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (864ms)
+	FinalizeReload (322ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (803ms)
+		SetupLoadedEditorAssemblies (268ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (598ms)
-			SetLoadedEditorAssemblies (6ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (8ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (140ms)
-			ProcessInitializeOnLoadMethodAttributes (55ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (186ms)
+			ProcessInitializeOnLoadMethodAttributes (57ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -131,58 +118,54 @@ Domain Reload Profiling: 1298ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.855 seconds
-Native extension for UWP target not found
+- Loaded All Assemblies, in  0.795 seconds
 Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for WebGL target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.872 seconds
-Domain Reload Profiling: 1724ms
-	BeginReloadAssembly (173ms)
+- Finished resetting the current domain, in  0.948 seconds
+Domain Reload Profiling: 1737ms
+	BeginReloadAssembly (167ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (25ms)
-	RebuildCommonClasses (37ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (49ms)
-	LoadAllAssembliesAndSetupDomain (580ms)
-		LoadAssemblies (421ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (57ms)
+	LoadAllAssembliesAndSetupDomain (514ms)
+		LoadAssemblies (395ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (262ms)
-			TypeCache.Refresh (219ms)
-				TypeCache.ScanAssembly (195ms)
-			ScanForSourceGeneratedMonoScriptInfo (32ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (872ms)
+		AnalyzeDomain (217ms)
+			TypeCache.Refresh (179ms)
+				TypeCache.ScanAssembly (162ms)
+			ScanForSourceGeneratedMonoScriptInfo (28ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (949ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (659ms)
+		SetupLoadedEditorAssemblies (764ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (33ms)
+			InitializePlatformSupportModulesInManaged (9ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (87ms)
-			ProcessInitializeOnLoadAttributes (487ms)
-			ProcessInitializeOnLoadMethodAttributes (39ms)
-			AfterProcessingInitializeOnLoad (8ms)
+			BeforeProcessingInitializeOnLoad (121ms)
+			ProcessInitializeOnLoadAttributes (573ms)
+			ProcessInitializeOnLoadMethodAttributes (46ms)
+			AfterProcessingInitializeOnLoad (11ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (7ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 10.98 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 3.53 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4609 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (130.6 KB). Loaded Objects now: 5081.
-Memory consumption went from 155.8 MB to 155.7 MB.
-Total: 5.323300 ms (FindLiveObjects: 0.561800 ms CreateObjectMapping: 0.620300 ms MarkObjects: 3.954900 ms  DeleteObjects: 0.184400 ms)
+Unloading 4610 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (130.5 KB). Loaded Objects now: 5081.
+Memory consumption went from 156.4 MB to 156.2 MB.
+Total: 2.498600 ms (FindLiveObjects: 0.193300 ms CreateObjectMapping: 0.091300 ms MarkObjects: 2.116300 ms  DeleteObjects: 0.096400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -199,50 +182,1676 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 4156.885501 seconds.
-  path: Assets/Scenes/MainWorld.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainWorld.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 6 workers.
- -> (artifact id: '4b988f55b93562102f0bf610cfc80def') in 0.003573 seconds
+  Time since last request: 695130.414411 seconds.
+  path: Assets/Scripts/Dialogue/DialogueController.cs
+  artifactKey: Guid(5d23e800053481841b251544cfe4f9df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Dialogue/DialogueController.cs using Guid(5d23e800053481841b251544cfe4f9df) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '7205a685601e261ad9ae220be9e37303') in 0.002096 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.272 seconds
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.017 seconds
+Domain Reload Profiling: 2283ms
+	BeginReloadAssembly (820ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (581ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (35ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (354ms)
+		LoadAssemblies (465ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (37ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (17ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1018ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (822ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (100ms)
+			ProcessInitializeOnLoadAttributes (662ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 8.37 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4584 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (102.4 KB). Loaded Objects now: 5098.
+Memory consumption went from 150.7 MB to 150.6 MB.
+Total: 3.426400 ms (FindLiveObjects: 0.391300 ms CreateObjectMapping: 0.136100 ms MarkObjects: 2.838000 ms  DeleteObjects: 0.059700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.658 seconds
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.438 seconds
+Domain Reload Profiling: 2090ms
+	BeginReloadAssembly (184ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (378ms)
+		LoadAssemblies (436ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (45ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (22ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1439ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (643ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (93ms)
+			ProcessInitializeOnLoadAttributes (488ms)
+			ProcessInitializeOnLoadMethodAttributes (37ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 8.25 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4585 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (102.4 KB). Loaded Objects now: 5114.
+Memory consumption went from 150.9 MB to 150.8 MB.
+Total: 3.369800 ms (FindLiveObjects: 0.399500 ms CreateObjectMapping: 0.143400 ms MarkObjects: 2.769000 ms  DeleteObjects: 0.056600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.573 seconds
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.439 seconds
+Domain Reload Profiling: 2005ms
+	BeginReloadAssembly (167ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (310ms)
+		LoadAssemblies (357ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (37ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (17ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1439ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (638ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (93ms)
+			ProcessInitializeOnLoadAttributes (485ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (11ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 7.15 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4585 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (102.3 KB). Loaded Objects now: 5130.
+Memory consumption went from 150.9 MB to 150.8 MB.
+Total: 3.491900 ms (FindLiveObjects: 0.379900 ms CreateObjectMapping: 0.144700 ms MarkObjects: 2.914900 ms  DeleteObjects: 0.050500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.612 seconds
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.508 seconds
+Domain Reload Profiling: 2113ms
+	BeginReloadAssembly (183ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (14ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (327ms)
+		LoadAssemblies (392ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (37ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (17ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1508ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (754ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (96ms)
+			ProcessInitializeOnLoadAttributes (599ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 7.14 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4585 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (102.4 KB). Loaded Objects now: 5146.
+Memory consumption went from 151.0 MB to 150.9 MB.
+Total: 3.356500 ms (FindLiveObjects: 0.387700 ms CreateObjectMapping: 0.145800 ms MarkObjects: 2.770300 ms  DeleteObjects: 0.051800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.588 seconds
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.388 seconds
+Domain Reload Profiling: 1970ms
+	BeginReloadAssembly (159ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (334ms)
+		LoadAssemblies (377ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (39ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (18ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1389ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (639ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (94ms)
+			ProcessInitializeOnLoadAttributes (486ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 7.27 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4585 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (102.4 KB). Loaded Objects now: 5162.
+Memory consumption went from 150.9 MB to 150.8 MB.
+Total: 3.510500 ms (FindLiveObjects: 0.385900 ms CreateObjectMapping: 0.156600 ms MarkObjects: 2.914900 ms  DeleteObjects: 0.052000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1408.127683 seconds.
+  path: Assets/Scenes/LoseScreen.unity
+  artifactKey: Guid(11a1dbe446e26d64aaf13e2f4c4b84ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/LoseScreen.unity using Guid(11a1dbe446e26d64aaf13e2f4c4b84ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ace47d3c96d2b6a1b100edc0fd1d5f24') in 0.007954 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.547 seconds
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.497 seconds
+Domain Reload Profiling: 2038ms
+	BeginReloadAssembly (160ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (33ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (292ms)
+		LoadAssemblies (355ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (18ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1498ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (682ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (100ms)
+			ProcessInitializeOnLoadAttributes (517ms)
+			ProcessInitializeOnLoadMethodAttributes (39ms)
+			AfterProcessingInitializeOnLoad (13ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 9.60 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4584 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (102.4 KB). Loaded Objects now: 5178.
+Memory consumption went from 150.7 MB to 150.6 MB.
+Total: 4.260600 ms (FindLiveObjects: 0.406700 ms CreateObjectMapping: 0.185000 ms MarkObjects: 3.578000 ms  DeleteObjects: 0.089400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 53.058992 seconds.
+  path: Assets/Scenes/Cave.unity
+  artifactKey: Guid(f435b94475ed05044b9639971e644f22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cave.unity using Guid(f435b94475ed05044b9639971e644f22) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '864b5cd98f2776a93b2a45eb76bd891f') in 0.002342 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 80.162352 seconds.
-  path: Assets/Prefabs/Circle Per Veure PlayerHitbox.prefab
-  artifactKey: Guid(0b669078d51afeb41bcc2f4175aa9997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Circle Per Veure PlayerHitbox.prefab using Guid(0b669078d51afeb41bcc2f4175aa9997) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 6 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 6 workers.
- -> (artifact id: '33ff730bb73d278f709e0eb2153d9ea8') in 0.154538 seconds
+  Time since last request: 1.188709 seconds.
+  path: Assets/Scenes/MainWorld.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainWorld.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '0d0d734e86c40e1ad21121d92f961473') in 0.000714 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000061 seconds.
-  path: Assets/Prefabs/Player.prefab
-  artifactKey: Guid(5acf66822aed99744aef62dd75e13af4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player.prefab using Guid(5acf66822aed99744aef62dd75e13af4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 6 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 6 workers.
- -> (artifact id: 'da82da858905f366ed1a0d15560bc73a') in 0.192912 seconds
+  Time since last request: 14.401794 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(8582cf59c017cb94f9e4047403a80b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(8582cf59c017cb94f9e4047403a80b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '15353aa1acc8ea8db2cc5dca77393bb4') in 0.001670 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 62
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.600 seconds
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.976 seconds
+Domain Reload Profiling: 2570ms
+	BeginReloadAssembly (180ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (322ms)
+		LoadAssemblies (400ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (21ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1977ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (785ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (117ms)
+			ProcessInitializeOnLoadAttributes (595ms)
+			ProcessInitializeOnLoadMethodAttributes (43ms)
+			AfterProcessingInitializeOnLoad (14ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (17ms)
+Refreshing native plugins compatible for Editor in 9.84 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4584 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (102.4 KB). Loaded Objects now: 5194.
+Memory consumption went from 150.7 MB to 150.6 MB.
+Total: 4.236300 ms (FindLiveObjects: 0.457700 ms CreateObjectMapping: 0.141900 ms MarkObjects: 3.576100 ms  DeleteObjects: 0.058900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.189715 seconds.
-  path: Assets/InputSystem/DEFAULTplayerInputs.inputactions
-  artifactKey: Guid(402eb223c1e818e4eb1afdd1f9d5c35f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/InputSystem/DEFAULTplayerInputs.inputactions using Guid(402eb223c1e818e4eb1afdd1f9d5c35f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 6 workers.
- -> (artifact id: '8445d73f3f6d9892134e89d899105abb') in 0.007011 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 14
-========================================================================
-Received Import Request.
-  Time since last request: 1.360324 seconds.
+  Time since last request: 3733.339468 seconds.
   path: Assets/Sprites/amluet.png
   artifactKey: Guid(8e7d3939c515c3149b28f706a44fff8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/amluet.png using Guid(8e7d3939c515c3149b28f706a44fff8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 6 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 6 workers.
- -> (artifact id: '5edf1b0e42f6f0aac2f54d6ce704aed6') in 0.053851 seconds
+Start importing Assets/Sprites/amluet.png using Guid(8e7d3939c515c3149b28f706a44fff8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '6b60a2cedf280b890817495aa572e098') in 0.132992 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/hpBar_TESTsheet.png
+  artifactKey: Guid(613b6d22bf4c6754298900828605b6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/hpBar_TESTsheet.png using Guid(613b6d22bf4c6754298900828605b6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '1fc50ab9def8d144ab05fd16b9d61c25') in 0.275045 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 1.479648 seconds.
+  path: Assets/Sprites/Tiles
+  artifactKey: Guid(6bc48f63277d2d04faf99532bf1f8adb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles using Guid(6bc48f63277d2d04faf99532bf1f8adb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ba87285481546b1a27c5ebfb282f85d2') in 0.000634 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.794202 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset
+  artifactKey: Guid(626787e30276d844484d15764eb14ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset using Guid(626787e30276d844484d15764eb14ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '0e4c37d565a4bb023a1f61b23b5188b0') in 0.000600 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.084435 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/BR_desert_road.png
+  artifactKey: Guid(f41a05c5ab28a0d44ab8b9c1b933e28e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/BR_desert_road.png using Guid(f41a05c5ab28a0d44ab8b9c1b933e28e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'fbf1b2bc3a25727f135c1f8ea39212c7') in 0.282098 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 156
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/BROWNROCK_full_tileset_v2.png
+  artifactKey: Guid(f92605f60800cab4db0f0d3c1685d62b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/BROWNROCK_full_tileset_v2.png using Guid(f92605f60800cab4db0f0d3c1685d62b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '385f767a122a1b77e8326b30c3ece3ef') in 1.942689 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1253
+========================================================================
+Received Import Request.
+  Time since last request: 35.486520 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes
+  artifactKey: Guid(cc6a6c2c426f62c4189958d4d27327ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes using Guid(cc6a6c2c426f62c4189958d4d27327ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '172ca2227445d1e964036d1653a63811') in 0.000854 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.051965 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_0.asset
+  artifactKey: Guid(94a8c96d365a7c8418cd361630baaa2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_0.asset using Guid(94a8c96d365a7c8418cd361630baaa2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e6377664444a7fc0c1e9bfef830797c9') in 0.029206 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_44.asset
+  artifactKey: Guid(1f5741f1ff3f47c45a6948a9bfa98d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_44.asset using Guid(1f5741f1ff3f47c45a6948a9bfa98d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8dc54d9a2bf341080dc9bdff29622e8f') in 0.017286 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_53.asset
+  artifactKey: Guid(9e951e3c7be2abe43a120661d7131627) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_53.asset using Guid(9e951e3c7be2abe43a120661d7131627) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'c2447fbdda782fb1f9fc936e4b642dad') in 0.011931 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_13.asset
+  artifactKey: Guid(1046fb731f41b6a43b1c34d8dea118cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_13.asset using Guid(1046fb731f41b6a43b1c34d8dea118cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '220c07a7175bae97c719e67906f53f65') in 0.011439 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_47.asset
+  artifactKey: Guid(e872229927fb3334896c1e8636e57d37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_47.asset using Guid(e872229927fb3334896c1e8636e57d37) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4192fc189c6bdd8d386717cb808c6e40') in 0.011993 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_59.asset
+  artifactKey: Guid(358e32eff3356814dbe3e221ca60a795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_59.asset using Guid(358e32eff3356814dbe3e221ca60a795) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e9a04957587a06942ac25fbf28b834a4') in 0.010281 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_16.asset
+  artifactKey: Guid(109a4627eb56489449c6c35389f68ed5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_16.asset using Guid(109a4627eb56489449c6c35389f68ed5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'dc383a7a0ea29abb0df5846d2f87c755') in 0.011120 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_31.asset
+  artifactKey: Guid(0434cf169a0d9be48b965525f6dc9f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_31.asset using Guid(0434cf169a0d9be48b965525f6dc9f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '2507966f16a59a253f3eeef88d281ebf') in 0.011553 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_15.asset
+  artifactKey: Guid(139afc89cca48934783e7623c2462649) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_15.asset using Guid(139afc89cca48934783e7623c2462649) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'de7a08307de95152fa7dd8ef14fcda33') in 0.011099 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_11.asset
+  artifactKey: Guid(d1610704f7321f34db9f249ddea2b5be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_11.asset using Guid(d1610704f7321f34db9f249ddea2b5be) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '372ccd3823e483621909c03d571d5a1d') in 0.010501 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_3.asset
+  artifactKey: Guid(7bd86e62595cc3c4db26ecd013b914ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_3.asset using Guid(7bd86e62595cc3c4db26ecd013b914ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'cd818a8ece6c5566b394c955249bc476') in 0.013715 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_19.asset
+  artifactKey: Guid(fcbfa4794e57f934f875982aafa0b021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_19.asset using Guid(fcbfa4794e57f934f875982aafa0b021) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '2ceda22d17b8c43191cf4bbf999dd8ff') in 0.010825 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_28.asset
+  artifactKey: Guid(2ff94c7b6cb5393429f4f548125693f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_28.asset using Guid(2ff94c7b6cb5393429f4f548125693f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'bcce822cdc707b40787d4c6654759193') in 0.010393 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_4.asset
+  artifactKey: Guid(7b5aa1acaf7ba4247b669bd2e83dee31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_4.asset using Guid(7b5aa1acaf7ba4247b669bd2e83dee31) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b301ab5883a73963d73a50bc9c3530cc') in 0.010297 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_36.asset
+  artifactKey: Guid(24b7cd676a82741438097e06fcf2c5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_36.asset using Guid(24b7cd676a82741438097e06fcf2c5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'd58e8d3f4264630522ab33a5efdb14bb') in 0.010172 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_5.asset
+  artifactKey: Guid(6205dd8e21f69a745a7df6d384aa9c03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_5.asset using Guid(6205dd8e21f69a745a7df6d384aa9c03) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e690bdaa240ea297b2d4ed17a4928a40') in 0.010171 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_39.asset
+  artifactKey: Guid(52f7de38fc3f64542bbec24c60ca1002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_39.asset using Guid(52f7de38fc3f64542bbec24c60ca1002) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'd1a5fceb16da63f9f2eb3602abff6ea7') in 0.010887 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_29.asset
+  artifactKey: Guid(15ea2ce0d23d6c849a140bf5dede7a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_29.asset using Guid(15ea2ce0d23d6c849a140bf5dede7a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '65488804df1baba25879f9a21f250bd1') in 0.011453 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_18.asset
+  artifactKey: Guid(7b42b3e69136ae04f87c36c30bdd82ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_18.asset using Guid(7b42b3e69136ae04f87c36c30bdd82ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '753347b5d1bc39ad8f2ce237276394fb') in 0.011268 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_46.asset
+  artifactKey: Guid(dd591bb7103ae1646b6f0106034ca52a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_46.asset using Guid(dd591bb7103ae1646b6f0106034ca52a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f38b679128e2a3918812f30a1990fd65') in 0.010827 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_22.asset
+  artifactKey: Guid(ed9fb52bfee195c4c9f1c729f1e0ba1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_22.asset using Guid(ed9fb52bfee195c4c9f1c729f1e0ba1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'c87160a8de6b4f64b0aa5d3f9f7ddcb6') in 0.010774 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_57.asset
+  artifactKey: Guid(884436d6af65c6c43a03d0cc7eb8d826) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_57.asset using Guid(884436d6af65c6c43a03d0cc7eb8d826) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4e23982837d6540e2be5b18b54b5d2f5') in 0.010630 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_27.asset
+  artifactKey: Guid(40ad95524209fdd45a5be5ca39e99ccd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_27.asset using Guid(40ad95524209fdd45a5be5ca39e99ccd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f3251db576d1dc60f59a9754f9e1d7b7') in 0.010314 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_42.asset
+  artifactKey: Guid(976f997c30d5c5d45830b38d847f3cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_42.asset using Guid(976f997c30d5c5d45830b38d847f3cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '632a03ae24e94aa245fdd44099550004') in 0.011339 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_41.asset
+  artifactKey: Guid(96f8817d3850cd948953bc21c63a38b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_41.asset using Guid(96f8817d3850cd948953bc21c63a38b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ae88e4edaf0e97f5204b67c52b281787') in 0.011359 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_43.asset
+  artifactKey: Guid(39d45579eb874584da2107feca37c3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_43.asset using Guid(39d45579eb874584da2107feca37c3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '04a6636da642a54dbe73da062939b684') in 0.012004 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_34.asset
+  artifactKey: Guid(294fc019c775fac47890c4d66a92253d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_34.asset using Guid(294fc019c775fac47890c4d66a92253d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '36fc105801adec1213c63b24ac2e36ba') in 0.010638 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_32.asset
+  artifactKey: Guid(75ede4e61ee24a84f872eac6a9df9f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_32.asset using Guid(75ede4e61ee24a84f872eac6a9df9f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '210ef0b087a1a201aa9c6bb527020621') in 0.010367 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_23.asset
+  artifactKey: Guid(838a31a6a9aeec54ab4b862454cd2045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_23.asset using Guid(838a31a6a9aeec54ab4b862454cd2045) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '82d09a4915fb1043108c97831b791316') in 0.011323 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_49.asset
+  artifactKey: Guid(175efad8e34947542a087964f58f0c57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_49.asset using Guid(175efad8e34947542a087964f58f0c57) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '1096f878d972fc8d68e00382d5ae974d') in 0.011418 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.536420 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_60.asset
+  artifactKey: Guid(97c346a9b44899a4f9f6314407c84bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_60.asset using Guid(97c346a9b44899a4f9f6314407c84bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4695e72da02df3cfdacb39faee635773') in 0.011898 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_69.asset
+  artifactKey: Guid(983794a826a1bdf45850a46d4ca2e447) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_69.asset using Guid(983794a826a1bdf45850a46d4ca2e447) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '031b627e64ac6eed5899e42504840ef7') in 0.011291 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_66.asset
+  artifactKey: Guid(a99b5335188899b4588ae020e6e71d58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_66.asset using Guid(a99b5335188899b4588ae020e6e71d58) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4db548c3565e4527b7921d6f4805f2f3') in 0.012986 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_64.asset
+  artifactKey: Guid(7313da69abad4a141a0793844f9b0e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_64.asset using Guid(7313da69abad4a141a0793844f9b0e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4812d07b4675fc51360a4693315d5df2') in 0.011870 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_73.asset
+  artifactKey: Guid(ec3005335320ef04e8072529c0bd60e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_73.asset using Guid(ec3005335320ef04e8072529c0bd60e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '7dedf4d294b4860d7cceaa234a1e3165') in 0.011919 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_78.asset
+  artifactKey: Guid(ee50b93477257c14aaaeaeb460e2a5d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_78.asset using Guid(ee50b93477257c14aaaeaeb460e2a5d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '9aee9c941094c0af86a77f72ff944ebd') in 0.011893 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_90.asset
+  artifactKey: Guid(d4b6b4a0aca714c47b3883050bc633cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_90.asset using Guid(d4b6b4a0aca714c47b3883050bc633cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b144cb9095884f499858b31fb031b2db') in 0.011760 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_85.asset
+  artifactKey: Guid(7cbe9d122776f9e488e102460826e6e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_85.asset using Guid(7cbe9d122776f9e488e102460826e6e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ae71f1d98100bf480c07850077fba6ef') in 0.012386 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_95.asset
+  artifactKey: Guid(4b2dd4db8ccc98f44b629693bcca6334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_95.asset using Guid(4b2dd4db8ccc98f44b629693bcca6334) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'fb7d300bb330f2b7dbadb1bdadff3cb5') in 0.011754 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_82.asset
+  artifactKey: Guid(e8eee697ff1efc741b7957988644f031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_82.asset using Guid(e8eee697ff1efc741b7957988644f031) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'd4b85098f5be390cebe4bff70d46024c') in 0.011186 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_75.asset
+  artifactKey: Guid(f2e32ed1f75616a47a5f308e5b410f36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_75.asset using Guid(f2e32ed1f75616a47a5f308e5b410f36) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f30244211c29994f6af4445096cf429e') in 0.011013 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_89.asset
+  artifactKey: Guid(9c7e5d068eb840840983fc9550cdac7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_89.asset using Guid(9c7e5d068eb840840983fc9550cdac7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'eb9ff94b9768d68e99609e26a7e2fadd') in 0.011405 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_94.asset
+  artifactKey: Guid(3d8b3b48805014046aa0b7e01516f0ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_94.asset using Guid(3d8b3b48805014046aa0b7e01516f0ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4d216006a8eaf387ba932e8ad94b4362') in 0.011964 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_92.asset
+  artifactKey: Guid(0a8f83705b889c042a549b6681e6a819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_92.asset using Guid(0a8f83705b889c042a549b6681e6a819) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '6dd2016e4790892056323bdfc83beea8') in 0.011249 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_98.asset
+  artifactKey: Guid(0f43b1f2e9e642f4eb256c03645eac2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_98.asset using Guid(0f43b1f2e9e642f4eb256c03645eac2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '1736eca80eefb72bb8f84a4b239bfd1d') in 0.012705 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_80.asset
+  artifactKey: Guid(e324dd27666fb21469ad3cfb48b98350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_80.asset using Guid(e324dd27666fb21469ad3cfb48b98350) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '9ac12b008dfbe3baad403cfeb94edfc2') in 0.011850 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_65.asset
+  artifactKey: Guid(9ce90fd215f96f046a2ef5222db855ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_65.asset using Guid(9ce90fd215f96f046a2ef5222db855ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'c4d2857c27821347c7a1c5ea6cfb3b9a') in 0.011657 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_88.asset
+  artifactKey: Guid(c919222c5c62000458db3729fc845709) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_88.asset using Guid(c919222c5c62000458db3729fc845709) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '732d181ffaa0525c2f2e3ff30c25924a') in 0.011877 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_100.asset
+  artifactKey: Guid(657ea6e7046d8a046afb05b246ad11ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_100.asset using Guid(657ea6e7046d8a046afb05b246ad11ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '89e9482d1c9cb85e99ba74bda1358f74') in 0.011487 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_99.asset
+  artifactKey: Guid(e8a372dd866867d439756bc24d2646c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_99.asset using Guid(e8a372dd866867d439756bc24d2646c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '2ae908847dec928c47b5e4ba3e48954b') in 0.011234 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_101.asset
+  artifactKey: Guid(035df9ea1f3672242bda4d3fd736f299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_101.asset using Guid(035df9ea1f3672242bda4d3fd736f299) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '3b9c9a323a9a69b7cd6f0c6358b96bc8') in 0.010709 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_70.asset
+  artifactKey: Guid(bf6338aa2fd5b624e9bf34ec680a4d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_70.asset using Guid(bf6338aa2fd5b624e9bf34ec680a4d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '7bcf4606492e782277538aacbbddd3ad') in 0.011219 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_63.asset
+  artifactKey: Guid(f8030d0d5c2a1314c9fc9b4e3d5167fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_63.asset using Guid(f8030d0d5c2a1314c9fc9b4e3d5167fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '478df6335f1d1c3f03d8338559534cc6') in 0.010857 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.023659 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_105.asset
+  artifactKey: Guid(45102f9dd1fac89498dbd35d5db9f05a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_105.asset using Guid(45102f9dd1fac89498dbd35d5db9f05a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '01dc91d795669b0d7731e2432991111c') in 0.013808 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_124.asset
+  artifactKey: Guid(caddee1fbaaa4f4499937886519b0c5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_124.asset using Guid(caddee1fbaaa4f4499937886519b0c5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '9c525e7681cb74fcb23536752402c977') in 0.010336 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_108.asset
+  artifactKey: Guid(7771252b8459e3b43bfa15530f5be8e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_108.asset using Guid(7771252b8459e3b43bfa15530f5be8e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'bbf89b57abd0ddad00b7b85c13834fd0') in 0.011595 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_107.asset
+  artifactKey: Guid(9879c0eee44090046b876f7e418c2dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_107.asset using Guid(9879c0eee44090046b876f7e418c2dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '6fcc2d1208516e9eb52d1634ccfcc394') in 0.011295 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_149.asset
+  artifactKey: Guid(2db38914fce7c4b40988388ee3bdfbc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_149.asset using Guid(2db38914fce7c4b40988388ee3bdfbc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '829ac90f14ab1d933ddd9f61e1348399') in 0.011708 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_117.asset
+  artifactKey: Guid(426ee48d19dac30408d906c92fe0ba24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_117.asset using Guid(426ee48d19dac30408d906c92fe0ba24) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '3eb990e8387e78f15efce37cda14938b') in 0.011615 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_151.asset
+  artifactKey: Guid(9d2e6563d6b222e4291df3440f38827d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_151.asset using Guid(9d2e6563d6b222e4291df3440f38827d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '58619196beb3b64c3d13de0f251b9317') in 0.012233 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_111.asset
+  artifactKey: Guid(9bb79011f8299864fb38675763923879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_111.asset using Guid(9bb79011f8299864fb38675763923879) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a5243f5ffafaa94593c7f5b96c63c980') in 0.012424 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_131.asset
+  artifactKey: Guid(165a0ff1ce4752d49a7c4db8a43c3ace) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_131.asset using Guid(165a0ff1ce4752d49a7c4db8a43c3ace) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '7f3026c6768e99653082e6b729cc91d2') in 0.011473 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_142.asset
+  artifactKey: Guid(703ec3675a7496d40bf22b308389506d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_142.asset using Guid(703ec3675a7496d40bf22b308389506d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'cf5d79c9dc46cddd050d6389bfd2a179') in 0.011631 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_116.asset
+  artifactKey: Guid(5a6f4b13747607748897d4298bd483d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_116.asset using Guid(5a6f4b13747607748897d4298bd483d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b6a701f8c12827c5370993cd5a3f8bc6') in 0.011037 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_123.asset
+  artifactKey: Guid(0c2108bac20133d43be6f9deb5cbaded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_123.asset using Guid(0c2108bac20133d43be6f9deb5cbaded) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '81dcdc75c1e7f698b1dd8f2c72e59ec0') in 0.010897 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_112.asset
+  artifactKey: Guid(4e3a2c0ba996a1243bda2f6e5ba7e0ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_112.asset using Guid(4e3a2c0ba996a1243bda2f6e5ba7e0ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '6faa6f5f7d45090380bf963fcf6099a1') in 0.011463 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_130.asset
+  artifactKey: Guid(89f1b4bf28c420a4c829868eed15b001) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_130.asset using Guid(89f1b4bf28c420a4c829868eed15b001) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '3bce4096499653375ec6a9a12926bce1') in 0.011277 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_128.asset
+  artifactKey: Guid(19e8163fc9c3feb46bd4dfc230877eca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_128.asset using Guid(19e8163fc9c3feb46bd4dfc230877eca) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'efac92229f5157534c9fe7dfcc962092') in 0.012118 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_138.asset
+  artifactKey: Guid(11f769ec49ea01743be62ec73be4b1da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_138.asset using Guid(11f769ec49ea01743be62ec73be4b1da) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '09074ec2ff885382c4590841d22fbe64') in 0.010669 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_152.asset
+  artifactKey: Guid(5c82322fa9130b049b74d89d36f79176) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_152.asset using Guid(5c82322fa9130b049b74d89d36f79176) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ca3db5543bd0b0d64191d6fe5cda8e8f') in 0.012153 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_121.asset
+  artifactKey: Guid(d56ca1a52027dbe4cba62e91be058dab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_121.asset using Guid(d56ca1a52027dbe4cba62e91be058dab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e57872afa757be188e1f6d6c6cea7649') in 0.011674 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_137.asset
+  artifactKey: Guid(d9c760d563ab6484c991dc932772d80c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_137.asset using Guid(d9c760d563ab6484c991dc932772d80c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '6cc01c3e62e94db3e7158b73f14843e6') in 0.011540 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_122.asset
+  artifactKey: Guid(f303d499ae8b7da48a5785e847ec7b01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_122.asset using Guid(f303d499ae8b7da48a5785e847ec7b01) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'd2ad96b0e699fa1ed18f98877998085e') in 0.011706 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_141.asset
+  artifactKey: Guid(510768a407f597f4fb87ae47d4657ee3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_141.asset using Guid(510768a407f597f4fb87ae47d4657ee3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '1da100b744b76482d6bb573f39f866c2') in 0.013172 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_109.asset
+  artifactKey: Guid(24b2974f39c52bc4a91f51c57cc91318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_109.asset using Guid(24b2974f39c52bc4a91f51c57cc91318) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a42696f369e7747883637a0c01c012ad') in 0.011237 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_134.asset
+  artifactKey: Guid(84ecd6e4e66817542921e63936080cf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_134.asset using Guid(84ecd6e4e66817542921e63936080cf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f226933a5f79272f7eb1fbed97266b62') in 0.011941 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_120.asset
+  artifactKey: Guid(20cbb6f01e14f3c449f47a436afa0c8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/BR_desert_road_120.asset using Guid(20cbb6f01e14f3c449f47a436afa0c8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'cc98fe1e820e00ee47730d6ff735f4a9') in 0.013048 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.832334 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles
+  artifactKey: Guid(99d4020e36eaa934daa1f921535b813f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles using Guid(99d4020e36eaa934daa1f921535b813f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b8804db7ee9f2cdc2d204226d8c25830') in 0.000667 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.088113 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_0.asset
+  artifactKey: Guid(60fe6120590172146a31b47ce2ed0c64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_0.asset using Guid(60fe6120590172146a31b47ce2ed0c64) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '2a861ded5431d4a763cbf21ab2fc5fb8') in 0.021785 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_33.asset
+  artifactKey: Guid(9cf92e50c4bc90d4cad296abb3da1722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_33.asset using Guid(9cf92e50c4bc90d4cad296abb3da1722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '01ed8ebbdbbffc699506ab216c8a60da') in 0.017681 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_58.asset
+  artifactKey: Guid(15d47371ce4da3c4ebc713f22230d813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_58.asset using Guid(15d47371ce4da3c4ebc713f22230d813) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '011a556e7740e392d7cb8ed12641cb8c') in 0.018146 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_53.asset
+  artifactKey: Guid(e345d6dac013c6341accca2b7ed950f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_53.asset using Guid(e345d6dac013c6341accca2b7ed950f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e635dfc96639a7124fac5e089da42f33') in 0.017290 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_13.asset
+  artifactKey: Guid(12b37189388f07f4495a3fe0bed66e14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_13.asset using Guid(12b37189388f07f4495a3fe0bed66e14) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8ab13301ba541de21cf3d6c521f9de24') in 0.017627 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_2.asset
+  artifactKey: Guid(640820cfde77e7e4e83ef88884b44a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_2.asset using Guid(640820cfde77e7e4e83ef88884b44a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b5b6301ef9dfcf2076dfe6401149d1d2') in 0.017675 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_10.asset
+  artifactKey: Guid(1642282a27ad7be4cb9745e16aa4c4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_10.asset using Guid(1642282a27ad7be4cb9745e16aa4c4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '6487b3b4bc5a60ef5db6f1d7f97ebbd4') in 0.018746 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_21.asset
+  artifactKey: Guid(12ec964482a87cc428a0e7dd06353e32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_21.asset using Guid(12ec964482a87cc428a0e7dd06353e32) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8c5646c01425c06251e1f2907399047d') in 0.017213 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_40.asset
+  artifactKey: Guid(4cdb6c6ec219a144792ddcc3aa9c28cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_40.asset using Guid(4cdb6c6ec219a144792ddcc3aa9c28cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '81b444b6039d3262cc81dc711ae3e493') in 0.018632 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_9.asset
+  artifactKey: Guid(38d9d1347a0fcd546ab79a3aac364227) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_9.asset using Guid(38d9d1347a0fcd546ab79a3aac364227) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '9aeb96f87831cbbe1febc4ed6889d6bd') in 0.019522 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_25.asset
+  artifactKey: Guid(1e448eb8c9fea0743b2807956a4890cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_25.asset using Guid(1e448eb8c9fea0743b2807956a4890cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8a01e330969d01b84b5f26b9f7577c34') in 0.017158 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_48.asset
+  artifactKey: Guid(1be87ef7eaaed3f4580f6427a261ebbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_48.asset using Guid(1be87ef7eaaed3f4580f6427a261ebbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f4ea51cc71e5b6eada8cd5f761b67ddc') in 0.020952 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_39.asset
+  artifactKey: Guid(c23d4b3a1699408459401f2a6e368c05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_39.asset using Guid(c23d4b3a1699408459401f2a6e368c05) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '58b01c6f61fadd0a6441332a5ea10b37') in 0.018437 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_60.asset
+  artifactKey: Guid(2024ddd8a2c52164a817e0ce3a0ebfad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_60.asset using Guid(2024ddd8a2c52164a817e0ce3a0ebfad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'd02bf70416c6c8c0e5e775c330eccc71') in 0.018957 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_37.asset
+  artifactKey: Guid(264596263a4740741853013d8879e3ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_37.asset using Guid(264596263a4740741853013d8879e3ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e444bda7adb455df28a13070fd465ae7') in 0.017738 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_54.asset
+  artifactKey: Guid(e0f668c506515a143a8a1db35f546efa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_54.asset using Guid(e0f668c506515a143a8a1db35f546efa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b566fd0708edfb57b554ba0b0e576b67') in 0.014927 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_51.asset
+  artifactKey: Guid(0c117cac684ec14489c3ce36d5042f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_51.asset using Guid(0c117cac684ec14489c3ce36d5042f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '459c180440ec911e63b103e6a44ef18b') in 0.015304 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_36.asset
+  artifactKey: Guid(0052997b6c5f2244fbc6ee5178395d54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_36.asset using Guid(0052997b6c5f2244fbc6ee5178395d54) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '3de0db02728f0238d0800dd9f892c76a') in 0.016209 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_42.asset
+  artifactKey: Guid(84565e02b535cc84590a38f99ef694bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_42.asset using Guid(84565e02b535cc84590a38f99ef694bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '573924065c2499c5db41fd7d88de1974') in 0.015507 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_20.asset
+  artifactKey: Guid(afd1c2b07f4d1b24eb3a9ccac8db5f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_20.asset using Guid(afd1c2b07f4d1b24eb3a9ccac8db5f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '754459349a68fb16c4f5c4b6963bed62') in 0.014727 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_15.asset
+  artifactKey: Guid(737a6a9379879dc4f9fc26c84a0df4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_15.asset using Guid(737a6a9379879dc4f9fc26c84a0df4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '39fa21cd0059b10a03a0d4facc5f79a8') in 0.016078 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_12.asset
+  artifactKey: Guid(d4b66ff13dae22346b36349707c0bf37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_12.asset using Guid(d4b66ff13dae22346b36349707c0bf37) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e6b86ddccf7e7e62508e9e9a219b7a37') in 0.014830 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_46.asset
+  artifactKey: Guid(70affeb67f609c94ebbe77da0c8ff450) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_46.asset using Guid(70affeb67f609c94ebbe77da0c8ff450) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4ee661eacaef9a658476ef5698534f2e') in 0.016560 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_23.asset
+  artifactKey: Guid(97821700e7594d14fb8bbc17189b4f13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_23.asset using Guid(97821700e7594d14fb8bbc17189b4f13) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'dd313b4e2a25039aa74f2497ecb053a6') in 0.016688 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_34.asset
+  artifactKey: Guid(c977d7e1da92ec149b0fc004426c9a00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_34.asset using Guid(c977d7e1da92ec149b0fc004426c9a00) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '2b48a301ecd8f0342802ceeb06b38baa') in 0.015411 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_45.asset
+  artifactKey: Guid(276eb42e13935024ea074b270cdfb84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_45.asset using Guid(276eb42e13935024ea074b270cdfb84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '2e85f9d49223fa720114926885cfc614') in 0.017015 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_35.asset
+  artifactKey: Guid(792c9c412e0b63040b4437c894d90c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_35.asset using Guid(792c9c412e0b63040b4437c894d90c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'dfec4297d54761382ea3875676854daf') in 0.015865 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_18.asset
+  artifactKey: Guid(5ca74314c287e97408dff40caaca4caf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_18.asset using Guid(5ca74314c287e97408dff40caaca4caf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'de8ca4b5a7fd53863c293e25e35cbcc8') in 0.016368 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_3.asset
+  artifactKey: Guid(79853ba07ba48874995d2309c2f65f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_3.asset using Guid(79853ba07ba48874995d2309c2f65f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '25b98f1134c910b1a145b3c03cca7e0b') in 0.016000 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_44.asset
+  artifactKey: Guid(dd23ad21c4d2f2d4fa1b9670fb33836f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_44.asset using Guid(dd23ad21c4d2f2d4fa1b9670fb33836f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '5eb08ea120162eb053f3cb98dbd96b16') in 0.022544 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_66.asset
+  artifactKey: Guid(636b9f8648a6f5c40accd8138d84614e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_66.asset using Guid(636b9f8648a6f5c40accd8138d84614e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a4804fdc68ee181777b01e525fc11837') in 0.021756 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_88.asset
+  artifactKey: Guid(7563c4b03a4276b459aeb2b011c679f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_88.asset using Guid(7563c4b03a4276b459aeb2b011c679f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '5f61162da31a12d2716594feb8628633') in 0.017267 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_85.asset
+  artifactKey: Guid(0342381242f97b74bba2a0c1446b0ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_85.asset using Guid(0342381242f97b74bba2a0c1446b0ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '30e79c61929aa350a6377ee6755663ef') in 0.019528 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_86.asset
+  artifactKey: Guid(75d0550685380294e897441f5068e1f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_86.asset using Guid(75d0550685380294e897441f5068e1f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '402f09da8bb1f0bc198339c8edaf83be') in 0.016098 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_63.asset
+  artifactKey: Guid(6704216321429d94fa84cdc74483651b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_63.asset using Guid(6704216321429d94fa84cdc74483651b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a949a1255545da869987aa10d5c3341c') in 0.014517 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_83.asset
+  artifactKey: Guid(675cb0b9511939345a8f497a314f8163) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_83.asset using Guid(675cb0b9511939345a8f497a314f8163) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '895274ee1c5c1af0c3e40c4e3aace700') in 0.016547 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_69.asset
+  artifactKey: Guid(28e82655b9e64064492de70b7eb2d4d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_69.asset using Guid(28e82655b9e64064492de70b7eb2d4d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'be7e37b55983eb05e463cebfbb077180') in 0.018114 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_72.asset
+  artifactKey: Guid(c0883cd950151504eaa1e09ebe0d4256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_72.asset using Guid(c0883cd950151504eaa1e09ebe0d4256) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '847e6cdb440348abdf2ab040a8df06bb') in 0.016715 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_65.asset
+  artifactKey: Guid(64ff64ef934e6f84db0ff75287be2922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_65.asset using Guid(64ff64ef934e6f84db0ff75287be2922) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '6129458655d751780bf8a802f7981219') in 0.019987 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_80.asset
+  artifactKey: Guid(3f012da9912049049809da6cf4a3a62a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_80.asset using Guid(3f012da9912049049809da6cf4a3a62a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4cab2065c812f39a5a4d8697558e740d') in 0.017551 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_84.asset
+  artifactKey: Guid(f74faa875df81464a90f5bc78e08ce3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_84.asset using Guid(f74faa875df81464a90f5bc78e08ce3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'd51ca7c966538f21b613dda80958a1a9') in 0.016688 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_78.asset
+  artifactKey: Guid(2c2007b67c070ee43bbc969ec4b39dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_78.asset using Guid(2c2007b67c070ee43bbc969ec4b39dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4d5e1efaf79a7ed90ca5a3d561ba796d') in 0.017829 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_70.asset
+  artifactKey: Guid(76e1badb47bc3b346bb8b5973f415e14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_70.asset using Guid(76e1badb47bc3b346bb8b5973f415e14) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '77b0ebc00608c8d7568ce99144540798') in 0.024907 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_68.asset
+  artifactKey: Guid(94af6ea3ae46d1e4c91799f8861d0cfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_68.asset using Guid(94af6ea3ae46d1e4c91799f8861d0cfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b710fb6f0c6697a16338c543b49bb35a') in 0.019328 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_74.asset
+  artifactKey: Guid(25f0e753e6f763a4699f44a9eecefef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Brown Rock Tileset/Palettes/Tiles/BROWNROCK_full_tileset_v2_74.asset using Guid(25f0e753e6f763a4699f44a9eecefef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '390400e5880d4946157a621d233b62bf') in 0.019016 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout

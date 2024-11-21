@@ -141,7 +141,7 @@ public class PlayerSettings : MonoBehaviour
             {
                 if (interactedObject.GetComponent<NPCController>() != null)
                 {
-                    NPCController nPCController = interactedObject.GetComponent< NPCController>();
+                    NPCController nPCController = interactedObject.GetComponent<NPCController>();
                     nPCController.Interacted();
                 }
                 else if (interactedObject.GetComponent <ItemController>() != null)

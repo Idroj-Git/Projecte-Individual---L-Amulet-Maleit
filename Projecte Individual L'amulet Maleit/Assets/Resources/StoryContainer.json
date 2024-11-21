@@ -1,0 +1,77 @@
+{
+    "dialogues": [
+        {
+            "id": 1,
+            "lines": [
+                {
+                    "name": "Ureos",
+                    "text": "Ahhhh... Quin bon dia que fa avui!"
+                },
+                {
+                    "name": "Ureos",
+                    "text": "Ahir va venir el meu veï a demanar-me llenya. Hauria d'anar-hi abans no es faci fosc.'"
+                },
+                {
+                    "name": "Ureos",
+                    "text": "Em va dir que necesitava un tipus de llenya que hi ha en el bosc del sud."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "lines": [
+                {
+                    "name": "Ureos",
+                    "text": "Aquests deuen ser els arbres que necessito. Amb un crec que serà suficient."
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "lines": [
+                {
+                    "name": "Ureos",
+                    "text": "????????????"
+                },
+                {
+                    "name": "Ureos",
+                    "text": "Això no hi era abans, em dona mala espina..."
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "lines": [
+                {
+                    "name": "Ureos",
+                    "text": "El poble ha sigut atacat mentres era fora!!! Em semblava estrany veure monstres tan aprop del poble però no m'esperava això..."
+                },
+                {
+                    "name": "Ureos",
+                    "text": "Un moment... No hauràn vingut a buscar el que em penso...?"
+                },
+                {
+                    "name": "Ureos",
+                    "text": "He de tornar a casa a comprovar-ho."
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "lines": [
+                {
+                    "name": "Ureos",
+                    "text": "Efectivament, l'amulet maleït que tenia amagat ja no hi és."
+                },
+                {
+                    "name": "Ureos",
+                    "text": "No puc perdre més el temps. He d'anar a recuperar l'amulet. Si no hi sóc a temps el meu poble serà només el primer en ser arrasat."
+                },
+                {
+                    "name": "Ureos",
+                    "text": "Si no recordo malament, hi ha una cova al nord-est d'on sovint surten monstres. Potser si hi vaig aconseguiré alguna pista d'on és l'amulet."
+                }
+            ]
+        }
+    ]
+}

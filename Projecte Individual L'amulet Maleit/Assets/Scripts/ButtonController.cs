@@ -16,8 +16,12 @@ public class ButtonController : MonoBehaviour
 
         if (pausableScenes.Contains(SceneController.GetActualSceneIndex()) && pauseMenuCanvas != null)
         {
-            // Aquí puedes acceder al objeto solo si existe
-            pauseMenuCanvas.SetActive(isGamePaused); // O cualquier otra operación
+            pauseMenuCanvas.SetActive(isGamePaused);
+        }
+
+        if (PlayerPrefs.GetInt("GameStarted")  == 0)
+        {
+            PlayerPrefs.SetInt("StoryFlag", 1); // Reset de la historia
         }
     }
 
@@ -44,6 +48,7 @@ public class ButtonController : MonoBehaviour
 
     public void StartGame() // mainWorld
     {
+        PlayerPrefs.SetInt("GameStarted", 1);
         SceneController.LoadMainWorldScene();
     }
 

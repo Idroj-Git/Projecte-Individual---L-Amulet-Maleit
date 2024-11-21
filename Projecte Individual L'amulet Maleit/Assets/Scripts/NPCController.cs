@@ -9,6 +9,8 @@ public class NPCController : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] PlayerSettings playerSettings;
 
+
+
     // Start is called before the first frame update
     void Start()
     {

@@ -25,6 +25,7 @@ public class RuntimeGameSettings : MonoBehaviour
     private void Start()
     {
         lastScene = 1;
+        StoryController.LoadDialoguesFromJson("StoryContainer");
     }
 
     public void SetPlayerLastPosition(Vector2 playerLastPosition)

@@ -127,6 +127,12 @@ public class PlayerMovement : MonoBehaviour
             RuntimeGameSettings.Instance.SetPlayerLastPosition(new Vector2(11.05f, -14.6f)); // POSICIÓ DE LA SORTIDA DEL BOSC
             SceneController.LoadMainWorldScene();
         }
+        else if (collision.CompareTag("StoryTrigger"))
+        {
+            //DialogueController.Instance.ShowStoryDialogue(PlayerPrefs.GetInt("StoryFlag"));
+            //PlayerPrefs.SetInt("StoryFlag", PlayerPrefs.GetInt("StoryFlag") + 1);
+            //collision.gameObject.SetActive(false);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
