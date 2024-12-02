@@ -13,7 +13,7 @@ public class EnemyController : MonoBehaviour
     private bool canMove = true;
 
     private Rigidbody2D rb;
-    //[SerializeField] HealthbarBehaviour healthbar;
+    [SerializeField] HealthbarBehaviour healthbar;
 
 
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class EnemyController : MonoBehaviour
         }
         maxSpeed = speed;
         maxHealth = health;
-        //healthbar.SetHealth(health, maxHealth);
+        healthbar.SetHealth(health, maxHealth);
     }
 
     // Update is called once per frame
@@ -57,7 +57,7 @@ public class EnemyController : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         this.health -= dmg;
-        //healthbar.SetHealth(health, maxHealth);
+        healthbar.SetHealth(health, maxHealth);
         GetKnockbacked();
         Debug.Log("*enemy says* Ouch");
         if (health <= 0)
