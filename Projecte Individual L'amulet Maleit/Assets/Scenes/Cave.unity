@@ -3011,8 +3011,8 @@ Tilemap:
   - first: {x: -2, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 51
-      m_TileSpriteIndex: 51
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3041,8 +3041,8 @@ Tilemap:
   - first: {x: 1, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 50
-      m_TileSpriteIndex: 50
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4612,7 +4612,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: ffb2cfa6c8460834a8e3f7e68eeec2a5, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 74ad3b03d3ca11c42a0bc06a9353f5bb, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: dfeeb2a6f0d3b294bbe883da20f69940, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: bc4d1c3a87ebe9242870dc3d9d443ecf, type: 2}
@@ -4700,9 +4700,9 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 541d5cabd6db75c4ab001601a7fa9a13, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: b0b09173f40893c4ab312be9be97846e, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: b188117a43b7611429f85cdc0c147299, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 51e014d610c94ed4fa50b1bcc6ce8508, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -4901,7 +4901,7 @@ Tilemap:
     m_Data: {fileID: -254853291, guid: f92605f60800cab4db0f0d3c1685d62b, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 626775093, guid: f92605f60800cab4db0f0d3c1685d62b, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 4
     m_Data: {fileID: -1481136581, guid: f92605f60800cab4db0f0d3c1685d62b, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 1128404463, guid: f92605f60800cab4db0f0d3c1685d62b, type: 3}
@@ -4989,9 +4989,9 @@ Tilemap:
     m_Data: {fileID: -302681406, guid: f92605f60800cab4db0f0d3c1685d62b, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 74659, guid: f92605f60800cab4db0f0d3c1685d62b, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: -1961590265, guid: f92605f60800cab4db0f0d3c1685d62b, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 1124855480, guid: f92605f60800cab4db0f0d3c1685d62b, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 2009761655, guid: f92605f60800cab4db0f0d3c1685d62b, type: 3}
@@ -5555,7 +5555,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c59566ac46a2ba04f84abaa48d7e983b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6269,7 +6269,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &829334102
 RectTransform:
@@ -6436,9 +6436,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1007203405}
   - component: {fileID: 1007203404}
-  - component: {fileID: 1007203408}
   - component: {fileID: 1007203407}
   - component: {fileID: 1007203406}
+  - component: {fileID: 1007203409}
   m_Layer: 9
   m_Name: Cursed Amulet
   m_TagString: Untagged
@@ -6575,7 +6575,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1007203408
+--- !u!114 &1007203409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6584,12 +6584,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1007203402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eb51a91cc3ebfc43a5eb305cec47126, type: 3}
+  m_Script: {fileID: 11500000, guid: 89d9c57cef3c536468ca18b0c2799fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1007203407}
   playerSettings: {fileID: 1554991399}
-  type: 0
 --- !u!1 &1079006400
 GameObject:
   m_ObjectHideFlags: 0
@@ -76859,16 +76858,16 @@ GameObject:
   m_Component:
   - component: {fileID: 1565861264}
   - component: {fileID: 1565861263}
-  - component: {fileID: 1565861262}
   - component: {fileID: 1565861261}
   - component: {fileID: 1565861260}
+  - component: {fileID: 1565861265}
   m_Layer: 9
   m_Name: Cursed Amulet (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!70 &1565861260
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -76931,21 +76930,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1565861262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565861259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eb51a91cc3ebfc43a5eb305cec47126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1565861261}
-  playerSettings: {fileID: 1554991399}
-  type: 0
 --- !u!212 &1565861263
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -77007,12 +76991,26 @@ Transform:
   m_GameObject: {fileID: 1565861259}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07, y: -2.33, z: 0}
+  m_LocalPosition: {x: 0.07, y: -2.07, z: 0}
   m_LocalScale: {x: 0.0864194, y: 0.0864194, z: 0.0864194}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1565861265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565861259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d9c57cef3c536468ca18b0c2799fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1007203407}
+  playerSettings: {fileID: 1554991399}
 --- !u!1 &1672291151
 GameObject:
   m_ObjectHideFlags: 0

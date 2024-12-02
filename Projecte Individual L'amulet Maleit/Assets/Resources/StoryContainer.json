@@ -9,11 +9,11 @@
                 },
                 {
                     "name": "Ureos",
-                    "text": "Ahir va venir el meu veï a demanar-me llenya. Hauria d'anar-hi abans no es faci fosc."
+                    "text": "Ahir va venir el meu veí a demanar-me llenya. Hauria d'anar-hi abans no es faci fosc."
                 },
                 {
                     "name": "Ureos",
-                    "text": "Em va dir que necesitava un tipus de llenya que hi ha en el bosc del sud."
+                    "text": "Em va dir que necessitava un tipus de llenya que hi ha en el bosc del sud."
                 }
             ]
         },
@@ -44,11 +44,11 @@
             "lines": [
                 {
                     "name": "Ureos",
-                    "text": "El poble ha sigut atacat mentres era fora!!! Em semblava estrany veure monstres tan aprop del poble però no m'esperava això..."
+                    "text": "El poble ha sigut atacat mentre era fora!!! Em semblava estrany veure monstres tan aprop del poble però no m'esperava això..."
                 },
                 {
                     "name": "Ureos",
-                    "text": "Un moment... No hauràn vingut a buscar el que em penso...?"
+                    "text": "Un moment... No hauran vingut a buscar el que em penso...?"
                 },
                 {
                     "name": "Ureos",
@@ -65,11 +65,11 @@
           },
           {
             "name": "Ureos",
-            "text": "No puc perdre més el temps. He d'anar a recuperar l'amulet. Si no hi sóc a temps el meu poble serà només el primer en ser arrasat."
+            "text": "No puc perdre més el temps. He d'anar a recuperar l'amulet. Si no hi soc a temps el meu poble serà només el primer a ser arrasat."
           },
           {
             "name": "Ureos",
-            "text": "Si no recordo malament, hi ha una cova al nord-est d'on sovint surten monstres. Potser si hi vaig aconseguiré alguna pista d'on és l'amulet."
+            "text": "Si no recordo malament, hi ha una cova al nord-est d'on sovint surten monstres. Potser, si hi vaig, aconseguiré alguna pista d'on és l'amulet."
           }
         ]
       },
@@ -78,11 +78,11 @@
         "lines": [
           {
             "name": "Ureos",
-            "text": "Per fi he aconseguit l'amulet. Ara que he vist tot el seu poder malèfic n'estic segur: L'he de destruïr."
+            "text": "Per fi he aconseguit l'amulet. Ara que he vist tot el seu poder malèfic n'estic segur: L'he de destruir."
           },
           {
             "name": "Ureos",
-            "text": "Però per fer això hauré d'anar al volcà. Necessitaré preparar-me a conciencia per aquest llarg viatge..."
+            "text": "Però per fer això hauré d'anar al volcà. Necessitaré preparar-me a consciència per aquest llarg viatge..."
           }
         ]
       },
@@ -91,19 +91,19 @@
         "lines": [
           {
             "name": "Sistema",
-            "text": "Felicitats! Fins aqui arriba el joc de L'Amulet Maleït. Espero que l'hagueu gaudït de la mateixa manera que jo en fer-lo."
+            "text": "Enhorabona! Fins aquí arriba el joc de L'Amulet Maleït. Espero que l'hàgiu gaudit de la mateixa manera que jo en fer-lo."
           },
           {
             "name": "Sistema",
-            "text": "En un futur hi haurà actualitzacions per millorar la jugabilitat entre altres. Tot el feedback es benvolgut!"
+            "text": "En un futur hi haurà actualitzacions per millorar la jugabilitat entre altres. Tot el feedback és benvolgut!"
           },
           {
             "name": "Sistema",
-            "text": "---AVIS---"
+            "text": "---AVÍS---"
           },
           {
             "name": "Sistema",
-            "text": "El joc es reiniciarà completament una vegada tornis a començar. Al igual que quan tanques i obres el joc."
+            "text": "El joc es reiniciarà completament una vegada tornis a començar. Igual que quan tanques i obres el joc."
           }
         ]
       }

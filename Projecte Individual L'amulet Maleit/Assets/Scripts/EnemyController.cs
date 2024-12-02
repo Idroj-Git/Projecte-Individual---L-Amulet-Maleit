@@ -6,13 +6,14 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] int health;
     [SerializeField] float speed;
-    private float maxSpeed;
+    private float maxSpeed, maxHealth;
     [SerializeField] int strength;
     private BattleManager battleManager;
     [SerializeField] Transform target;
     private bool canMove = true;
 
     private Rigidbody2D rb;
+    //[SerializeField] HealthbarBehaviour healthbar;
 
 
     // Start is called before the first frame update
@@ -21,7 +22,13 @@ public class EnemyController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         battleManager = FindObjectOfType<BattleManager>();
         battleManager.SetEnemiesAlive(battleManager.GetEnemiesAlive() + 1);
+        if (target == null)
+        {
+            target = FindAnyObjectByType<PlayerMovement>().transform;
+        }
         maxSpeed = speed;
+        maxHealth = health;
+        //healthbar.SetHealth(health, maxHealth);
     }
 
     // Update is called once per frame
@@ -50,6 +57,7 @@ public class EnemyController : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         this.health -= dmg;
+        //healthbar.SetHealth(health, maxHealth);
         GetKnockbacked();
         Debug.Log("*enemy says* Ouch");
         if (health <= 0)

@@ -42,9 +42,9 @@ public class PlayerMovement : MonoBehaviour
             _rb.position = RuntimeGameSettings.Instance.GetPlayerLastPostion();
         }
 
-        if (PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName) <= 1)
+        if (PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName) <= 1) // GESTIONAR MILLOR EL CANVI D'ESCENA + MOVIMENT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         {
-            canMove = false;
+            //canMove = false;
         }
     }
     private void OnDisable()
