@@ -9,6 +9,11 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/Projecte Individual/[Ll]ibrary/
+/Projecte Individual/[Tt]emp/
+/Projecte Individual/[Oo]bj/
+/Projecte Individual/[Bb]uild/
+/Projecte Individual/[Bb]uilds/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
