@@ -173,8 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
-  speed: 3
-  strength: 50
+  speed: 2
+  strength: 30
   target: {fileID: 0}
   healthbar: {fileID: 8463916597755583373}
 --- !u!50 &3596412359145566579

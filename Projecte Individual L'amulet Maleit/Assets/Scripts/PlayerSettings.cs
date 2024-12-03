@@ -11,9 +11,13 @@ public class PlayerSettings : MonoBehaviour
     private float weaponCooldown;
 
     [SerializeField] Transform attackPosition;
+    private Vector3 attackPositionVector;
     [SerializeField] Transform weaponPivot;
     public LayerMask whatIsEnemies;
     public float attackRange;
+    private bool isAttacking = false;
+    private float attackDuration = 0.2f, attackTimer = 0f;
+    private HashSet<EnemyController> damagedEnemies = new HashSet<EnemyController>();
 
     [SerializeField] Animator axe_animator;
 
@@ -27,6 +31,7 @@ public class PlayerSettings : MonoBehaviour
     private Vector2 _moveDirection;
 
     [SerializeField] MusicController musicController;
+    [SerializeField] HealthbarBehaviour healthbar;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +40,8 @@ public class PlayerSettings : MonoBehaviour
         // same per weaponDamage
         maxHealth = health;
         weaponCooldown = 0;
+        if (healthbar != null)
+            healthbar.SetHealth(health, maxHealth);
     }
 
     private void OnEnable()
@@ -58,6 +65,19 @@ public class PlayerSettings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isAttacking)
+        {
+            attackTimer -= Time.deltaTime;
+            if (attackTimer > 0)
+            {
+                PerformAttack();
+            }
+            else
+            {
+                isAttacking = false; // Finaliza el ataque cuando el temporizador llega a 0
+            }
+        }
+
         if (weaponCooldown > 0)
         {
             weaponCooldown -= Time.deltaTime;
@@ -76,13 +96,16 @@ public class PlayerSettings : MonoBehaviour
 
     private void TurnWeaponPivot()
     {
-        if (_moveDirection.x < 0)
+        if (!isAttacking)
         {
-            weaponPivot.localScale = new Vector3(Mathf.Abs(weaponPivot.localScale.x) * -1, weaponPivot.localScale.y, weaponPivot.localScale.z);
-        }
-        else if (_moveDirection.x > 0)
-        {
-            weaponPivot.localScale = new Vector3(Mathf.Abs(weaponPivot.localScale.x), weaponPivot.localScale.y, weaponPivot.localScale.z);
+            if (_moveDirection.x < 0)
+            {
+                weaponPivot.localScale = new Vector3(Mathf.Abs(weaponPivot.localScale.x) * -1, weaponPivot.localScale.y, weaponPivot.localScale.z);
+            }
+            else if (_moveDirection.x > 0)
+            {
+                weaponPivot.localScale = new Vector3(Mathf.Abs(weaponPivot.localScale.x), weaponPivot.localScale.y, weaponPivot.localScale.z);
+            }
         }
     }
 
@@ -111,6 +134,7 @@ public class PlayerSettings : MonoBehaviour
         this.health -= dmg;
         damagedParticleSystem.Play();
         musicController.PlayHurt();
+        healthbar.SetHealth(health, maxHealth);
         if (this.health <= 0)
         {
             musicController.PlayDeath();
@@ -126,13 +150,33 @@ public class PlayerSettings : MonoBehaviour
             if (weaponCooldown <= 0)
             {
                 musicController.PlaySlash();
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies); // Mirar com es fa per que quedi una estela de dmg (coroutine o algo)
-                for (int i = 0; i < enemiesToDamage.Length; i++)
-                {
-                    enemiesToDamage[i].GetComponent<EnemyController>().TakeDamage(weaponDamage);
-                }
+                //Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies);
+                //for (int i = 0; i < enemiesToDamage.Length; i++)
+                //{
+                //    enemiesToDamage[i].GetComponent<EnemyController>().TakeDamage(weaponDamage);
+                //}
                 weaponCooldown = 1f;
                 axe_animator.SetTrigger("Attack");
+
+                isAttacking = true;
+                attackTimer = attackDuration;
+                attackPositionVector = attackPosition.position;
+                damagedEnemies.Clear(); // Esborra els enemics que hi havia en el HashSet
+            }
+        }
+    }
+
+    private void PerformAttack()
+    {
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies);
+        // tmb es pot fer amb foreach: foreach (Collider2D collider in enemiesToDamage)
+        for (int i = 0; i < enemiesToDamage.Length; i++)
+        {
+            EnemyController enemy = enemiesToDamage[i].GetComponent<EnemyController>();
+            if (!damagedEnemies.Contains(enemy))
+            {
+                enemy.TakeDamage(weaponDamage);
+                damagedEnemies.Add(enemy);
             }
         }
     }

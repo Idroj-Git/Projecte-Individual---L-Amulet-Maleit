@@ -17,7 +17,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] GameObject enemyPrefab1;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         int spawnCount = 0;
         while (spawnCount < maxSpawns) // max no inclós
