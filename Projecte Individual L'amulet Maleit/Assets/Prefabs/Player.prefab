@@ -267,12 +267,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 200
   weaponDamage: 15
-  attackPosition: {fileID: 1670404010321844122}
+  attackPosition: {fileID: 1693856627485922978}
   weaponPivot: {fileID: 1670404010321844122}
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 1024
-  attackRange: 1.5
+  attackRange: 0.83
   axe_animator: {fileID: 6448895949738797969}
   interactPosition: {fileID: 3658263672632089553}
   interactRange: 0.5
@@ -280,6 +280,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   damagedParticleSystem: {fileID: 1190977110967606439}
+  musicController: {fileID: 0}
+  healthbar: {fileID: 0}
 --- !u!1 &5261175537053848422
 GameObject:
   m_ObjectHideFlags: 0

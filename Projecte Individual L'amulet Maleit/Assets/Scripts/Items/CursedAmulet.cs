@@ -28,13 +28,13 @@ public class CursedAmulet : ItemController
     {
         CallStoryDialogue();
         yield return new WaitForEndOfFrame();
-        yield return WaitForDialogueFinished(() => DialogueController.Instance.hasDialogueFinished);
+        yield return WaitForDialogueFinished(() => DialogueController.Instance.GetHasDialogueFinished());
         //playerSettings.SetCanInteract(false);
         CanvasFade.Instance.FadeCanvas();
         Time.timeScale = 1f; // el fadein ho posa a 0. Per que surti el text amb el fons en negre necessito que sigui 1.
         CallStoryDialogue();
-        DialogueController.Instance.hasDialogueFinished = false;
-        yield return WaitForDialogueFinished(() => DialogueController.Instance.hasDialogueFinished);
+        DialogueController.Instance.SetHasDialogueFinished(false);
+        yield return WaitForDialogueFinished(() => DialogueController.Instance.GetHasDialogueFinished());
         //playerSettings.SetCanInteract(false);
         SceneController.LoadWinScene();
     }

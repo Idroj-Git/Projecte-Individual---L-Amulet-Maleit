@@ -5,12 +5,22 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 
 public class DialogueController : MonoBehaviour
 {
     public static DialogueController Instance { get; private set; }
 
-    public bool hasDialogueFinished = false;
+    private bool hasDialogueFinished = true;
+
+    public bool GetHasDialogueFinished()
+    {
+        return this.hasDialogueFinished;
+    }
+    public void SetHasDialogueFinished(bool hasDialogueFinished)
+    {
+        this.hasDialogueFinished = hasDialogueFinished;
+    }
 
     [SerializeField] GameObject textBox;
     [SerializeField] TMP_Text dialogueText;
@@ -102,6 +112,7 @@ public class DialogueController : MonoBehaviour
 
     public void OpenDialogueBox()
     {
+        hasDialogueFinished = false;
         SetDialogueBoxStatus(true);
         InputController.OnInteractDialogue += SetNextButtonPressed;
         //Debug.Log("Open");
@@ -257,4 +268,12 @@ public class DialogueController : MonoBehaviour
             yield return new WaitForSeconds(checkInterval);
         }
     }
+
+    internal void StartNPCDialogue(TextStorage text)
+    {
+        hasDialogueFinished = false;
+        ShowDialogue(text);
+    }
+
+
 }

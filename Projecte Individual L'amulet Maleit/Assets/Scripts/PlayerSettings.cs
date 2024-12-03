@@ -176,6 +176,12 @@ public class PlayerSettings : MonoBehaviour
             if (!damagedEnemies.Contains(enemy))
             {
                 enemy.TakeDamage(weaponDamage);
+
+                if (enemy.getActualHealth() < enemy.getMaxHealth())
+                    musicController.PlayDeath();
+                else
+                    musicController.PlayHurt();
+
                 damagedEnemies.Add(enemy);
             }
         }

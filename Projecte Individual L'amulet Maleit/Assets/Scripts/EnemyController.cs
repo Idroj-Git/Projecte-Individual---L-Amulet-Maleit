@@ -15,6 +15,14 @@ public class EnemyController : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] HealthbarBehaviour healthbar;
 
+    private float stunTimer = 0f;
+    private bool isKnockbacked = false;
+    private Vector2 lastDirection;
+    private bool isStunned
+    {
+        get { return stunTimer > 0f; }
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,14 +42,29 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveEnemy();
-        if (speed >= maxSpeed)
+        if (!isStunned)
         {
-            speed = maxSpeed;
+            MoveEnemy();
+        }
+
+
+        if (isKnockbacked && speed < 0)
+        {
+            speed += Time.deltaTime * 2f;
+            if (speed >= 0)
+            {
+                speed = 0;
+                StartStun();
+            }
         }
         else
         {
-            speed += 0.3f;
+            speed = maxSpeed;
+        }
+
+        if (stunTimer > 0)
+        {
+            stunTimer -= Time.deltaTime;
         }
     }
 
@@ -50,7 +73,13 @@ public class EnemyController : MonoBehaviour
         if (target != null && canMove)
         {
             Vector2 direction = (target.position - transform.position).normalized;
-            rb.velocity = direction * speed;
+            if (!isKnockbacked)
+                lastDirection = direction;
+
+            if (isKnockbacked)
+                rb.velocity = lastDirection * speed; // es tira endarrera amb la direcció anterior.
+            else
+                rb.velocity = direction * speed;
         }
     }
 
@@ -58,7 +87,7 @@ public class EnemyController : MonoBehaviour
     {
         this.health -= dmg;
         healthbar.SetHealth(health, maxHealth);
-        GetKnockbacked();
+        GetKnockbacked(dmg/10);
         Debug.Log("*enemy says* Ouch");
         if (health <= 0)
         {
@@ -67,9 +96,17 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void GetKnockbacked()
+    private void GetKnockbacked(float knockbackForce)
     {
-        speed = -6f;
+        isKnockbacked = true;
+        stunTimer = 0f;
+        speed = -speed * knockbackForce;
+    }
+
+    private void StartStun()
+    {
+        stunTimer = 0.2f;
+        isKnockbacked = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -80,7 +117,7 @@ public class EnemyController : MonoBehaviour
             if (player != null)
             {
                 player.TakeDamage(strength);
-                GetKnockbacked();
+                GetKnockbacked(strength/10);
             }
         }
     }
@@ -88,5 +125,15 @@ public class EnemyController : MonoBehaviour
     public void SetCanMove(bool canMove)
     {
         this.canMove = canMove;
+    }
+
+    public float getActualHealth()
+    {
+        return this.health;
+    }
+
+    public float getMaxHealth()
+    {
+        return this.maxHealth;
     }
 }

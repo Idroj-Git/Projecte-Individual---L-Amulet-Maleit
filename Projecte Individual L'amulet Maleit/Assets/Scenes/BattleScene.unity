@@ -5934,6 +5934,14 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: -3
       objectReference: {fileID: 0}
+    - target: {fileID: 1693856627485922978, guid: 5acf66822aed99744aef62dd75e13af4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1693856627485922978, guid: 5acf66822aed99744aef62dd75e13af4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.13
+      objectReference: {fileID: 0}
     - target: {fileID: 2200747123961638593, guid: 5acf66822aed99744aef62dd75e13af4, type: 3}
       propertyPath: healthbar
       value: 

@@ -32523,7 +32523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d23e800053481841b251544cfe4f9df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasDialogueFinished: 0
+  hasDialogueFinished: 1
   textBox: {fileID: 1520201159}
   dialogueText: {fileID: 548123002}
   nameText: {fileID: 507366922}

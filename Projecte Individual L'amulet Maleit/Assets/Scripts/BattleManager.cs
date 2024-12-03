@@ -66,6 +66,14 @@ public class BattleManager : MonoBehaviour
             Debug.Log("Tots els enemics han sigut derrotats, VICTORIA!");
             //afegir sfx
         }
+        StartCoroutine(VictoryRoutine());
+        //SceneController.LoadSceneByIndex(RuntimeGameSettings.Instance.lastScene);
+    }
+
+    private IEnumerator VictoryRoutine()
+    {
+        // mostrar or aconseguit + img de "VICTORY"
+        yield return new WaitForSeconds(2);
         SceneController.LoadSceneByIndex(RuntimeGameSettings.Instance.lastScene);
     }
 

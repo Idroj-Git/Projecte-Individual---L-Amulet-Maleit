@@ -29,7 +29,7 @@ public class NPCController : MonoBehaviour
 
     private void StartDialogue() // hacer public? (no funciona creo)
     {
-        DialogueController.Instance.ShowDialogue(text);
+        DialogueController.Instance.StartNPCDialogue(text);
     }
 
     public void Interacted()
