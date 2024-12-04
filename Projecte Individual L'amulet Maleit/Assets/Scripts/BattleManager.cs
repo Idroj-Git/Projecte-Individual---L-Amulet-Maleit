@@ -21,14 +21,15 @@ public class BattleManager : MonoBehaviour
     private float maxSpawns = 5, minSpawns = 2;
     private bool victoryCalled = false;
     [SerializeField] GameObject enemyPrefab1;
+    [SerializeField] GameObject enemyPrefab2;
 
     // Start is called before the first frame update
     void Awake()
     {
         GameObject enemyPrefabSpawning;
-        if (RuntimeGameSettings.Instance.GetLastScene() == 4) // Cova
+        if (RuntimeGameSettings.Instance.GetLastScene() == SceneController.GetCaveIndex()) // Cova
         {
-            enemyPrefabSpawning = enemyPrefab1; // AQUI SERA EL ENEMY PREFAB 2
+            enemyPrefabSpawning = enemyPrefab2; // AQUI SERA EL ENEMY PREFAB 2
         }
         else
         {

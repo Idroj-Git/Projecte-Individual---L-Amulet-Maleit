@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
         spawnCooldown = spawnCooldownMax;
 
-        if (SceneController.GetActualSceneIndex() == 2)
+        if (SceneController.GetActualSceneIndex() == SceneController.GetBattleIndex())
         {
             _rb.position = new Vector2(-6, 2); // aprox de on vull que faci spawn
         }
@@ -75,14 +76,21 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (lastCollision.CompareTag("SpawnableEnemies") && _moveDirection != Vector2.zero) 
                 {
-                    if (isPlayerOnSpawner && Random.Range(0, 100) < 5) // 5% de posibilitats d'spawn d'enemics
+                    if (isPlayerOnSpawner && Random.Range(0, 100) < 10) // 10% de posibilitats d'spawn d'enemics
                     {
                         RuntimeGameSettings.Instance.SetPlayerLastPosition(_rb.position); // CANVIAR AMB EL SETTER
                         SceneController.LoadBattleScene();
                     }
                     //Debug.Log("¡HA APARECIDO UN ENEMIGO en el update!");
                 }
-
+            }
+            if (_moveDirection != Vector2.zero && SceneController.GetActualSceneIndex() == SceneController.GetCaveIndex())
+            {
+                if (Random.Range(0, 100) < 5) // SENSE EL IS ON SPAWNER PERQUE APAREIXEN A TOT ARREU
+                {
+                    RuntimeGameSettings.Instance.SetPlayerLastPosition(_rb.position); // CANVIAR AMB EL SETTER
+                    SceneController.LoadBattleScene();
+                }
             }
         }
     }

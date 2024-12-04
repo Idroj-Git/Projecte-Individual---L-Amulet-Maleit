@@ -18,7 +18,7 @@ public class MainMenuController : MonoBehaviour
 
     public void StartGame()
     {
-        if (RuntimeGameSettings.Instance.GetLastScene() == 0)
+        if (RuntimeGameSettings.Instance.GetLastScene() == SceneController.GetMainMenuIndex())
         {
             SceneController.LoadMainWorldScene();
         }

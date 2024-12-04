@@ -15,7 +15,7 @@ public class EnemyController : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] HealthbarBehaviour healthbar;
 
-    private float stunTimer = 0f;
+    private float stunTimer = 0f, baseKnockback = 2;
     private bool isKnockbacked = false;
     private Vector2 lastDirection;
     private bool isStunned
@@ -87,8 +87,9 @@ public class EnemyController : MonoBehaviour
     {
         this.health -= dmg;
         healthbar.SetHealth(health, maxHealth);
-        GetKnockbacked(dmg/10);
-        Debug.Log("*enemy says* Ouch");
+        GetKnockbacked(dmg);
+        //Debug.Log("*enemy says* Ouch");
+        Debug.Log("With speed" + speed + " resulting in " + -speed + " speed");
         if (health <= 0)
         {
             battleManager.SetEnemiesAlive(battleManager.GetEnemiesAlive() - 1);
@@ -98,9 +99,13 @@ public class EnemyController : MonoBehaviour
 
     private void GetKnockbacked(float knockbackForce)
     {
-        isKnockbacked = true;
-        stunTimer = 0f;
-        speed = -speed * knockbackForce;
+        if (!isKnockbacked)
+        {
+            isKnockbacked = true;
+            stunTimer = 0f;
+            speed = -speed * baseKnockback * (knockbackForce / 100); // mini augment depenent de la força
+            Debug.Log("Knockback with " + knockbackForce + " With speed  " + speed +  " resulting in " + knockbackForce * -speed + " speed");
+        }
     }
 
     private void StartStun()
@@ -117,7 +122,7 @@ public class EnemyController : MonoBehaviour
             if (player != null)
             {
                 player.TakeDamage(strength);
-                GetKnockbacked(strength/10);
+                GetKnockbacked(strength);
             }
         }
     }

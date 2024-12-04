@@ -7,13 +7,16 @@ using UnityEngine.UI;
 public class ButtonController : MonoBehaviour
 {
     private bool isGamePaused;
-    private int[] pausableScenes;
+    private int[] pausableScenes, unsavableScenes;
     [SerializeField] GameObject pauseMenuCanvas;
     [SerializeField] CanvasGroup pauseMenuCanvasGroup;
     [SerializeField] Button continueButton;
     private void Start()
     {
-        pausableScenes = new int[] { 1, 2, 3, 4};
+        pausableScenes = new int[] { SceneController.GetMainWorldIndex(), SceneController.GetForestIndex(), SceneController.GetBattleIndex(), SceneController.GetCaveIndex()};
+        unsavableScenes = new int[] { SceneController.GetMainMenuIndex(), SceneController.GetBattleIndex(), SceneController.GetWinIndex(), SceneController.GetLoseIndex()};
+
+
         isGamePaused = false;
 
         if (pausableScenes.Contains(SceneController.GetActualSceneIndex()) && pauseMenuCanvas != null)
@@ -51,7 +54,8 @@ public class ButtonController : MonoBehaviour
         }
         //RuntimeGameSettings.Instance.SetLastScene(1); // Reset de tot.
         //RuntimeGameSettings.Instance.SetPlayerLastPosition(new Vector2(16, 2));
-        RuntimeGameSettings.Instance.SaveGame();
+        if (!unsavableScenes.Contains(SceneController.GetActualSceneIndex()))
+            RuntimeGameSettings.Instance.SaveGame();
         SceneController.LoadMainMenuScene();
     }
 
@@ -86,7 +90,11 @@ public class ButtonController : MonoBehaviour
     {
         isGamePaused = true;
         pauseMenuCanvas.SetActive(isGamePaused);
+        PlayerSettings playerSettings = FindAnyObjectByType<PlayerSettings>();
+        if (playerSettings != null)
+            playerSettings.SetCanInteract(false);
         pauseMenuCanvasGroup.alpha = 0f; // Posar en el inspector (prefab) el canvasGroup.alpha = 0, quan ho tingui acabat
+        
         FadeIn();
         Time.timeScale = 0.0f;
     }
@@ -95,13 +103,20 @@ public class ButtonController : MonoBehaviour
     {
         isGamePaused = false;
         FadeOut();
+
+        PlayerSettings playerSettings = FindAnyObjectByType<PlayerSettings>();
+        if (playerSettings != null)
+            playerSettings.SetCanInteract(true);
         Time.timeScale = 1.0f;
     }
 
     public void PauseMenu()
     {
 
-        if (pausableScenes.Contains(SceneController.GetActualSceneIndex()) && (pauseMenuCanvas != null && pauseMenuCanvasGroup != null)) // comprovar si es pot pausar l'escena
+        if (pausableScenes.Contains(SceneController.GetActualSceneIndex()) 
+            && pauseMenuCanvas != null 
+            && pauseMenuCanvasGroup != null
+            && DialogueController.Instance.GetHasDialogueFinished()) // comprovar si es pot pausar l'escena
         {
             if (!isGamePaused)
             {

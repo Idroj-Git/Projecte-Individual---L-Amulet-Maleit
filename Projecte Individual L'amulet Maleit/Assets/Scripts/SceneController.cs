@@ -98,4 +98,12 @@ public static class SceneController
                 break;
         }
     }
+
+    public static int GetMainMenuIndex() { return 0; }
+    public static int GetMainWorldIndex() { return 1; }
+    public static int GetBattleIndex() { return 2; }
+    public static int GetForestIndex() { return 3; }
+    public static int GetCaveIndex() { return 4; }
+    public static int GetWinIndex() { return 5; }
+    public static int GetLoseIndex() { return 6; }
 }

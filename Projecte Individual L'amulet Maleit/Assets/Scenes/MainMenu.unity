@@ -782,7 +782,6 @@ GameObject:
   m_Component:
   - component: {fileID: 965393741}
   - component: {fileID: 965393740}
-  - component: {fileID: 965393739}
   m_Layer: 0
   m_Name: RuntimeGameSettings
   m_TagString: Untagged
@@ -790,18 +789,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &965393739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965393738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8c27513ce50a5443865d73bed800f9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &965393740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1075,7 +1062,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Comen\xE7a el Joc"
+  m_text: Nova Partida
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a0a6ba7bcdcbc44f87a9f13e902038f, type: 2}
   m_sharedMaterial: {fileID: 866995674536889994, guid: 5a0a6ba7bcdcbc44f87a9f13e902038f, type: 2}

@@ -33,7 +33,7 @@ public class HealthbarBehaviour : MonoBehaviour
         Image fillImage = slider.fillRect.GetComponentInChildren<Image>();
         if (fillImage != null)
         {
-            Debug.Log("Fill image found: " + fillImage.name);
+            //Debug.Log("Fill image found: " + fillImage.name);
             fillImage.color = Color.Lerp(low, high, slider.normalizedValue);
         }
         slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(low, high, slider.normalizedValue);

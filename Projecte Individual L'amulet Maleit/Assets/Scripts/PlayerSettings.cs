@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Linq;
 
 public class PlayerSettings : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayerSettings : MonoBehaviour
     private Vector3 attackPositionVector;
     [SerializeField] Transform weaponPivot;
     public LayerMask whatIsEnemies;
+    public LayerMask whatIsFlyingEnemies;
     public float attackRange;
     private bool isAttacking = false;
     private float attackDuration = 0.2f, attackTimer = 0f;
@@ -141,12 +143,12 @@ public class PlayerSettings : MonoBehaviour
             musicController.PlayDeath();
             SceneController.LoadLoseScene();
         }
-        Debug.Log("*player says* Ouch");
+        //Debug.Log("*player says* Ouch");
     }
 
     public void Attack()
     {
-        if (SceneController.GetActualSceneIndex() == 2) // es poden juntar els dos IF, pero per mantenir ordre no ho faig
+        if (SceneController.GetActualSceneIndex() == SceneController.GetBattleIndex()) // es poden juntar els dos IF, pero per mantenir ordre no ho faig
         {
             if (weaponCooldown <= 0)
             {
@@ -164,11 +166,15 @@ public class PlayerSettings : MonoBehaviour
 
     private void PerformAttack()
     {
-        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies);
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsFlyingEnemies);
+        Collider2D[] flyingEnemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies);
+
+        Collider2D[] allEnemiesToDamage = enemiesToDamage.Concat(flyingEnemiesToDamage).ToArray();
+
         // tmb es pot fer amb foreach: foreach (Collider2D collider in enemiesToDamage)
-        for (int i = 0; i < enemiesToDamage.Length; i++)
+        for (int i = 0; i < allEnemiesToDamage.Length; i++)
         {
-            EnemyController enemy = enemiesToDamage[i].GetComponent<EnemyController>();
+            EnemyController enemy = allEnemiesToDamage[i].GetComponent<EnemyController>();
             if (!damagedEnemies.Contains(enemy))
             {
                 enemy.TakeDamage(RuntimeGameSettings.Instance.GetPlayerDamage());
@@ -185,7 +191,7 @@ public class PlayerSettings : MonoBehaviour
 
     public void Interact()
     {
-        if (SceneController.GetActualSceneIndex() != 2 && canInteract) // tot menys l'escena de batalla
+        if (SceneController.GetActualSceneIndex() != SceneController.GetBattleIndex() && canInteract) // tot menys l'escena de batalla
         {
             Collider2D interactedObject = Physics2D.OverlapCircle(interactPosition.position, interactRange, interactable); // Sense el ALL (OverlapCircle) perquè només vull una interacció
             if (interactedObject != null)

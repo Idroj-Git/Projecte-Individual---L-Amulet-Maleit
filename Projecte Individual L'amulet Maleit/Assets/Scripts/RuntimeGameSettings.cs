@@ -40,7 +40,7 @@ public class RuntimeGameSettings : MonoBehaviour
 
     public void SaveGame() // Guardar dins dels playerprefs per poder tancar el joc.
     {
-        if (SceneController.GetActualSceneIndex() != 2)
+        if (SceneController.GetActualSceneIndex() != SceneController.GetBattleIndex())
         {
             PlayerMovement playerMovement = FindAnyObjectByType<PlayerMovement>();
             if (playerMovement != null)
@@ -51,7 +51,7 @@ public class RuntimeGameSettings : MonoBehaviour
             }
         }
 
-        if (SceneController.GetActualSceneIndex() != 2) // Si es l'escena de batalla s'obre l'última escena (guardada en el lloc on es fa el canvi d'escena)
+        if (SceneController.GetActualSceneIndex() != SceneController.GetBattleIndex()) // Si es l'escena de batalla s'obre l'última escena (guardada en el lloc on es fa el canvi d'escena)
         {
             lastScene = SceneController.GetActualSceneIndex();
         }
@@ -70,7 +70,7 @@ public class RuntimeGameSettings : MonoBehaviour
         lastScene = 1;
         actualHealth = 200;
         maxHealth = 200;
-        playerDamage = 15;
+        playerDamage = 30;
         playerGold = 5;
         unsavedStoryProgression = 1; // RESET HISTÒRIA
 }
