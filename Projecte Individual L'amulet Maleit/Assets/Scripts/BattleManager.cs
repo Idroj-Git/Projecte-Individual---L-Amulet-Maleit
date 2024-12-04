@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class BattleManager : MonoBehaviour
 {
@@ -8,40 +10,57 @@ public class BattleManager : MonoBehaviour
     public int enemiesAlive = 0;
     private Vector2[] enemySpawnPositions = new Vector2[]
     {
-        new Vector2(7, -2),
+        new Vector2(6, 4), //up mid
+        new Vector2(8, 1.5f), //up mid
+        new Vector2(5, 0), // mid mid
+        new Vector2(7, -2), // etc
         new Vector2(5, -3),
-        new Vector2(3, -4)
+        new Vector2(3, -3.7f),
+        new Vector2(7.3f, -4)
     };
-    private float maxSpawns = 3;
+    private float maxSpawns = 5, minSpawns = 2;
     private bool victoryCalled = false;
     [SerializeField] GameObject enemyPrefab1;
 
     // Start is called before the first frame update
     void Awake()
     {
-        int spawnCount = 0;
-        while (spawnCount < maxSpawns) // max no inclós
+        GameObject enemyPrefabSpawning;
+        if (RuntimeGameSettings.Instance.GetLastScene() == 4) // Cova
         {
-            foreach (Vector2 position in enemySpawnPositions)
+            enemyPrefabSpawning = enemyPrefab1; // AQUI SERA EL ENEMY PREFAB 2
+        }
+        else
+        {
+            enemyPrefabSpawning = enemyPrefab1;
+        }
+        List<Vector2> availablePositions = new List<Vector2>(enemySpawnPositions);
+        Shuffle(availablePositions);
+
+        int totalSpawns = Random.Range((int)minSpawns, (int)maxSpawns + 1);
+        int spawnCount = 0;
+        while (spawnCount < totalSpawns) // max no inclós, va 1 per 1
+        {
+            int randomIndex = Random.Range(0, availablePositions.Count);
+            Vector2 position = availablePositions[randomIndex];
+
+            if (Random.value < 0.5f || spawnCount < minSpawns) // Així sempre apareixen 2 primer en posicions aleatories
             {
-                if (Random.value < 0.5)
-                {
-                    spawnCount++;
-                    Instantiate(enemyPrefab1, position, Quaternion.identity);
-                }
+                spawnCount++;
+                Instantiate(enemyPrefabSpawning, position, Quaternion.identity);
+                availablePositions.RemoveAt(randomIndex);
             }
-            //if (Random.value < 0.5)
-            //{
-            //    Instantiate(enemyPrefab1, enemySpawnPositions[1], Quaternion.identity);
-            //}
-            //if (Random.value < 0.5)
-            //{
-            //    Instantiate(enemyPrefab1, enemySpawnPositions[2], Quaternion.identity);
-            //}
-            //if (Random.value < 0.5)
-            //{
-            //    Instantiate(enemyPrefab1, enemySpawnPositions[3], Quaternion.identity);
-            //}
+        }
+    }
+
+    private void Shuffle<T>(List<T> list)
+    {
+        for (int i = list.Count - 1; i > 0; i--)
+        {
+            int randomIndex = Random.Range(0, i + 1);
+            T temp = list[i];
+            list[i] = list[randomIndex];
+            list[randomIndex] = temp;
         }
     }
 
@@ -74,7 +93,7 @@ public class BattleManager : MonoBehaviour
     {
         // mostrar or aconseguit + img de "VICTORY"
         yield return new WaitForSeconds(2);
-        SceneController.LoadSceneByIndex(RuntimeGameSettings.Instance.lastScene);
+        SceneController.LoadSceneByIndex(RuntimeGameSettings.Instance.GetLastScene());
     }
 
     public void SetEnemiesAlive(int enemiesAlive)

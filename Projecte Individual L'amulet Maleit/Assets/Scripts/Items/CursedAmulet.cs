@@ -11,17 +11,19 @@ public class CursedAmulet : ItemController
     public override void Interacted() // Per fer override ÉS NECESSARI QUE SIGUI VIRTUAL!
     {
         playerSettings.SetCanInteract(false);
-        PlayerPrefs.SetInt(RuntimeGameSettings.storyFlagName, 20); // Implementació pendent.
+        RuntimeGameSettings.Instance.SetStoryProgression(20);
+        //PlayerPrefs.SetInt(RuntimeGameSettings.storyFlagName, 20); // Implementació pendent.
         StartCoroutine(EndingScene());
     }
 
     private void CallStoryDialogue()
     {
-        Debug.Log(PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName));
-        DialogueController.Instance.ShowStoryDialogue(PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName));
-        PlayerPrefs.SetInt(RuntimeGameSettings.storyFlagName, PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName) + 1);
+        Debug.Log(RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/);
+        DialogueController.Instance.ShowStoryDialogue(RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/);
+        RuntimeGameSettings.Instance.IncreaseStoryProgression();
+        //PlayerPrefs.SetInt(RuntimeGameSettings.storyFlagName, PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName) + 1);
         PlayerPrefs.Save();
-        Debug.Log(PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName));
+        Debug.Log(RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/);
     }
 
     private IEnumerator EndingScene()

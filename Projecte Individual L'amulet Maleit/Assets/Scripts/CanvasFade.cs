@@ -155,7 +155,7 @@ public class CanvasFade : MonoBehaviour
         PlayerMovement playerMovement = FindObjectOfType<PlayerMovement>();
         if (playerMovement != null)
         {
-            //Debug.Log("Canmove no no no");
+            Debug.Log("Canmove no no no");
             playerMovement.SetCanMove(false);
         }
         EnemyController[] enemies = FindObjectsOfType<EnemyController>();
@@ -184,7 +184,7 @@ public class CanvasFade : MonoBehaviour
         //Debug.Log(DialogueController.Instance.GetHasDialogueFinished());
         if (playerMovement != null && DialogueController.Instance.GetHasDialogueFinished())
         {
-            //Debug.Log("Canmove yes yes yes");
+            Debug.Log("Canmove yes yes yes");
             playerMovement.SetCanMove(true);
         }
         foreach (EnemyController enemy in enemies)

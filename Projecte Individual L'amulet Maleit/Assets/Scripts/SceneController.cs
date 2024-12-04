@@ -50,7 +50,7 @@ public static class SceneController
     }
     public static void LoadBattleScene()
     {
-        RuntimeGameSettings.Instance.lastScene = GetActualSceneIndex();
+        RuntimeGameSettings.Instance.SetLastScene(GetActualSceneIndex());
         LoadScene(2);
     }
     public static void LoadForestScene()

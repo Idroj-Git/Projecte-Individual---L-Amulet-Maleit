@@ -12,21 +12,21 @@ public class MainWorldStoryEvents : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName) == 1)
+        if (RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/== 1)
         {
             storyObject1.SetActive(true);
             storyObject4.SetActive(false);
             storyObject5.SetActive(false);
             pathBlocking.SetActive(true);
         }
-        else if (PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName) == 4)
+        else if (RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/ == 4)
         {
             storyObject1.SetActive(false);
             storyObject4.SetActive(true);
             storyObject5.SetActive(false);
             pathBlocking.SetActive(true);
         }
-        else if (PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName) == 5)
+        else if (RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/ == 5)
         {
             storyObject1.SetActive(false);
             storyObject4.SetActive(false);
@@ -46,7 +46,7 @@ public class MainWorldStoryEvents : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            switch (PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName))
+            switch (RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/)
             {
                 case 1:
                     storyObject1.SetActive(false);
@@ -68,10 +68,11 @@ public class MainWorldStoryEvents : MonoBehaviour
 
     private void CallStoryDialogue()
     {
-        Debug.Log(PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName));
-        DialogueController.Instance.ShowStoryDialogue(PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName));
-        PlayerPrefs.SetInt(RuntimeGameSettings.storyFlagName, PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName) + 1);
+        Debug.Log(RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/);
+        DialogueController.Instance.ShowStoryDialogue(RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/);
+        RuntimeGameSettings.Instance.IncreaseStoryProgression();
+        //PlayerPrefs.SetInt(RuntimeGameSettings.storyFlagName, RuntimeGameSettings.Instance.GetStoryProgression() + 1);
         PlayerPrefs.Save();
-        Debug.Log(PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName));
+        Debug.Log(RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/);
     }
 }

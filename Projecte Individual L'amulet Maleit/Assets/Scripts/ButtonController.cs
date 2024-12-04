@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ButtonController : MonoBehaviour
     private int[] pausableScenes;
     [SerializeField] GameObject pauseMenuCanvas;
     [SerializeField] CanvasGroup pauseMenuCanvasGroup;
+    [SerializeField] Button continueButton;
     private void Start()
     {
         pausableScenes = new int[] { 1, 2, 3, 4};
@@ -19,9 +21,14 @@ public class ButtonController : MonoBehaviour
             pauseMenuCanvas.SetActive(isGamePaused);
         }
 
-        if (PlayerPrefs.GetInt("GameStarted")  == 0)
+        if (continueButton != null)
         {
-            PlayerPrefs.SetInt("StoryFlag", 1); // Reset de la historia
+            if (PlayerPrefs.GetInt("GameStarted")  == 0) // Serveix per saber si hi ha una partida començada, una vegada creada una partida sempre serà else a no ser que es borri de la carpeta
+            {
+                continueButton.interactable = false; // Reset de la historia obligatori
+            }
+            else
+                continueButton.interactable = true;
         }
     }
 
@@ -42,21 +49,30 @@ public class ButtonController : MonoBehaviour
         {
             ClosePauseMenu();
         }
-        RuntimeGameSettings.Instance.SetLastScene(1); // Reset de tot.
-        RuntimeGameSettings.Instance.SetPlayerLastPosition(new Vector2(16, 2));
+        //RuntimeGameSettings.Instance.SetLastScene(1); // Reset de tot.
+        //RuntimeGameSettings.Instance.SetPlayerLastPosition(new Vector2(16, 2));
+        RuntimeGameSettings.Instance.SaveGame();
         SceneController.LoadMainMenuScene();
     }
 
-    public void StartGame() // mainWorld
+    public void StartGame()
     {
         PlayerPrefs.SetInt("GameStarted", 1);
-        PlayerPrefs.SetInt("StoryFlag", 1); // TEMPORAL, FINS QUE POSI BOTÓ DE RESET DE HISTORIA!
+        RuntimeGameSettings.Instance.LoadGame(); // Carrega les stats anteriors
+        SceneController.LoadSceneByIndex(RuntimeGameSettings.Instance.GetLastScene());
+    }
+
+    public void StartNewGame() // mainWorld
+    {
+        PlayerPrefs.SetInt("GameStarted", 1);
+        //PlayerPrefs.SetInt("StoryFlag", 1); // Reset de la història // Es fa dins de SetBaseStats
+        RuntimeGameSettings.Instance.SetBaseStats(); // Carrega les stats default
         SceneController.LoadMainWorldScene();
     }
 
     public void ExitGame() //apagar el joc
     {
-        PlayerPrefs.SetInt("GameStarted", 0);
+        //PlayerPrefs.SetInt("GameStarted", 0);
         SceneController.ExitGame();
     }
     public void OpenConfig()

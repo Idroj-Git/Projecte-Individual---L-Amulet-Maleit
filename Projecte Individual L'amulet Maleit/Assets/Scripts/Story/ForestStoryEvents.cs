@@ -6,33 +6,42 @@ public class ForestStoryEvents : MonoBehaviour
 {
     [SerializeField] GameObject storyObject2;
     [SerializeField] GameObject storyObject3;
-    [SerializeField] GameObject missingTreeObject;
+    //[SerializeField] GameObject missingTreeObject;
     [SerializeField] GameObject enemyGrassObject;
 
+    public static int obtainedTrees = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName) == 2)
+        if (RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/ == 2)
         {
             storyObject2.SetActive(true);
             storyObject3.SetActive(false);
-            missingTreeObject.SetActive(true);
+            //missingTreeObject.SetActive(true);
             enemyGrassObject.SetActive(false);
         }
-        else if (PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName) == 3)
+        else if (RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/ == 3)
         {
             storyObject2.SetActive(false);
             storyObject3.SetActive(true);
-            missingTreeObject.SetActive(false);
+            //missingTreeObject.SetActive(false);
             enemyGrassObject.SetActive(true);
         }
         else
         {
             storyObject2.SetActive(false);
             storyObject3.SetActive(false);
-            missingTreeObject.SetActive(false);
+            //missingTreeObject.SetActive(false);
             enemyGrassObject.SetActive(true);
+        }
+    }
+
+    private void Update()
+    {
+        if (obtainedTrees >= 2 && RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/ == 3)
+        {
+            EnoughTreesCollected();
         }
     }
 
@@ -40,14 +49,14 @@ public class ForestStoryEvents : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            switch (PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName))
+            switch (RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/)
             {
                 case 2:
                     storyObject2.SetActive(false);
                     CallStoryDialogue();
-                    missingTreeObject.SetActive(false);
-                    enemyGrassObject.SetActive(true);
-                    storyObject3.SetActive(true);
+                    //missingTreeObject.SetActive(false);
+                    //enemyGrassObject.SetActive(true);
+                    //storyObject3.SetActive(true);
                     break;
                 case 3:
                     storyObject3.SetActive(false);
@@ -57,12 +66,21 @@ public class ForestStoryEvents : MonoBehaviour
         }
     }
 
+    private void EnoughTreesCollected()
+    {
+        //storyObject2.SetActive(false);
+        //CallStoryDialogue();
+        enemyGrassObject.SetActive(true);
+        storyObject3.SetActive(true);
+    }
+
     private void CallStoryDialogue()
     {
-        Debug.Log(PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName));
-        DialogueController.Instance.ShowStoryDialogue(PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName));
-        PlayerPrefs.SetInt(RuntimeGameSettings.storyFlagName, PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName) + 1);
+        Debug.Log(RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/);
+        DialogueController.Instance.ShowStoryDialogue(RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/);
+        RuntimeGameSettings.Instance.IncreaseStoryProgression();
+        //PlayerPrefs.SetInt(RuntimeGameSettings.storyFlagName, RuntimeGameSettings.Instance.GetStoryProgression() + 1);
         PlayerPrefs.Save();
-        Debug.Log(PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName));
+        Debug.Log(RuntimeGameSettings.Instance.GetStoryProgression()/*PlayerPrefs.GetInt(RuntimeGameSettings.storyFlagName)*/);
     }
 }

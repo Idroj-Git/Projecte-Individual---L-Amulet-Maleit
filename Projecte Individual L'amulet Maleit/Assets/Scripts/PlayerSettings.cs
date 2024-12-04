@@ -5,9 +5,9 @@ using UnityEngine.EventSystems;
 
 public class PlayerSettings : MonoBehaviour
 {
-    [SerializeField] int health;
-    private int maxHealth;
-    [SerializeField] int weaponDamage;
+    //[SerializeField] int health;
+    //private int maxHealth;
+    //[SerializeField] int playerDamage;
     private float weaponCooldown;
 
     [SerializeField] Transform attackPosition;
@@ -38,10 +38,10 @@ public class PlayerSettings : MonoBehaviour
     {
         // igualar health al que tingui guardat en el playerprefs, canviar el serializefield
         // same per weaponDamage
-        maxHealth = health;
+        //maxHealth = RuntimeGameSettings.Instance.GetActualHealth();
         weaponCooldown = 0;
         if (healthbar != null)
-            healthbar.SetHealth(health, maxHealth);
+            healthbar.SetHealth(RuntimeGameSettings.Instance.GetActualHealth(), RuntimeGameSettings.Instance.GetMaxHealth());
     }
 
     private void OnEnable()
@@ -131,11 +131,12 @@ public class PlayerSettings : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
-        this.health -= dmg;
+        RuntimeGameSettings.Instance.SetActualHealth(RuntimeGameSettings.Instance.GetActualHealth() - dmg);
+        //this.health -= dmg;
         damagedParticleSystem.Play();
         musicController.PlayHurt();
-        healthbar.SetHealth(health, maxHealth);
-        if (this.health <= 0)
+        healthbar.SetHealth(RuntimeGameSettings.Instance.GetActualHealth(), RuntimeGameSettings.Instance.GetMaxHealth());
+        if (RuntimeGameSettings.Instance.GetActualHealth() <= 0)
         {
             musicController.PlayDeath();
             SceneController.LoadLoseScene();
@@ -150,15 +151,10 @@ public class PlayerSettings : MonoBehaviour
             if (weaponCooldown <= 0)
             {
                 musicController.PlaySlash();
-                //Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies);
-                //for (int i = 0; i < enemiesToDamage.Length; i++)
-                //{
-                //    enemiesToDamage[i].GetComponent<EnemyController>().TakeDamage(weaponDamage);
-                //}
                 weaponCooldown = 1f;
                 axe_animator.SetTrigger("Attack");
 
-                isAttacking = true;
+                isAttacking = true; // ACTIVA AIXÒ
                 attackTimer = attackDuration;
                 attackPositionVector = attackPosition.position;
                 damagedEnemies.Clear(); // Esborra els enemics que hi havia en el HashSet
@@ -175,7 +171,7 @@ public class PlayerSettings : MonoBehaviour
             EnemyController enemy = enemiesToDamage[i].GetComponent<EnemyController>();
             if (!damagedEnemies.Contains(enemy))
             {
-                enemy.TakeDamage(weaponDamage);
+                enemy.TakeDamage(RuntimeGameSettings.Instance.GetPlayerDamage());
 
                 if (enemy.getActualHealth() < enemy.getMaxHealth())
                     musicController.PlayDeath();
@@ -225,10 +221,16 @@ public class PlayerSettings : MonoBehaviour
 
     private void OnDrawGizmosSelected() // Això serveix per poder veure el rang d'atac desde l'escena (no en el joc)
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPosition.position, attackRange);
+        if (attackPosition != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(attackPosition.position, attackRange);
+        }
 
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(interactPosition.position, interactRange);
+        if (interactPosition != null)
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(interactPosition.position, interactRange);
+        }
     }
 }
