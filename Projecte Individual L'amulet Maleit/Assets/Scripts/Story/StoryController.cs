@@ -12,7 +12,7 @@ public static class StoryController
         if (jsonFile != null)
         {
             dialogueContainer = JsonUtility.FromJson<DialogueContainer>(jsonFile.text);
-            Debug.Log("Diálogos cargados exitosamente.");
+            //Debug.Log("Diálogos cargados exitosamente.");
         }
         else
         {

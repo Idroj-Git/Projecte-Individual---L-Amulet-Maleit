@@ -265,13 +265,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ce3ef40732c9940bdb341aa4e52c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 200
-  weaponDamage: 15
   attackPosition: {fileID: 1693856627485922978}
   weaponPivot: {fileID: 1670404010321844122}
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 1024
+  whatIsFlyingEnemies:
+    serializedVersion: 2
+    m_Bits: 2048
   attackRange: 0.83
   axe_animator: {fileID: 6448895949738797969}
   interactPosition: {fileID: 3658263672632089553}
@@ -536,7 +537,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0, b: 0, a: 1}
+      maxColor: {r: 1, g: 0, b: 0, a: 0.8156863}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -600,8 +601,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
-      minScalar: 0.2
+      scalar: 0.1
+      minScalar: 0.05
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1293,7 +1294,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 3
-        scalar: 80
+        scalar: 50
         minScalar: 30
         maxCurve:
           serializedVersion: 2

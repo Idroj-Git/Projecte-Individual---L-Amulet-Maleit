@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Linq;
+using TMPro;
 
 public class PlayerSettings : MonoBehaviour
 {
     //[SerializeField] int health;
     //private int maxHealth;
     //[SerializeField] int playerDamage;
-    private float weaponCooldown;
+    private float weaponCooldown, weaponMaxCooldown = 1f;
 
     [SerializeField] Transform attackPosition;
     private Vector3 attackPositionVector;
@@ -34,6 +35,7 @@ public class PlayerSettings : MonoBehaviour
 
     [SerializeField] MusicController musicController;
     [SerializeField] HealthbarBehaviour healthbar;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,7 @@ public class PlayerSettings : MonoBehaviour
         // igualar health al que tingui guardat en el playerprefs, canviar el serializefield
         // same per weaponDamage
         //maxHealth = RuntimeGameSettings.Instance.GetActualHealth();
+        
         weaponCooldown = 0;
         if (healthbar != null)
             healthbar.SetHealth(RuntimeGameSettings.Instance.GetActualHealth(), RuntimeGameSettings.Instance.GetMaxHealth());
@@ -153,7 +156,7 @@ public class PlayerSettings : MonoBehaviour
             if (weaponCooldown <= 0)
             {
                 musicController.PlaySlash();
-                weaponCooldown = 1f;
+                weaponCooldown = weaponMaxCooldown;
                 axe_animator.SetTrigger("Attack");
 
                 isAttacking = true; // ACTIVA AIXÒ
@@ -203,7 +206,7 @@ public class PlayerSettings : MonoBehaviour
                 }
                 else if (interactedObject.GetComponent <ItemController>() != null)
                 {
-                    Debug.Log("Objeto detectado: " + interactedObject.name);
+                    //Debug.Log("Objeto detectado: " + interactedObject.name);
                     ItemController itemController = interactedObject.GetComponent<ItemController>();
                     itemController.Interacted();
                 }

@@ -10,6 +10,7 @@ TagManager:
   - ForestExit
   - CaveExit
   - StoryTrigger
+  - VampireBoss
   layers:
   - Default
   - TransparentFX

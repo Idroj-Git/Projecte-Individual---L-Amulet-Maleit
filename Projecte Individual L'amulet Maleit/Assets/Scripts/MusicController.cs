@@ -5,13 +5,16 @@ using UnityEngine;
 public class MusicController : MonoBehaviour
 {
     [SerializeField] AudioSource sfxAudioSource;
+    [SerializeField] AudioSource musicAudioSource;
     [SerializeField] AudioClip[] audioClips;
+    public float defaultVolume = 0.5f;
 
     public enum SoundType
     {
         Hurt,
         Slash,
         Death,
+        Victory
         // Afeigr més sfx a mesura que ho necesiti
     }
 
@@ -38,6 +41,9 @@ public class MusicController : MonoBehaviour
                 case SoundType.Death:
                     PlayClip(audioClips[2]);
                     break;
+                case SoundType.Victory:
+                    PlayClip(audioClips[3]);
+                    break;
                 default:
                     Debug.Log("No existeix el tipus de so");
                     break;
@@ -58,5 +64,21 @@ public class MusicController : MonoBehaviour
     public void PlayDeath()
     {
         PlaySound(SoundType.Death);
+    }
+
+    public void PlayVictory()
+    {
+        ChangeSFXVolume(0.2f);
+        PlaySound(SoundType.Victory);
+    }
+
+    public void ChangeSFXVolume(float newVolume)
+    {
+        sfxAudioSource.volume = newVolume;
+    }
+
+    public void ChangeMusicVolume(float newVolume)
+    {
+        musicAudioSource.volume = newVolume;
     }
 }

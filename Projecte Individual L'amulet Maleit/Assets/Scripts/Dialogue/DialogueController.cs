@@ -105,7 +105,9 @@ public class DialogueController : MonoBehaviour
     {
         SetDialogueBoxStatus(false);
         hasDialogueFinished = true;
-        playerSettings.SetCanInteract(true); // es posa a false en el metode de interactuar de totes les diferents interaccions
+        playerSettings = FindAnyObjectByType<PlayerSettings>();
+        if (playerSettings != null)
+            playerSettings.SetCanInteract(true); // es posa a false en el metode de interactuar de totes les diferents interaccions
         InputController.OnInteractDialogue -= SetNextButtonPressed;
         //Debug.Log("Close");
     }
@@ -122,7 +124,9 @@ public class DialogueController : MonoBehaviour
     {
         dBoxOpen = open;
         textBox.SetActive(open);
-        player.SetCanMove(!open);
+        player = FindAnyObjectByType<PlayerMovement>();
+        if (player != null)
+            player.SetCanMove(!open);
     }
 
     public void ShowDialogue(TextStorage dialogue) // METODE PRINCIPAL

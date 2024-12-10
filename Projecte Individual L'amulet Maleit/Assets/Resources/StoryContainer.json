@@ -61,24 +61,83 @@
         "lines": [
           {
             "name": "Ureos",
-            "text": "Efectivament, l'amulet maleït que tenia amagat ja no hi és."
+            "text": "Efectivament, l'Amulet maleït que tenia amagat ja no hi és."
           },
           {
             "name": "Ureos",
-            "text": "No puc perdre més el temps. He d'anar a recuperar l'amulet. Si no hi soc a temps el meu poble serà només el primer a ser arrasat."
+            "text": "No puc perdre més el temps. He d'anar a recuperar l'Amulet. Si no hi soc a temps el meu poble serà només el primer a ser arrasat."
           },
+            {
+                "name": "Ureos",
+                "text": "Si no recordo malament, hi ha una cova al nord-est d'on sovint surten monstres. Potser, si hi vaig, aconseguiré alguna pista d'on és l'Amulet."
+            },
           {
             "name": "Ureos",
-            "text": "Si no recordo malament, hi ha una cova al nord-est d'on sovint surten monstres. Potser, si hi vaig, aconseguiré alguna pista d'on és l'amulet."
+            "text": "Per sort sempre que ho necessiti puc tornar a casa a recuperar la vida."
           }
         ]
       },
       {
-        "id": 20,
+        "id": 6,
+        "lines": [
+            {
+                "name": "Ureos",
+                "text": "Ei tu! He vingut a recuperar l'Amulet, però no esperava que un ratpenat qualsevol l'estigués utilitzant."
+            },
+            {
+                "name": "???????",
+                "text": "INSOLENT.\nNo sóc un ratpenat qualsevol, sóc un vampir i el meu nom és Alucard!"
+            },
+            {
+                "name": "Alucard",
+                "text": "Fa molt de temps que espero el moment oportú per robar l'Amulet, però fins ara hi havia un segell que m'impedia apropar-m'hi."
+            },
+            {
+                "name": "Alucard",
+                "text": "Però això ja no és cap problema. Ara que he aconseguit l'Amulet no hi ha ningú més poderós que jo MUAHAHAHAHAHAHAHA."
+            },
+            {
+                "name": "Ureos",
+                "text": "Áixò no ho diràs una vegada t'hagi vençut."
+            }
+        ]
+      },
+      {
+        "id": 7,
+        "lines": [
+            {
+                "name": "Alucard",
+                "text": "Impossible... Un humà qualsevol com tú no em pot haver derrotat..."
+            },
+            {
+                "name": "Ureos",
+                "text": "S'ha acabat. Ja no pots tens suficient poder per evitar ser consumit per l'Amulet."
+            },
+            {
+                "name": "Alucard",
+                "text": "Derrotat per un humà i absorbit per l'Amulet que tan ansiava..."
+            }
+        ]
+      },
+      {
+        "id": 8,
+        "lines": [
+            {
+                "name": "Alucard",
+                "text": "NO! NO VULL DESAPAREIXER... NOOOOOOOOOOOoooooooo........"
+            },
+            {
+                "name": "Ureos",
+                "text": "He aconseguit derrotar l'Alucard... Millor que vagi a agafar l'Amulet."
+            }
+        ]
+      },
+      {
+        "id": 9,
         "lines": [
           {
             "name": "Ureos",
-            "text": "Per fi he aconseguit l'amulet. Ara que he vist tot el seu poder malèfic n'estic segur: L'he de destruir."
+            "text": "Per fi he aconseguit l'Amulet. Ara que he vist tot el seu poder malèfic n'estic segur: L'he de destruir."
           },
           {
             "name": "Ureos",
@@ -95,7 +154,7 @@
           },
           {
             "name": "Sistema",
-            "text": "En un futur hi haurà actualitzacions per millorar la jugabilitat entre altres. Tot el feedback és benvolgut!"
+            "text": "En un futur hi haurà una segona part... probablement. Tot el feedback és benvolgut!"
           },
           {
             "name": "Sistema",
@@ -103,7 +162,7 @@
           },
           {
             "name": "Sistema",
-            "text": "El joc es reiniciarà completament una vegada tornis a començar. Igual que quan tanques i obres el joc."
+            "text": "El joc es reiniciarà fins l'últim lloc de guardat."
           }
         ]
       }

@@ -10,6 +10,7 @@ public class HealthbarBehaviour : MonoBehaviour
     public Color high;
     public Vector3 offset;
     public Canvas canvas;
+    public bool isStatic;
 
     private void Start()
     {
@@ -41,6 +42,7 @@ public class HealthbarBehaviour : MonoBehaviour
 
     void Update()
     {
-        slider.transform.position = transform.parent.position + offset;
+        if (!isStatic)
+            slider.transform.position = transform.parent.position + offset;
     }
 }

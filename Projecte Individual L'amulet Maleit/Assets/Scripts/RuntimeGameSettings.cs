@@ -71,7 +71,7 @@ public class RuntimeGameSettings : MonoBehaviour
         actualHealth = 200;
         maxHealth = 200;
         playerDamage = 30;
-        playerGold = 5;
+        playerGold = 10;
         unsavedStoryProgression = 1; // RESET HISTÒRIA
 }
 

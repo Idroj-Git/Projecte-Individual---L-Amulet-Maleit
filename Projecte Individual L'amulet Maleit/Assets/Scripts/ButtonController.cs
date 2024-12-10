@@ -10,7 +10,8 @@ public class ButtonController : MonoBehaviour
     private int[] pausableScenes, unsavableScenes;
     [SerializeField] GameObject pauseMenuCanvas;
     [SerializeField] CanvasGroup pauseMenuCanvasGroup;
-    [SerializeField] Button continueButton;
+    [SerializeField] Button continueButton, saveGameButton;
+    private bool canPauseGame = true;
     private void Start()
     {
         pausableScenes = new int[] { SceneController.GetMainWorldIndex(), SceneController.GetForestIndex(), SceneController.GetBattleIndex(), SceneController.GetCaveIndex()};
@@ -33,6 +34,11 @@ public class ButtonController : MonoBehaviour
             else
                 continueButton.interactable = true;
         }
+
+        if (saveGameButton != null && SceneController.GetActualSceneIndex() == SceneController.GetBattleIndex())
+            saveGameButton.interactable = false;
+        else if (saveGameButton != null)
+            saveGameButton.interactable = true;
     }
 
     private void OnEnable()
@@ -116,7 +122,8 @@ public class ButtonController : MonoBehaviour
         if (pausableScenes.Contains(SceneController.GetActualSceneIndex()) 
             && pauseMenuCanvas != null 
             && pauseMenuCanvasGroup != null
-            && DialogueController.Instance.GetHasDialogueFinished()) // comprovar si es pot pausar l'escena
+            && DialogueController.Instance.GetHasDialogueFinished()
+            && canPauseGame) // comprovar si es pot pausar l'escena
         {
             if (!isGamePaused)
             {
@@ -154,5 +161,13 @@ public class ButtonController : MonoBehaviour
         {
             pauseMenuCanvas.SetActive(isGamePaused);
         }
+    }
+
+    public void SetCanPauseGame(bool canPauseGame) { this.canPauseGame = canPauseGame; }
+    public bool GetCanPauseGame() { return this.canPauseGame; }
+
+    public void SaveGameButton()
+    {
+        RuntimeGameSettings.Instance.SaveGame();
     }
 }

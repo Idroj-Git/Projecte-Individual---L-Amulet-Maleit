@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
                     //Debug.Log("¡HA APARECIDO UN ENEMIGO en el update!");
                 }
             }
-            if (_moveDirection != Vector2.zero && SceneController.GetActualSceneIndex() == SceneController.GetCaveIndex())
+            if (_moveDirection != Vector2.zero && SceneController.GetActualSceneIndex() == SceneController.GetCaveIndex() && DialogueController.Instance.GetHasDialogueFinished())
             {
                 if (Random.Range(0, 100) < 5) // SENSE EL IS ON SPAWNER PERQUE APAREIXEN A TOT ARREU
                 {
@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void MovePlayer()
+    public void MovePlayer()
     {
 
         _rb.velocity = _moveDirection * _speed;

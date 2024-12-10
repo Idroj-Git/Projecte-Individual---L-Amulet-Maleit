@@ -195,6 +195,7 @@ MonoBehaviour:
   high: {r: 0, g: 1, b: 0, a: 1}
   offset: {x: 0, y: 0.2, z: 0}
   canvas: {fileID: 5155909818430436352}
+  isStatic: 0
 --- !u!1 &3565238536241652517
 GameObject:
   m_ObjectHideFlags: 0

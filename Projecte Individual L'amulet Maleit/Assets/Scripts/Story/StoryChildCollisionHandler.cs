@@ -6,11 +6,13 @@ public class StoryChildCollisionHandler : MonoBehaviour
 {
     private MainWorldStoryEvents mainWorldStoryEvents;
     private ForestStoryEvents forestStoryEvents;
+    private CaveStoryEvents caveStoryEvents;
 
     private void Start()
     {
         mainWorldStoryEvents = GetComponentInParent<MainWorldStoryEvents>();
         forestStoryEvents = GetComponentInParent<ForestStoryEvents>();
+        caveStoryEvents = GetComponentInParent<CaveStoryEvents>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,6 +24,10 @@ public class StoryChildCollisionHandler : MonoBehaviour
         else if (forestStoryEvents != null)
         {
             forestStoryEvents.HandleChildCollision(collision, gameObject);
+        }
+        else if (caveStoryEvents != null)
+        {
+            caveStoryEvents.HandleChildCollision(collision, gameObject);
         }
     }
 }

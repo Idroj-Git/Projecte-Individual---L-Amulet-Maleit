@@ -48,6 +48,7 @@ MonoBehaviour:
   pauseMenuCanvas: {fileID: 3846358183376635437}
   pauseMenuCanvasGroup: {fileID: 5637733289666667653}
   continueButton: {fileID: 0}
+  saveGameButton: {fileID: 2962904435825903111}
 --- !u!1 &1904682189286915414
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Configuraci\xF3 (WIP)"
+  m_text: Guardar Partida
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a0a6ba7bcdcbc44f87a9f13e902038f, type: 2}
   m_sharedMaterial: {fileID: 866995674536889994, guid: 5a0a6ba7bcdcbc44f87a9f13e902038f, type: 2}
@@ -381,7 +382,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!114 &2470825957058235263
 MonoBehaviour:
@@ -586,7 +587,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.1
 --- !u!114 &2710435516025706450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,7 +854,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.1
 --- !u!114 &405134485744627002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,7 +924,7 @@ GameObject:
   - component: {fileID: 7305690762435297569}
   - component: {fileID: 2962904435825903111}
   m_Layer: 5
-  m_Name: ConfigButton
+  m_Name: SaveGameButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -986,7 +987,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.1
 --- !u!114 &2962904435825903111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,14 +1027,14 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 7305690762435297569}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4488571732962443591}
         m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: OpenConfig
+        m_MethodName: SaveGameButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
